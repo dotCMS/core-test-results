@@ -1,2 +1,2 @@
 <tr><td><a href="./NavResourceTests.html">NavResourceTests.json</a></td><td style="color: #ffffff; background-color: #28a745; font-weight: bold;">PASSED</td>
-      <td>185.805</td></tr>
+      <td>174.442</td></tr>
