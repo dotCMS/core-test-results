@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Push Publish JWT Token Test" tests="13" time="12.135">
+  <testsuite name="success_PP_with_admin_user / request_token" id="8fe04897-eafc-4383-b7bc-5f20f206dd43" timestamp="2023-06-23T16:52:39.380Z" tests="1" failures="0" errors="0" time="3.997">
+    <testcase name="Status code is 200" time="3.997" classname="PushPublishJwtTokenTest"/>
+  </testsuite>
+  <testsuite name="success_PP_with_admin_user / logout" id="917213a7-bd8f-4940-96f4-b4eb0a4c68cf" timestamp="2023-06-23T16:52:39.380Z" tests="1" failures="0" errors="0" time="0.020">
+    <testcase name="Status code is 200" time="0.020" classname="PushPublishJwtTokenTest"/>
+  </testsuite>
+  <testsuite name="success_PP_with_admin_user / request_pp" id="20f9d8b4-6cd8-4d32-aca8-97a9e72c4abd" timestamp="2023-06-23T16:52:39.380Z" tests="1" failures="1" errors="0" time="0.026">
+    <testcase name="Status code is 200" time="0.026" classname="PushPublishJwtTokenTest">
+      <failure type="AssertionFailure" message="expected response to have status code 200 but got 401">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 8b4691e6-7909-4c9c-9762-1c99a93c9768.]]>
+        <![CDATA[Collection name: Push Publish JWT Token Test.]]>
+        <![CDATA[Request name: success_PP_with_admin_user / request_pp.]]>
+        <![CDATA[Test description: Status code is 200.]]>
+        <![CDATA[Error message: expected response to have status code 200 but got 401.]]>
+        <![CDATA[Stacktrace: AssertionError: expected response to have status code 200 but got 401
+   at Object.eval sandbox-script.js:1:3).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="success_PP_with_admin_user / checking_content_types_after_pp" id="900f2064-8b2a-4578-bc48-e22a059fca96" timestamp="2023-06-23T16:52:39.380Z" tests="1" failures="1" errors="0" time="0.281">
+    <testcase name="Status code is 200" time="0.281" classname="PushPublishJwtTokenTest">
+      <failure type="AssertionFailure" message="expected response to have status code 200 but got 404">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 8b4691e6-7909-4c9c-9762-1c99a93c9768.]]>
+        <![CDATA[Collection name: Push Publish JWT Token Test.]]>
+        <![CDATA[Request name: success_PP_with_admin_user / checking_content_types_after_pp.]]>
+        <![CDATA[Test description: Status code is 200.]]>
+        <![CDATA[Error message: expected response to have status code 200 but got 404.]]>
+        <![CDATA[Stacktrace: AssertionError: expected response to have status code 200 but got 404
+   at Object.eval sandbox-script.js:1:4).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="expired_token / request_token" id="2dca7f54-89fb-4da3-a15b-34adbe3315d3" timestamp="2023-06-23T16:52:39.380Z" tests="1" failures="0" errors="0" time="3.839">
+    <testcase name="Status code is 200" time="3.839" classname="PushPublishJwtTokenTest"/>
+  </testsuite>
+  <testsuite name="expired_token / logout" id="cdb6d68f-e292-48a5-b63f-6f56f1793478" timestamp="2023-06-23T16:52:39.380Z" tests="1" failures="0" errors="0" time="0.013">
+    <testcase name="Status code is 200" time="0.013" classname="PushPublishJwtTokenTest"/>
+  </testsuite>
+  <testsuite name="expired_token / request_pp" id="052e2854-cee4-40db-aa3f-2aee4efc43e4" timestamp="2023-06-23T16:52:39.380Z" tests="2" failures="0" errors="0" time="0.013">
+    <testcase name="Status code is 401" time="0.013" classname="PushPublishJwtTokenTest"/>
+    <testcase name="Check WWW-Authenticate header" time="0.013" classname="PushPublishJwtTokenTest"/>
+  </testsuite>
+  <testsuite name="fail_not_valid_token / request_pp" id="ddfb52f7-475c-420b-aa38-8bc40fe8ce44" timestamp="2023-06-23T16:52:39.380Z" tests="2" failures="0" errors="0" time="0.023">
+    <testcase name="Status code is 401" time="0.023" classname="PushPublishJwtTokenTest"/>
+    <testcase name="Check WWW-Authenticate header" time="0.023" classname="PushPublishJwtTokenTest"/>
+  </testsuite>
+  <testsuite name="fail_not_token_sent / request_pp" id="5274ff51-115a-4cfb-a0ca-5086c17a0877" timestamp="2023-06-23T16:52:39.380Z" tests="2" failures="0" errors="0" time="0.015">
+    <testcase name="Status code is 200" time="0.015" classname="PushPublishJwtTokenTest"/>
+    <testcase name="Check WWW-Authenticate header" time="0.015" classname="PushPublishJwtTokenTest"/>
+  </testsuite>
+  <testsuite name="fail_empty_body / request_token" id="839bdd21-e23c-45c6-a920-aab7dc45663d" timestamp="2023-06-23T16:52:39.380Z" tests="1" failures="0" errors="0" time="3.854">
+    <testcase name="Status code is 200" time="3.854" classname="PushPublishJwtTokenTest"/>
+  </testsuite>
+  <testsuite name="fail_empty_body / logout" id="e765ae64-f71f-49bf-95ac-ef02baf47147" timestamp="2023-06-23T16:52:39.380Z" tests="1" failures="0" errors="0" time="0.011">
+    <testcase name="Status code is 200" time="0.011" classname="PushPublishJwtTokenTest"/>
+  </testsuite>
+  <testsuite name="fail_empty_body / request_pp" id="f4c2f84b-dd9f-4a8f-9104-30c4d1ecfb54" timestamp="2023-06-23T16:52:39.380Z" tests="1" failures="0" errors="0" time="0.018">
+    <testcase name="Status code is 200" time="0.018" classname="PushPublishJwtTokenTest"/>
+  </testsuite>
+  <testsuite name="using_basic_authentication_instead_JWT_token / request_pp" id="b6d81bcd-d0b1-4066-aa37-a87dda915fec" timestamp="2023-06-23T16:52:39.380Z" tests="2" failures="0" errors="0" time="0.025">
+    <testcase name="Status code is 200" time="0.025" classname="PushPublishJwtTokenTest"/>
+    <testcase name="Check WWW-Authenticate header" time="0.025" classname="PushPublishJwtTokenTest"/>
+  </testsuite>
+</testsuites>
