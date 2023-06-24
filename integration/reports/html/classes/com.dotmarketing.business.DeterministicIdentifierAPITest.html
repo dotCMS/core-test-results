@@ -29,7 +29,7 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">0</div>
+<div class="counter">1</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">1.442s</div>
+<div class="counter">1.545s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox success" id="successRate">
-<div class="percent">100%</div>
+<div class="infoBox failures" id="successRate">
+<div class="percent">93%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,10 +61,84 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Tests</a>
+<a href="#tab0">Failed tests</a>
+</li>
+<li>
+<a href="#tab1">Tests</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="Test_Language_Deterministic_Id[2: LanguageTestCase{expectedSeed='Language:sg:SAG', expectedHash=4713118, langCode='sg', countryCode='SAG', country=''}]"></a>
+<h3 class="failures">Test_Language_Deterministic_Id[2: LanguageTestCase{expectedSeed='Language:sg:SAG', expectedHash=4713118, langCode='sg', countryCode='SAG', country=''}]</h3>
+<span class="code">
+<pre>java.lang.AssertionError: expected:&lt;4713118&gt; but was:&lt;1687564662668&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:633)
+	at com.dotmarketing.business.DeterministicIdentifierAPITest.Test_Language_Deterministic_Id(DeterministicIdentifierAPITest.java:347)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at com.tngtech.java.junit.dataprovider.DataProviderFrameworkMethod.invokeExplosively(DataProviderFrameworkMethod.java:119)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:61)
+	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at com.dotcms.junit.CustomDataProviderRunner.runChild(CustomDataProviderRunner.java:38)
+	at com.dotcms.junit.CustomDataProviderRunner.runChild(CustomDataProviderRunner.java:14)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at com.dotcms.junit.MainBaseSuite$DotRunner.run(MainBaseSuite.java:60)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy5.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:176)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -75,58 +149,58 @@
 </tr>
 </thead>
 <tr>
-<td class="success">Test_Asset_Generate_Deterministic_Id_Best_Effort[0: TestCase{versionable=my.host1687558629288.com, parent=System Host, expectedName='my.host1687558629288.com', expectedType='Host'}]</td>
-<td class="success">0.003s</td>
+<td class="success">Test_Asset_Generate_Deterministic_Id_Best_Effort[0: TestCase{versionable=my.host1687558893072.com, parent=System Host, expectedName='my.host1687558893072.com', expectedType='Host'}]</td>
+<td class="success">0.006s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">Test_Asset_Generate_Deterministic_Id_Best_Effort[1: TestCase{versionable=com.dotmarketing.portlets.contentlet.model.Contentlet@539f3fb6[map={modDate=2023-06-23 22:17:10.404, fileName=file10130281611752315574.txt, title=file10130281611752315574.txt, inode=dfd9af29-316b-4164-959f-48dbffc42938, __IS_NEW_CONTENT__=true, disabledWYSIWYG=[], host=a73f6990-79ab-409f-8f23-541333ef0126, stInode=33888b6f-7a8e-4069-b1b6-5c1aa9d0a48d, owner=system, identifier=2e44fa7f-9bda-444d-8cd4-68a1ccf7cfb7, nullProperties=[wfExpireDate, wfPublishDate, wfActionAssign, wfActionId, wfActionComments, filterKey, whereToSend, wfNeverExpire, _path_to_move, timezoneId, iWantTo, wfPublishTime, wfExpireTime], languageId=1, fileAsset=/home/runner/work/core/custom/assets/d/f/dfd9af29-316b-4164-959f-48dbffc42938/fileAsset/file10130281611752315574.txt, folder=dfcb59c8-98aa-4125-ad8f-95d9360f3cba, __disable_workflow__=true, sortOrder=0, modUser=system},lowIndexPriority=false,variantId=DEFAULT], parent=com.dotmarketing.portlets.folders.model.Folder@1b532aa8[identifier=dfcb59c8-98aa-4125-ad8f-95d9360f3cba,name=testName1687558630394,sortOrder=0,showOnMenu=false,hostId=a73f6990-79ab-409f-8f23-541333ef0126,type=folder,title=testTitle1687558630394,filesMasks=,defaultFileType=33888b6f-7a8e-4069-b1b6-5c1aa9d0a48d,modDate=2023-06-23 22:17:10.4,owner=&lt;null&gt;,iDate=2023-06-23 22:17:10.4,inode=dfcb59c8-98aa-4125-ad8f-95d9360f3cba,path=/testName1687558630394/], expectedName='file10130281611752315574.txt', expectedType='FileAsset'}]</td>
-<td class="success">0.003s</td>
+<td class="success">Test_Asset_Generate_Deterministic_Id_Best_Effort[1: TestCase{versionable=com.dotmarketing.portlets.contentlet.model.Contentlet@16c03d13[map={modDate=2023-06-23 22:21:34.031, fileName=file14268828357819761762.txt, title=file14268828357819761762.txt, inode=bdb044bf-f10a-4e86-80af-8534c829dc7d, __IS_NEW_CONTENT__=true, disabledWYSIWYG=[], host=4ed0165c-328c-4972-aa41-bc772ec68e28, stInode=33888b6f-7a8e-4069-b1b6-5c1aa9d0a48d, owner=system, identifier=96630091-2f25-4d6d-abfa-de70e892e585, nullProperties=[wfExpireDate, wfPublishDate, wfActionAssign, wfActionId, wfActionComments, filterKey, whereToSend, wfNeverExpire, _path_to_move, timezoneId, iWantTo, wfPublishTime, wfExpireTime], languageId=1, fileAsset=/home/runner/work/core/custom/assets/b/d/bdb044bf-f10a-4e86-80af-8534c829dc7d/fileAsset/file14268828357819761762.txt, folder=a024a1a2-cd48-433f-bfb3-7c2fa89ea0ac, __disable_workflow__=true, sortOrder=0, modUser=system},lowIndexPriority=false,variantId=DEFAULT], parent=com.dotmarketing.portlets.folders.model.Folder@13dea4d[identifier=a024a1a2-cd48-433f-bfb3-7c2fa89ea0ac,name=testName1687558894024,sortOrder=0,showOnMenu=false,hostId=4ed0165c-328c-4972-aa41-bc772ec68e28,type=folder,title=testTitle1687558894024,filesMasks=,defaultFileType=33888b6f-7a8e-4069-b1b6-5c1aa9d0a48d,modDate=2023-06-23 22:21:34.028,owner=&lt;null&gt;,iDate=2023-06-23 22:21:34.028,inode=a024a1a2-cd48-433f-bfb3-7c2fa89ea0ac,path=/testName1687558894024/], expectedName='file14268828357819761762.txt', expectedType='FileAsset'}]</td>
+<td class="success">0.004s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">Test_Asset_Generate_Deterministic_Id_Best_Effort[2: TestCase{versionable=com.dotmarketing.portlets.templates.model.Template@91ce872e, parent=my.host1687558629288.com, expectedName='testTitle1687558630629', expectedType='Template'}]</td>
+<td class="success">Test_Asset_Generate_Deterministic_Id_Best_Effort[2: TestCase{versionable=com.dotmarketing.portlets.templates.model.Template@94f7fffa, parent=my.host1687558893072.com, expectedName='testTitle1687558894101', expectedType='Template'}]</td>
 <td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">Test_Asset_Generate_Deterministic_Id_Best_Effort[3: TestCase{versionable=com.dotmarketing.portlets.htmlpageasset.model.HTMLPageAsset@1c9bb715[map={template=928754d9-8661-48df-ae9f-3cbbe61557fc, owner=system, identifier=8f503834-8789-42c6-936c-3cdc22077d14, nullProperties=[wfExpireDate, wfPublishDate, wfActionAssign, wfActionId, wfActionComments, filterKey, whereToSend, wfNeverExpire, _path_to_move, timezoneId, iWantTo, wfPublishTime, wfExpireTime], modDate=2023-06-23 22:17:10.648, cachettl=0, _is_test_mode=true, languageId=1, title=test-page-title-1687558630642, httpsreq=, url=test-page-url-1687558630642, showOnMenu=, inode=6bbb3518-552c-415d-be71-15cb76800a86, folder=dfcb59c8-98aa-4125-ad8f-95d9360f3cba, disabledWYSIWYG=[], sortOrder=1, modUser=system, host=a73f6990-79ab-409f-8f23-541333ef0126, stInode=c541abb1-69b3-4bc5-8430-5e09e5239cc8, friendlyName=test-page-friendly-name-1687558630642},lowIndexPriority=false,variantId=DEFAULT], parent=com.dotmarketing.portlets.folders.model.Folder@1b532aa8[identifier=dfcb59c8-98aa-4125-ad8f-95d9360f3cba,name=testName1687558630394,sortOrder=0,showOnMenu=false,hostId=a73f6990-79ab-409f-8f23-541333ef0126,type=folder,title=testTitle1687558630394,filesMasks=,defaultFileType=33888b6f-7a8e-4069-b1b6-5c1aa9d0a48d,modDate=2023-06-23 22:17:10.4,owner=&lt;null&gt;,iDate=2023-06-23 22:17:10.4,inode=dfcb59c8-98aa-4125-ad8f-95d9360f3cba,path=/testName1687558630394/], expectedName='test-page-url-1687558630642', expectedType='htmlpageasset'}]</td>
-<td class="success">0.002s</td>
+<td class="success">Test_Asset_Generate_Deterministic_Id_Best_Effort[3: TestCase{versionable=com.dotmarketing.portlets.htmlpageasset.model.HTMLPageAsset@70c3db72[map={template=d2211305-33a6-4de3-b929-46c3caa5194b, owner=system, identifier=f251d16a-d395-4879-98c7-a2c0217f3da8, nullProperties=[wfExpireDate, wfPublishDate, wfActionAssign, wfActionId, wfActionComments, filterKey, whereToSend, wfNeverExpire, _path_to_move, timezoneId, iWantTo, wfPublishTime, wfExpireTime], modDate=2023-06-23 22:21:34.117, cachettl=0, _is_test_mode=true, languageId=1, title=test-page-title-1687558894112, httpsreq=, url=test-page-url-1687558894112, showOnMenu=, inode=2acae425-d624-4723-b9fe-293ca7262d35, folder=a024a1a2-cd48-433f-bfb3-7c2fa89ea0ac, disabledWYSIWYG=[], sortOrder=1, modUser=system, host=4ed0165c-328c-4972-aa41-bc772ec68e28, stInode=c541abb1-69b3-4bc5-8430-5e09e5239cc8, friendlyName=test-page-friendly-name-1687558894112},lowIndexPriority=false,variantId=DEFAULT], parent=com.dotmarketing.portlets.folders.model.Folder@13dea4d[identifier=a024a1a2-cd48-433f-bfb3-7c2fa89ea0ac,name=testName1687558894024,sortOrder=0,showOnMenu=false,hostId=4ed0165c-328c-4972-aa41-bc772ec68e28,type=folder,title=testTitle1687558894024,filesMasks=,defaultFileType=33888b6f-7a8e-4069-b1b6-5c1aa9d0a48d,modDate=2023-06-23 22:21:34.028,owner=&lt;null&gt;,iDate=2023-06-23 22:21:34.028,inode=a024a1a2-cd48-433f-bfb3-7c2fa89ea0ac,path=/testName1687558894024/], expectedName='test-page-url-1687558894112', expectedType='htmlpageasset'}]</td>
+<td class="success">0.003s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">Test_Asset_Generate_Deterministic_Id_Best_Effort[4: TestCase{versionable=com.dotmarketing.portlets.contentlet.model.Contentlet@4f26cd57[map={fileAsset2=/home/runner/work/core/custom/assets/9/5/95f49c6b-c0ed-458b-a0e3-cfabdc6296d1/fileAsset2/test_binary1687558631373.png, modDate=2023-06-23 22:17:11.378, fileAsset1=/home/runner/work/core/custom/assets/9/5/95f49c6b-c0ed-458b-a0e3-cfabdc6296d1/fileAsset1/test_binary1687558631372.jpg, title=blah, inode=95f49c6b-c0ed-458b-a0e3-cfabdc6296d1, __IS_NEW_CONTENT__=true, disabledWYSIWYG=[], host=8a7d5e23-da1e-420a-b4f0-471e7da8ea2d, stInode=c029de50-4101-4c21-a711-a94587d5e05a, owner=system, identifier=24376d9f-beab-4187-8e3e-3db9dbb24122, nullProperties=[], languageId=1, image1=9a32a5b1-2434-4abd-89fc-148df51909b5, folder=SYSTEM_FOLDER, __disable_workflow__=true, sortOrder=0, modUser=system},lowIndexPriority=false,variantId=DEFAULT], parent=default, expectedName='test_binary1687558631372.jpg:test_binary1687558631373.png', expectedType='MultipleBinaries1687558630755'}]</td>
-<td class="success">0.007s</td>
+<td class="success">Test_Asset_Generate_Deterministic_Id_Best_Effort[4: TestCase{versionable=com.dotmarketing.portlets.contentlet.model.Contentlet@2be32fa[map={fileAsset2=/home/runner/work/core/custom/assets/d/4/d456fe5e-4b5b-44ce-98a9-08a9261e4aa6/fileAsset2/test_binary1687558895017.png, modDate=2023-06-23 22:21:35.023, fileAsset1=/home/runner/work/core/custom/assets/d/4/d456fe5e-4b5b-44ce-98a9-08a9261e4aa6/fileAsset1/test_binary1687558895017.jpg, title=blah, inode=d456fe5e-4b5b-44ce-98a9-08a9261e4aa6, __IS_NEW_CONTENT__=true, disabledWYSIWYG=[], host=8a7d5e23-da1e-420a-b4f0-471e7da8ea2d, stInode=1087c04e-f45b-4ab8-8f8f-6265ab89e996, owner=system, identifier=6cdb6f75-216a-401e-8ff5-d035a479ee62, nullProperties=[], languageId=1, image1=fa78b591-6369-4220-96fd-2268510cfac1, folder=SYSTEM_FOLDER, __disable_workflow__=true, sortOrder=0, modUser=system},lowIndexPriority=false,variantId=DEFAULT], parent=default, expectedName='test_binary1687558895017.jpg:test_binary1687558895017.png', expectedType='MultipleBinaries1687558894224'}]</td>
+<td class="success">0.009s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">Test_Asset_Generate_Deterministic_Id_Best_Effort[5: TestCase{versionable=namefed9d28b3a : keyTagfed9d28b3a, parent=my.host1687558629288.com, expectedName='keyTagfed9d28b3a', expectedType='persona'}]</td>
+<td class="success">Test_Asset_Generate_Deterministic_Id_Best_Effort[5: TestCase{versionable=name37f7268651 : keyTag37f7268651, parent=my.host1687558893072.com, expectedName='keyTag37f7268651', expectedType='persona'}]</td>
 <td class="success">0.006s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Test_Category_None_Persisted_Category_Should_Return_Deterministic_Id</td>
-<td class="success">0.001s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Test_Category_Path_Seed_And_Id</td>
-<td class="success">0.023s</td>
+<td class="success">0.029s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">Test_Generate_Content_Type_Identifier[0: ContentTypeTestCase{contentType=KeyValueContentType{name=Language Variable, id=f4d7c1b8-2c88-4071-abf1-a5328977b07d, description=Default Content Type for Language Variables, defaultType=false, fixed=true, iDate=Thu Aug 31 16:38:49 UTC 2017, system=true, versionable=true, variable=Languagevariable, modDate=Fri Jun 23 22:13:55 UTC 2023, host=SYSTEM_HOST, siteName=systemHost, icon=language, sortOrder=0, folder=SYSTEM_FOLDER, folderPath=/, markedForDeletion=false, multilingualable=false}, expectedName='Languagevariable', expectedType='KeyValue'}]</td>
+<td class="success">Test_Generate_Content_Type_Identifier[0: ContentTypeTestCase{contentType=KeyValueContentType{name=Language Variable, id=f4d7c1b8-2c88-4071-abf1-a5328977b07d, description=Default Content Type for Language Variables, defaultType=false, fixed=true, iDate=Thu Aug 31 16:38:49 UTC 2017, system=true, versionable=true, variable=Languagevariable, modDate=Fri Jun 23 22:18:13 UTC 2023, host=SYSTEM_HOST, siteName=systemHost, icon=language, sortOrder=0, folder=SYSTEM_FOLDER, folderPath=/, markedForDeletion=false, multilingualable=false}, expectedName='Languagevariable', expectedType='KeyValue'}]</td>
 <td class="success">0.007s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">Test_Generate_Content_Type_Identifier[1: ContentTypeTestCase{contentType=SimpleContentType{name=testName1687558631687, id=54ea83e5-ae3c-4875-af67-f2d7f410de72, description=testDescription1687558631687, defaultType=false, fixed=false, iDate=Fri Jun 23 22:17:11 UTC 2023, system=false, versionable=true, multilingualable=false, variable=testVarname1687558631687, owner=system, modDate=Fri Jun 23 22:17:12 UTC 2023, host=8a7d5e23-da1e-420a-b4f0-471e7da8ea2d, siteName=default, icon=event_note, sortOrder=0, folder=SYSTEM_FOLDER, folderPath=/, requiredFields=[], markedForDeletion=false}, expectedName='testVarname1687558631687', expectedType='CONTENT'}]</td>
-<td class="success">0.005s</td>
+<td class="success">Test_Generate_Content_Type_Identifier[1: ContentTypeTestCase{contentType=SimpleContentType{name=testName1687558895312, id=b5fe756d-a139-444d-91d7-54aebc5bdc64, description=testDescription1687558895312, defaultType=false, fixed=false, iDate=Fri Jun 23 22:21:35 UTC 2023, system=false, versionable=true, multilingualable=false, variable=testVarname1687558895312, owner=system, modDate=Fri Jun 23 22:21:35 UTC 2023, host=8a7d5e23-da1e-420a-b4f0-471e7da8ea2d, siteName=default, icon=event_note, sortOrder=0, folder=SYSTEM_FOLDER, folderPath=/, requiredFields=[], markedForDeletion=false}, expectedName='testVarname1687558895312', expectedType='CONTENT'}]</td>
+<td class="success">0.004s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Test_Generate_Folder_Identifier</td>
-<td class="success">0.905s</td>
+<td class="success">0.934s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -140,9 +214,9 @@
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">Test_Language_Deterministic_Id[2: LanguageTestCase{expectedSeed='Language:sg:SAG', expectedHash=4713118, langCode='sg', countryCode='SAG', country=''}]</td>
-<td class="success">0.001s</td>
-<td class="success">passed</td>
+<td class="failures">Test_Language_Deterministic_Id[2: LanguageTestCase{expectedSeed='Language:sg:SAG', expectedHash=4713118, langCode='sg', countryCode='SAG', country=''}]</td>
+<td class="failures">0.004s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
 <td class="success">Test_Language_Deterministic_Id[3: LanguageTestCase{expectedSeed='Language:en:NZ', expectedHash=5382528, langCode='en', countryCode='NZ', country='New Zealand'}]</td>
@@ -151,7 +225,7 @@
 </tr>
 <tr>
 <td class="success">Test_Similar_Content_Type_Wont_Clash</td>
-<td class="success">0.474s</td>
+<td class="success">0.532s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -164,7 +238,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.3.3</a> at Jun 23, 2023, 11:59:14 PM</p>
+<a href="http://www.gradle.org">Gradle 7.3.3</a> at Jun 24, 2023, 12:05:00 AM</p>
 </div>
 </div>
 </body>
