@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="WebAssets" tests="15" time="67.451">
+  <testsuite name="Create folder" id="39e1957c-49be-4fc0-981c-050112b153f6" timestamp="2023-06-26T19:53:26.266Z" tests="1" failures="0" errors="0" time="7.062">
+    <testcase name="Status code should be 200" time="7.062" classname="WebAssets"/>
+  </testsuite>
+  <testsuite name="Upload file in folder" id="b3ca2c34-0a44-4fff-917d-d661b9db841c" timestamp="2023-06-26T19:53:26.266Z" tests="1" failures="0" errors="0" time="9.403">
+    <testcase name="Status code should be 200" time="9.403" classname="WebAssets"/>
+  </testsuite>
+  <testsuite name="Upload file in root" id="d574330a-9a06-49db-8c5b-3b1bb283c6e9" timestamp="2023-06-26T19:53:26.266Z" tests="1" failures="0" errors="0" time="11.382">
+    <testcase name="Status code should be 200" time="11.382" classname="WebAssets"/>
+  </testsuite>
+  <testsuite name="CreateLanguage" id="4276a9e9-f874-4285-97da-2a5a792c3ecd" timestamp="2023-06-26T19:53:26.266Z" tests="6" failures="1" errors="0" time="6.033">
+    <testcase name="Status code is 200" time="6.033" classname="WebAssets"/>
+    <testcase name="languageCode returned" time="6.033" classname="WebAssets"/>
+    <testcase name="countryCode returned" time="6.033" classname="WebAssets"/>
+    <testcase name="language returned" time="6.033" classname="WebAssets"/>
+    <testcase name="country returned" time="6.033" classname="WebAssets"/>
+    <testcase name="Expected Language info returned" time="6.033" classname="WebAssets">
+      <failure type="AssertionFailure" message="expected 'es' to deeply equal 'it'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: b929423c-87c7-4fa0-a725-852e8b439dd4.]]>
+        <![CDATA[Collection name: WebAssets.]]>
+        <![CDATA[Request name: CreateLanguage.]]>
+        <![CDATA[Test description: Expected Language info returned.]]>
+        <![CDATA[Error message: expected 'es' to deeply equal 'it'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 'es' to deeply equal 'it'
+   at Object.eval sandbox-script.js:6:4).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="WebAsset :: Look up folder" id="a9bc8bcf-ba37-44dd-b333-3165991d4724" timestamp="2023-06-26T19:53:26.266Z" tests="2" failures="0" errors="0" time="3.166">
+    <testcase name="Status code should be 200" time="3.166" classname="WebAssets"/>
+    <testcase name="folder name check" time="3.166" classname="WebAssets"/>
+  </testsuite>
+  <testsuite name="WebAsset :: Look up folder  ends in forward slash" id="cf782515-ffa2-4fb0-a2b5-10a30e8a4b3f" timestamp="2023-06-26T19:53:26.266Z" tests="2" failures="0" errors="0" time="3.028">
+    <testcase name="Status code should be 200" time="3.028" classname="WebAssets"/>
+    <testcase name="folder name check" time="3.028" classname="WebAssets"/>
+  </testsuite>
+  <testsuite name="WebAsset :: Look up file" id="ffde770b-803b-4d77-bff5-2e3f6d20f4b1" timestamp="2023-06-26T19:53:26.266Z" tests="2" failures="0" errors="0" time="3.109">
+    <testcase name="Status code should be 200" time="3.109" classname="WebAssets"/>
+    <testcase name="folder name check" time="3.109" classname="WebAssets"/>
+  </testsuite>
+  <testsuite name="WebAsset :: Look up file under root" id="1ccb8dba-45c6-444a-83a0-ef8cafb46821" timestamp="2023-06-26T19:53:26.266Z" tests="2" failures="0" errors="0" time="3.039">
+    <testcase name="Status code should be 200" time="3.039" classname="WebAssets"/>
+    <testcase name="folder name check" time="3.039" classname="WebAssets"/>
+  </testsuite>
+  <testsuite name="WebAsset :: Look up unexising asset" id="238a1b14-edf5-49e7-9e19-ceba5adad9d6" timestamp="2023-06-26T19:53:26.266Z" tests="1" failures="0" errors="0" time="3.043">
+    <testcase name="Status code should be 404" time="3.043" classname="WebAssets"/>
+  </testsuite>
+  <testsuite name="WebAsset :: Create or Replace Copy" id="586f83e3-be53-43d7-95f8-26c9fe015adc" timestamp="2023-06-26T19:53:26.266Z" tests="1" failures="1" errors="0" time="3.036">
+    <testcase name="Status code should be 200" time="3.036" classname="WebAssets">
+      <failure type="AssertionFailure" message="expected response to have status code 200 but got 500">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: b929423c-87c7-4fa0-a725-852e8b439dd4.]]>
+        <![CDATA[Collection name: WebAssets.]]>
+        <![CDATA[Request name: WebAsset :: Create or Replace Copy.]]>
+        <![CDATA[Test description: Status code should be 200.]]>
+        <![CDATA[Error message: expected response to have status code 200 but got 500.]]>
+        <![CDATA[Stacktrace: AssertionError: expected response to have status code 200 but got 500
+   at Object.eval sandbox-script.js:1:10).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="WebAsset :: Get File" id="97e126cd-53b3-4aca-9bb6-7fb24aa4f9f1" timestamp="2023-06-26T19:53:26.266Z" tests="1" failures="1" errors="0" time="3.036">
+    <testcase name="Status code should be 200" time="3.036" classname="WebAssets">
+      <failure type="AssertionFailure" message="expected response to have status code 200 but got 404">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: b929423c-87c7-4fa0-a725-852e8b439dd4.]]>
+        <![CDATA[Collection name: WebAssets.]]>
+        <![CDATA[Request name: WebAsset :: Get File.]]>
+        <![CDATA[Test description: Status code should be 200.]]>
+        <![CDATA[Error message: expected response to have status code 200 but got 404.]]>
+        <![CDATA[Stacktrace: AssertionError: expected response to have status code 200 but got 404
+   at Object.eval sandbox-script.js:1:11).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="WebAsset :: Get File in a Different Lang Expect 404" id="7b3ab39d-0f89-40dd-9072-c59588edad0e" timestamp="2023-06-26T19:53:26.266Z" tests="1" failures="0" errors="0" time="3.025">
+    <testcase name="Status code should be 404" time="3.025" classname="WebAssets"/>
+  </testsuite>
+  <testsuite name="WebAsset :: Delete File in a Different Lang Expect 404" id="8e9e3e5d-77a6-42cd-b53e-c86c7142374e" timestamp="2023-06-26T19:53:26.266Z" tests="1" failures="0" errors="0" time="3.027">
+    <testcase name="Status code should be 404" time="3.027" classname="WebAssets"/>
+  </testsuite>
+  <testsuite name="WebAsset :: Delete File Expect Success" id="628acb43-d985-46e6-94a9-058831dc5808" timestamp="2023-06-26T19:53:26.266Z" tests="1" failures="1" errors="0" time="3.026">
+    <testcase name="Status code should be 200" time="3.026" classname="WebAssets">
+      <failure type="AssertionFailure" message="expected response to have status code 200 but got 404">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: b929423c-87c7-4fa0-a725-852e8b439dd4.]]>
+        <![CDATA[Collection name: WebAssets.]]>
+        <![CDATA[Request name: WebAsset :: Delete File Expect Success.]]>
+        <![CDATA[Test description: Status code should be 200.]]>
+        <![CDATA[Error message: expected response to have status code 200 but got 404.]]>
+        <![CDATA[Stacktrace: AssertionError: expected response to have status code 200 but got 404
+   at Object.eval sandbox-script.js:1:14).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="WebAsset :: Delete Folder Expect Succes" id="2bd2d2a3-badf-4384-a1c6-95896baab978" timestamp="2023-06-26T19:53:26.266Z" tests="1" failures="1" errors="0" time="3.036">
+    <testcase name="Status code should be 200" time="3.036" classname="WebAssets">
+      <failure type="AssertionFailure" message="expected response to have status code 200 but got 404">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: b929423c-87c7-4fa0-a725-852e8b439dd4.]]>
+        <![CDATA[Collection name: WebAssets.]]>
+        <![CDATA[Request name: WebAsset :: Delete Folder Expect Succes.]]>
+        <![CDATA[Test description: Status code should be 200.]]>
+        <![CDATA[Error message: expected response to have status code 200 but got 404.]]>
+        <![CDATA[Stacktrace: AssertionError: expected response to have status code 200 but got 404
+   at Object.eval sandbox-script.js:1:15).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+</testsuites>
