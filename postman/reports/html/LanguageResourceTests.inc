@@ -1,2 +1,2 @@
 <tr><td><a href="./LanguageResourceTests.html">LanguageResourceTests.json</a></td><td style="color: #ffffff; background-color: #28a745; font-weight: bold;">PASSED</td>
-      <td>134.882</td></tr>
+      <td>136.3</td></tr>
