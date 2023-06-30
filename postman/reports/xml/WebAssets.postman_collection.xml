@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="WebAssets" tests="15" time="66.393">
+  <testsuite name="Create folder" id="eebf237d-8b49-4ab3-a595-b8888cb0e7d3" timestamp="2023-06-30T23:21:52.833Z" tests="1" failures="0" errors="0" time="7.168">
+    <testcase name="Status code should be 200" time="7.168" classname="WebAssets"/>
+  </testsuite>
+  <testsuite name="Upload file in folder" id="d02b6025-5806-4fad-81d7-93c9f707d74d" timestamp="2023-06-30T23:21:52.833Z" tests="1" failures="0" errors="0" time="9.237">
+    <testcase name="Status code should be 200" time="9.237" classname="WebAssets"/>
+  </testsuite>
+  <testsuite name="Upload file in root" id="47caa80a-998f-43b5-bab5-aa569a8d72e4" timestamp="2023-06-30T23:21:52.833Z" tests="1" failures="0" errors="0" time="10.566">
+    <testcase name="Status code should be 200" time="10.566" classname="WebAssets"/>
+  </testsuite>
+  <testsuite name="CreateLanguage" id="ac58fdea-c043-49b9-b128-ce7c2e15e94c" timestamp="2023-06-30T23:21:52.833Z" tests="1" failures="0" errors="0" time="6.020">
+    <testcase name="Status code is 200" time="6.020" classname="WebAssets"/>
+  </testsuite>
+  <testsuite name="WebAsset :: Look up folder" id="2bd3ef66-d2ba-4ae0-9996-c5a443f5cb32" timestamp="2023-06-30T23:21:52.833Z" tests="2" failures="0" errors="0" time="3.127">
+    <testcase name="Status code should be 200" time="3.127" classname="WebAssets"/>
+    <testcase name="folder name check" time="3.127" classname="WebAssets"/>
+  </testsuite>
+  <testsuite name="WebAsset :: Look up folder  ends in forward slash" id="feb84fc8-ace8-43ea-a10d-66ea1fe906a0" timestamp="2023-06-30T23:21:52.833Z" tests="2" failures="0" errors="0" time="3.016">
+    <testcase name="Status code should be 200" time="3.016" classname="WebAssets"/>
+    <testcase name="folder name check" time="3.016" classname="WebAssets"/>
+  </testsuite>
+  <testsuite name="WebAsset :: Look up file" id="b51cf641-18b2-48db-8dc0-34cdb268b97b" timestamp="2023-06-30T23:21:52.833Z" tests="2" failures="0" errors="0" time="3.089">
+    <testcase name="Status code should be 200" time="3.089" classname="WebAssets"/>
+    <testcase name="folder name check" time="3.089" classname="WebAssets"/>
+  </testsuite>
+  <testsuite name="WebAsset :: Look up file under root" id="73e1de7a-fbfa-40e8-9c10-0dfd6d29dcd3" timestamp="2023-06-30T23:21:52.833Z" tests="2" failures="0" errors="0" time="3.040">
+    <testcase name="Status code should be 200" time="3.040" classname="WebAssets"/>
+    <testcase name="folder name check" time="3.040" classname="WebAssets"/>
+  </testsuite>
+  <testsuite name="WebAsset :: Look up unexising asset" id="9bb5207d-e2e1-4f6e-9f44-e53830ca3694" timestamp="2023-06-30T23:21:52.833Z" tests="1" failures="0" errors="0" time="3.026">
+    <testcase name="Status code should be 404" time="3.026" classname="WebAssets"/>
+  </testsuite>
+  <testsuite name="WebAsset :: Create or Replace" id="df8d6f7b-62b2-43f0-8acf-0cf24c6d2590" timestamp="2023-06-30T23:21:52.833Z" tests="1" failures="1" errors="0" time="3.034">
+    <testcase name="Status code should be 200" time="3.034" classname="WebAssets">
+      <failure type="AssertionFailure" message="expected response to have status code 200 but got 405">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: d1e460bd-5b8f-40b6-9bfd-20a784629378.]]>
+        <![CDATA[Collection name: WebAssets.]]>
+        <![CDATA[Request name: WebAsset :: Create or Replace.]]>
+        <![CDATA[Test description: Status code should be 200.]]>
+        <![CDATA[Error message: expected response to have status code 200 but got 405.]]>
+        <![CDATA[Stacktrace: AssertionError: expected response to have status code 200 but got 405
+   at Object.eval sandbox-script.js:1:10).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="WebAsset :: Get File" id="c715ea28-4915-4153-9947-16af88b07c4b" timestamp="2023-06-30T23:21:52.833Z" tests="1" failures="1" errors="0" time="3.012">
+    <testcase name="Status code should be 200" time="3.012" classname="WebAssets">
+      <failure type="AssertionFailure" message="expected response to have status code 200 but got 404">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: d1e460bd-5b8f-40b6-9bfd-20a784629378.]]>
+        <![CDATA[Collection name: WebAssets.]]>
+        <![CDATA[Request name: WebAsset :: Get File.]]>
+        <![CDATA[Test description: Status code should be 200.]]>
+        <![CDATA[Error message: expected response to have status code 200 but got 404.]]>
+        <![CDATA[Stacktrace: AssertionError: expected response to have status code 200 but got 404
+   at Object.eval sandbox-script.js:1:11).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="WebAsset :: Get File in a Different Lang Expect 404" id="d7fd9256-fccc-4f8d-b821-a729bb1ecdf4" timestamp="2023-06-30T23:21:52.833Z" tests="1" failures="0" errors="0" time="3.013">
+    <testcase name="Status code should be 404" time="3.013" classname="WebAssets"/>
+  </testsuite>
+  <testsuite name="WebAsset :: Delete File Expect Success" id="6b642576-64f4-4a05-8676-54912e78af50" timestamp="2023-06-30T23:21:52.833Z" tests="1" failures="1" errors="0" time="3.014">
+    <testcase name="Status code should be 200" time="3.014" classname="WebAssets">
+      <failure type="AssertionFailure" message="expected response to have status code 200 but got 404">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: d1e460bd-5b8f-40b6-9bfd-20a784629378.]]>
+        <![CDATA[Collection name: WebAssets.]]>
+        <![CDATA[Request name: WebAsset :: Delete File Expect Success.]]>
+        <![CDATA[Test description: Status code should be 200.]]>
+        <![CDATA[Error message: expected response to have status code 200 but got 404.]]>
+        <![CDATA[Stacktrace: AssertionError: expected response to have status code 200 but got 404
+   at Object.eval sandbox-script.js:1:13).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="WebAsset :: Delete Folder Expect Success" id="0abd3e5e-03e2-4533-8d21-a34199d8f7fb" timestamp="2023-06-30T23:21:52.833Z" tests="1" failures="1" errors="0" time="3.013">
+    <testcase name="Status code should be 200" time="3.013" classname="WebAssets">
+      <failure type="AssertionFailure" message="expected response to have status code 200 but got 404">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: d1e460bd-5b8f-40b6-9bfd-20a784629378.]]>
+        <![CDATA[Collection name: WebAssets.]]>
+        <![CDATA[Request name: WebAsset :: Delete Folder Expect Success.]]>
+        <![CDATA[Test description: Status code should be 200.]]>
+        <![CDATA[Error message: expected response to have status code 200 but got 404.]]>
+        <![CDATA[Stacktrace: AssertionError: expected response to have status code 200 but got 404
+   at Object.eval sandbox-script.js:1:14).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="WebAsset :: Archive File Expect Success" id="f33c3564-9393-4b31-b416-4cb45dc0d72b" timestamp="2023-06-30T23:21:52.833Z" tests="1" failures="1" errors="0" time="3.018">
+    <testcase name="Status code should be 200" time="3.018" classname="WebAssets">
+      <failure type="AssertionFailure" message="expected response to have status code 200 but got 404">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: d1e460bd-5b8f-40b6-9bfd-20a784629378.]]>
+        <![CDATA[Collection name: WebAssets.]]>
+        <![CDATA[Request name: WebAsset :: Archive File Expect Success.]]>
+        <![CDATA[Test description: Status code should be 200.]]>
+        <![CDATA[Error message: expected response to have status code 200 but got 404.]]>
+        <![CDATA[Stacktrace: AssertionError: expected response to have status code 200 but got 404
+   at Object.eval sandbox-script.js:1:15).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+</testsuites>
