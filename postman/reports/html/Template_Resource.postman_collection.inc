@@ -1,2 +1,2 @@
 <tr><td><a href="./Template_Resource.postman_collection.html">Template Resource.postman_collection.json</a></td><td style="color: #ffffff; background-color: #dc3545; font-weight: bold;">FAILED</td>
-      <td>672.595</td></tr>
+      <td>635.934</td></tr>
