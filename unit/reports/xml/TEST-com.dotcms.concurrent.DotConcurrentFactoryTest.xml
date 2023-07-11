@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.dotcms.concurrent.DotConcurrentFactoryTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2023-07-11T15:35:29" hostname="fv-az564-313" time="57.818">
+<testsuite name="com.dotcms.concurrent.DotConcurrentFactoryTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2023-07-11T17:20:01" hostname="fv-az216-508" time="56.902">
   <properties/>
-  <testcase name="testDefaultOne_Submitter_Config_shutdown_keep_config" classname="com.dotcms.concurrent.DotConcurrentFactoryTest" time="15.309"/>
-  <testcase name="testDefaultOne_Submitter_Config" classname="com.dotcms.concurrent.DotConcurrentFactoryTest" time="10.234"/>
+  <testcase name="testDefaultOne_Submitter_Config_shutdown_keep_config" classname="com.dotcms.concurrent.DotConcurrentFactoryTest" time="15.295"/>
+  <testcase name="testDefaultOne_Submitter_Config" classname="com.dotcms.concurrent.DotConcurrentFactoryTest" time="10.228"/>
   <testcase name="test_delayed_queue" classname="com.dotcms.concurrent.DotConcurrentFactoryTest" time="2.001"/>
-  <testcase name="testDefaultOne" classname="com.dotcms.concurrent.DotConcurrentFactoryTest" time="3.216"/>
-  <testcase name="test_Conditional_Submitter" classname="com.dotcms.concurrent.DotConcurrentFactoryTest" time="16.016"/>
-  <testcase name="testDefaultOne_Single_Submitter_Config" classname="com.dotcms.concurrent.DotConcurrentFactoryTest" time="10.01"/>
-  <testcase name="testSubmit_Single_Submitter_Config" classname="com.dotcms.concurrent.DotConcurrentFactoryTest" time="1.032"/>
+  <testcase name="testDefaultOne" classname="com.dotcms.concurrent.DotConcurrentFactoryTest" time="2.314"/>
+  <testcase name="test_Conditional_Submitter" classname="com.dotcms.concurrent.DotConcurrentFactoryTest" time="16.014"/>
+  <testcase name="testDefaultOne_Single_Submitter_Config" classname="com.dotcms.concurrent.DotConcurrentFactoryTest" time="10.009"/>
+  <testcase name="testSubmit_Single_Submitter_Config" classname="com.dotcms.concurrent.DotConcurrentFactoryTest" time="1.041"/>
   <system-out><![CDATA[DotConcurrentImpl{threadPoolExecutor=name = testsubmitter {com.dotcms.concurrent.DotConcurrentFactory$DotThreadPoolExecutor@6ba5a2a2[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0]}
 MaximumPoolSize=4
 keepAliveMillis=60000
@@ -18,6 +18,7 @@ MaximumPoolSize=4
 keepAliveMillis=60000
 queue=[]
 shutdown=false}
+Thread0 is running
 DotConcurrentImpl{threadPoolExecutor=name = testsubmitter {com.dotcms.concurrent.DotConcurrentFactory$DotThreadPoolExecutor@6ba5a2a2[Running, pool size = 2, active threads = 2, queued tasks = 8, completed tasks = 0]}
 MaximumPoolSize=4
 keepAliveMillis=60000
@@ -35,16 +36,15 @@ queue=[com.dotcms.concurrent.DotConcurrentFactoryTest$PrintTask@163f489e, com.do
 shutdown=false}
 Active Threads : 2
 Thread1 is running
+Active Threads : 2
+Active Threads : 2
+Active Threads : 2
+Active Threads : 2
 Thread0 is running
-Active Threads : 2
-Active Threads : 2
-Active Threads : 2
-Active Threads : 2
-Active Threads : 2
+Thread2 is running
 Thread1 is running
-Thread2 is running
-Thread0 is running
 Thread3 is running
+Active Threads : 2
 Active Threads : 2
 Active Threads : 2
 Active Threads : 2
@@ -140,8 +140,8 @@ Active Threads : 2
 Active Threads : 2
 Active Threads : 2
 Thread22 is running
+Thread24 is running
 Thread23 is running
-Thread24 is running
 Thread25 is running
 Active Threads : 2
 Active Threads : 2
@@ -149,35 +149,35 @@ Active Threads : 2
 Active Threads : 2
 Active Threads : 2
 Thread24 is running
+Thread26 is running
 Thread25 is running
-Thread26 is running
 Thread27 is running
 Active Threads : 2
 Active Threads : 2
 Active Threads : 2
 Active Threads : 2
 Active Threads : 2
-Thread27 is running
 Thread26 is running
-Thread28 is running
+Thread27 is running
 Thread29 is running
-Active Threads : 2
-Active Threads : 2
-Active Threads : 2
-Active Threads : 2
-Active Threads : 2
 Thread28 is running
+Active Threads : 2
+Active Threads : 2
+Active Threads : 2
+Active Threads : 2
+Active Threads : 2
 Thread29 is running
-Thread31 is running
 Thread30 is running
-Active Threads : 2
-Active Threads : 2
-Active Threads : 2
-Active Threads : 2
-Active Threads : 2
+Thread28 is running
 Thread31 is running
+Active Threads : 2
+Active Threads : 2
+Active Threads : 2
+Active Threads : 2
+Active Threads : 2
+Thread30 is running
 Thread32 is running
-Thread30 is running
+Thread31 is running
 Thread33 is running
 Active Threads : 2
 Active Threads : 2
@@ -194,8 +194,8 @@ Active Threads : 2
 Active Threads : 2
 Active Threads : 2
 Thread34 is running
+Thread36 is running
 Thread35 is running
-Thread36 is running
 Thread37 is running
 Active Threads : 2
 Active Threads : 2
@@ -203,8 +203,8 @@ Active Threads : 2
 Active Threads : 2
 Active Threads : 2
 Thread36 is running
-Thread37 is running
 Thread38 is running
+Thread37 is running
 Thread39 is running
 Active Threads : 2
 Active Threads : 2
@@ -320,7 +320,6 @@ MaximumPoolSize=4
 keepAliveMillis=60000
 queue=[]
 shutdown=false}
-Thread0 is running
 DotConcurrentImpl{threadPoolExecutor=name = testsubmitter {com.dotcms.concurrent.DotConcurrentFactory$DotThreadPoolExecutor@6d20cacc[Running, pool size = 2, active threads = 2, queued tasks = 8, completed tasks = 0]}
 MaximumPoolSize=4
 keepAliveMillis=60000
@@ -338,13 +337,14 @@ queue=[com.dotcms.concurrent.DotConcurrentFactoryTest$PrintTask@3fc5b01e, com.do
 shutdown=false}
 Active Threads : 2
 Thread1 is running
-Active Threads : 2
-Active Threads : 2
-Active Threads : 2
-Active Threads : 2
 Thread0 is running
-Thread2 is running
+Active Threads : 2
+Active Threads : 2
+Active Threads : 2
+Active Threads : 2
 Thread1 is running
+Thread2 is running
+Thread0 is running
 Thread3 is running
 Active Threads : 2
 Active Threads : 2
@@ -406,8 +406,8 @@ Active Threads : 2
 Active Threads : 2
 Active Threads : 2
 Thread14 is running
+Thread16 is running
 Thread15 is running
-Thread16 is running
 Thread17 is running
 Active Threads : 2
 Active Threads : 2
@@ -423,45 +423,45 @@ Active Threads : 2
 Active Threads : 2
 Active Threads : 2
 Active Threads : 2
-Thread19 is running
 Thread18 is running
 Thread20 is running
+Thread19 is running
 Thread21 is running
 Active Threads : 2
 Active Threads : 2
 Active Threads : 2
 Active Threads : 2
 Active Threads : 2
-Thread21 is running
 Thread20 is running
-Thread23 is running
 Thread22 is running
-Active Threads : 2
-Active Threads : 2
-Active Threads : 2
-Active Threads : 2
-Active Threads : 2
+Thread21 is running
 Thread23 is running
+Active Threads : 2
+Active Threads : 2
+Active Threads : 2
+Active Threads : 2
+Active Threads : 2
+Thread22 is running
 Thread24 is running
-Thread22 is running
+Thread23 is running
 Thread25 is running
 Active Threads : 2
 Active Threads : 2
 Active Threads : 2
 Active Threads : 2
 Active Threads : 2
-Thread25 is running
 Thread24 is running
 Thread26 is running
+Thread25 is running
 Thread27 is running
 Active Threads : 2
 Active Threads : 2
 Active Threads : 2
 Active Threads : 2
 Active Threads : 2
+Thread26 is running
 Thread27 is running
 Thread28 is running
-Thread26 is running
 Thread29 is running
 Active Threads : 2
 Active Threads : 2
@@ -469,8 +469,8 @@ Active Threads : 2
 Active Threads : 2
 Active Threads : 2
 Thread28 is running
-Thread30 is running
 Thread29 is running
+Thread30 is running
 Thread31 is running
 Active Threads : 2
 Active Threads : 2
@@ -478,8 +478,8 @@ Active Threads : 2
 Active Threads : 2
 Active Threads : 2
 Thread30 is running
-Thread31 is running
 Thread32 is running
+Thread31 is running
 Thread33 is running
 Active Threads : 2
 Active Threads : 2
@@ -496,8 +496,8 @@ Active Threads : 2
 Active Threads : 2
 Active Threads : 2
 Thread34 is running
+Thread36 is running
 Thread35 is running
-Thread36 is running
 Thread37 is running
 Active Threads : 2
 Active Threads : 2
@@ -505,8 +505,8 @@ Active Threads : 2
 Active Threads : 2
 Active Threads : 2
 Thread36 is running
-Thread37 is running
 Thread38 is running
+Thread37 is running
 Thread39 is running
 Active Threads : 2
 Active Threads : 2
@@ -525,12 +525,12 @@ Active Threads : 0
 Thread0 is running
 Thread1 is running
 Thread0 is running
+Thread2 is running
 Thread1 is running
+Thread3 is running
 Thread2 is running
-Thread3 is running
-Thread3 is running
 Thread4 is running
-Thread2 is running
+Thread3 is running
 Thread5 is running
 Thread4 is running
 Thread6 is running
@@ -554,16 +554,14 @@ Thread0 is running
 Thread1 is running
 Thread2 is running
 Thread3 is running
-Thread4 is running
 Thread5 is running
 Thread6 is running
-Thread7 is running
+Thread4 is running
 DotConcurrentImpl{threadPoolExecutor=name = dotSystemPool {com.dotcms.concurrent.DotConcurrentFactory$DotThreadPoolExecutor@75a59520[Running, pool size = 10, active threads = 10, queued tasks = 0, completed tasks = 0]}
 MaximumPoolSize=50
 keepAliveMillis=60000
 queue=[]
 shutdown=false}
-Thread9 is running
 DotConcurrentImpl{threadPoolExecutor=name = dotSystemPool {com.dotcms.concurrent.DotConcurrentFactory$DotThreadPoolExecutor@75a59520[Running, pool size = 10, active threads = 10, queued tasks = 10, completed tasks = 0]}
 MaximumPoolSize=50
 keepAliveMillis=60000
@@ -575,6 +573,8 @@ keepAliveMillis=60000
 queue=[com.dotcms.concurrent.DotConcurrentFactoryTest$PrintTask@58edf169, com.dotcms.concurrent.DotConcurrentFactoryTest$PrintTask@3862694e, com.dotcms.concurrent.DotConcurrentFactoryTest$PrintTask@38543689, com.dotcms.concurrent.DotConcurrentFactoryTest$PrintTask@5be778cd, com.dotcms.concurrent.DotConcurrentFactoryTest$PrintTask@6cb6bc61, com.dotcms.concurrent.DotConcurrentFactoryTest$PrintTask@473590a0, com.dotcms.concurrent.DotConcurrentFactoryTest$PrintTask@5ecc06b1, com.dotcms.concurrent.DotConcurrentFactoryTest$PrintTask@3e0d3cb5, com.dotcms.concurrent.DotConcurrentFactoryTest$PrintTask@6701caa1, com.dotcms.concurrent.DotConcurrentFactoryTest$PrintTask@c5af671, com.dotcms.concurrent.DotConcurrentFactoryTest$PrintTask@329d80c5, com.dotcms.concurrent.DotConcurrentFactoryTest$PrintTask@65a2fab7, com.dotcms.concurrent.DotConcurrentFactoryTest$PrintTask@c1f7060, com.dotcms.concurrent.DotConcurrentFactoryTest$PrintTask@572de6ec, com.dotcms.concurrent.DotConcurrentFactoryTest$PrintTask@968cf64, com.dotcms.concurrent.DotConcurrentFactoryTest$PrintTask@7bedfbbc, com.dotcms.concurrent.DotConcurrentFactoryTest$PrintTask@c8608d1, com.dotcms.concurrent.DotConcurrentFactoryTest$PrintTask@3424952b, com.dotcms.concurrent.DotConcurrentFactoryTest$PrintTask@7b787f24, com.dotcms.concurrent.DotConcurrentFactoryTest$PrintTask@6fdc4bec]
 shutdown=false}
 Active Threads : 10
+Thread9 is running
+Thread7 is running
 Thread8 is running
 Active Threads : 10
 Active Threads : 10
@@ -592,17 +592,17 @@ Thread2 is running
 Thread12 is running
 Thread3 is running
 Thread13 is running
-Thread4 is running
-Thread14 is running
 Thread5 is running
+Thread14 is running
+Thread4 is running
 Thread15 is running
 Thread6 is running
 Thread16 is running
-Thread7 is running
-Thread17 is running
-Thread9 is running
-Thread18 is running
 Active Threads : 10
+Thread9 is running
+Thread17 is running
+Thread7 is running
+Thread18 is running
 Thread8 is running
 Thread19 is running
 Active Threads : 10
@@ -627,19 +627,19 @@ Thread15 is running
 Thread25 is running
 Thread16 is running
 Thread26 is running
+Active Threads : 10
 Thread17 is running
 Thread27 is running
-Thread18 is running
-Thread28 is running
 Thread19 is running
+Thread28 is running
+Thread18 is running
 Thread29 is running
 Active Threads : 10
 Active Threads : 10
 Active Threads : 10
-Active Threads : 10
 Thread12 is running
-Thread14 is running
 Thread13 is running
+Thread14 is running
 Thread15 is running
 Active Threads : 10
 Thread20 is running
@@ -656,6 +656,7 @@ Thread25 is running
 Thread35 is running
 Thread26 is running
 Thread36 is running
+Active Threads : 10
 Thread27 is running
 Thread37 is running
 Thread28 is running
@@ -665,9 +666,8 @@ Thread39 is running
 Active Threads : 10
 Active Threads : 10
 Active Threads : 10
-Active Threads : 10
-Thread14 is running
 Thread15 is running
+Thread14 is running
 Thread16 is running
 Thread17 is running
 Active Threads : 10
@@ -678,6 +678,7 @@ Thread33 is running
 Thread34 is running
 Thread35 is running
 Thread36 is running
+Active Threads : 3
 Thread37 is running
 Thread38 is running
 Thread39 is running
@@ -688,86 +689,76 @@ keepAliveMillis=60000
 queue=[]
 shutdown=false}
 Thread0 is running
-Active Threads : 1
 Thread1 is running
 Thread2 is running
 Thread3 is running
 Thread4 is running
 Thread5 is running
 Thread6 is running
+Active Threads : 0
 Thread7 is running
 Thread8 is running
 Thread9 is running
-Active Threads : 10
-Active Threads : 10
+Supplier1, a 1689096031481
+Supplier1, a 1689096031481
+Supplier1, a 1689096031485
+Supplier1, a 1689096031485
+Supplier1, a 1689096031481
+Supplier1, a 1689096031483
 Thread16 is running
 Thread17 is running
 Thread18 is running
 Thread19 is running
-Active Threads : 10
-Active Threads : 10
 Thread0 is running
 Thread10 is running
-Thread3 is running
-Thread11 is running
-Thread1 is running
 Thread2 is running
+Thread11 is running
+Thread3 is running
 Thread12 is running
+Thread1 is running
 Thread13 is running
-Thread5 is running
 Thread4 is running
+Thread5 is running
 Thread14 is running
 Thread15 is running
 Thread6 is running
-Thread7 is running
 Thread16 is running
+Thread7 is running
 Thread17 is running
 Thread8 is running
 Thread18 is running
 Thread9 is running
 Thread19 is running
-Active Threads : 10
-Active Threads : 10
-Active Threads : 10
 Thread18 is running
 Thread19 is running
-Active Threads : 10
-Active Threads : 10
-Thread10 is running
 Thread12 is running
+Thread10 is running
+Thread11 is running
 Thread13 is running
 Thread15 is running
-Thread14 is running
 Thread16 is running
-Thread11 is running
+Thread14 is running
 Thread17 is running
 Thread18 is running
 Thread19 is running
-Active Threads : 0
-Supplier1, a 1689089759778
-Supplier1, a 1689089759783
-Supplier1, a 1689089759784
-Supplier1, a 1689089759784
-Supplier1, a 1689089759784
-Supplier1, a 1689089759785
-Supplier1, b 1689089767779
-Supplier1, b 1689089767783
-Supplier1, b 1689089767784
-Supplier1, b 1689089767784
-Supplier1, b 1689089767785
-Supplier1, b 1689089767785
-Supplier1, a 1689089767786
-Supplier1, a 1689089767786
-Supplier1, a 1689089767786
-Supplier1, a 1689089767786
-Supplier1, a 1689089767786
-Supplier1, a 1689089767786
-Supplier1, b 1689089775786
-Supplier1, b 1689089775786
-Supplier1, b 1689089775786
-Supplier1, b 1689089775786
-Supplier1, b 1689089775786
-Supplier1, b 1689089775786
+Supplier1, b 1689096039485
+Supplier1, b 1689096039485
+Supplier1, b 1689096039485
+Supplier1, b 1689096039486
+Supplier1, b 1689096039487
+Supplier1, b 1689096039488
+Supplier1, a 1689096039489
+Supplier1, a 1689096039489
+Supplier1, a 1689096039490
+Supplier1, a 1689096039490
+Supplier1, a 1689096039490
+Supplier1, a 1689096039490
+Supplier1, b 1689096047489
+Supplier1, b 1689096047489
+Supplier1, b 1689096047490
+Supplier1, b 1689096047490
+Supplier1, b 1689096047490
+Supplier1, b 1689096047490
 com.dotcms.concurrent.DotConcurrentFactory$DotSingleSubmitterImpl@57031f26
 Thread0 is running
 Thread0 is running
