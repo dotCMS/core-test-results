@@ -1,0 +1,881 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Workflow Resource Tests [/api/v1/workflows]" tests="237" time="1211.882">
+  <testsuite name="Save Scheme [POST /api/v1/workflow/schemes] / invalidateSession" id="c33a9da0-15da-4e2c-921f-511cbb94d0dc" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="16.855">
+    <testcase name="Status code is 200" time="16.855" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="Save Scheme [POST /api/v1/workflow/schemes] / UserCredentialsValidation" id="360d5d00-331f-4ac9-8615-fa746e87a745" timestamp="2023-07-17T18:32:09.737Z" tests="4" failures="0" errors="0" time="0.461">
+    <testcase name="Status code is 401, You need credentials" time="0.461" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="0.461" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="Save Scheme [POST /api/v1/workflow/schemes] / GivenValidScheme_ShouldSave" id="65d2df32-0fb4-4b7e-acb7-ca01f25d0140" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="7.811">
+    <testcase name="Status code is 200 " time="7.811" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Response includes name" time="7.811" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="Save Scheme [POST /api/v1/workflow/schemes] / GivenNewSchemeWithExistingName_ShouldSave" id="eea46253-2815-4f2a-a12a-3b4269be948c" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="6.093">
+    <testcase name="Status code is 200, Scheme already exist" time="6.093" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="6.093" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="Save Scheme [POST /api/v1/workflow/schemes] / invalidateSession" id="1de16392-e5dc-461c-b145-7643d55a83aa" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="3.534">
+    <testcase name="Status code is 200" time="3.534" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="Save Scheme [POST /api/v1/workflow/schemes] / GivenEmptyBody_ShouldRespondBadRequest" id="e7796019-473d-4198-8dd3-9f8fb34874e7" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="4.211">
+    <testcase name="Status code is 400 " time="4.211" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="Save Step [POST /api/v1/workflow/steps] / invalidateSession" id="7bef33b3-4a06-479b-8257-9bdbe02ac1a0" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="3.474">
+    <testcase name="Status code is 200" time="3.474" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="Save Step [POST /api/v1/workflow/steps] / UserCredentialValidation" id="329774f6-a6f4-4a04-adbe-fde48d9af079" timestamp="2023-07-17T18:32:09.737Z" tests="4" failures="0" errors="0" time="0.051">
+    <testcase name="Status code is 401, You need credentials" time="0.051" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="0.051" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="Save Step [POST /api/v1/workflow/steps] / GivenValidStep_shouldSave" id="dee9c1fe-f4c5-4f53-b00b-ff20dae8345b" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="7.004">
+    <testcase name="Status code is 200 " time="7.004" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="7.004" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="Save Step [POST /api/v1/workflow/steps] / GivenInvalidSchemeId_ShouldRespond404" id="9dc68dbc-bfac-4728-80fa-342e679108ea" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="3.075">
+    <testcase name="Status code is 404" time="3.075" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="3.075" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="Save Step [POST /api/v1/workflow/steps] / SupportShortly" id="47fd5f16-a24b-4a76-aa80-6357bac17d55" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="6.147">
+    <testcase name="Status code is 200 " time="6.147" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="6.147" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="Save Step [POST /api/v1/workflow/steps] / GivenEmptyBody_ShouldRespondBadRequest" id="848512d0-5e4d-4985-8b9b-d78300cdf83c" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="3.053">
+    <testcase name="Status code is 400 " time="3.053" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="SaveAction [POST /api/v1/workflow/actions] / invalidateSession" id="3f713135-d2d5-45b6-817c-33985ef9e8c4" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="3.494">
+    <testcase name="Status code is 200" time="3.494" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="SaveAction [POST /api/v1/workflow/actions] / UserCredentialsValidation" id="ec6eb86e-79a3-4c75-8c25-b3d8272970ec" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="0.062">
+    <testcase name="Status code is 401, You need credentials" time="0.062" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="0.062" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="SaveAction [POST /api/v1/workflow/actions] / ValidAction_shouldSave" id="c04bba43-f7be-428e-b0ac-712570bf1b74" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="10.102">
+    <testcase name="Status code is 200 " time="10.102" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="10.102" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="SaveAction [POST /api/v1/workflow/actions] / InvalidStepId_ShouldRespond404" id="e4486774-b0a7-4505-8792-0725cba979e8" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="3.177">
+    <testcase name="Status code is 404" time="3.177" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="3.177" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="SaveAction [POST /api/v1/workflow/actions] / InvalidSchemeId_ShouldRespond404" id="84c31fa5-93f9-4b03-af48-0e68c0332219" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="3.074">
+    <testcase name="Status code is 404" time="3.074" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="3.074" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="SaveAction [POST /api/v1/workflow/actions] / ValidActionWithShortyStepIdAndShortySchemeId_ShouldSave" id="181430d5-cd06-4bb8-aca4-09c36221f9f7" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="9.078">
+    <testcase name="Status code is 200 " time="9.078" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="9.078" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="SaveAction [POST /api/v1/workflow/actions] / EmptyBody_ShouldRespondBadRequest" id="500c5cc1-0290-4248-b5c3-9018e81ba1c1" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="3.037">
+    <testcase name="Status code is 400 " time="3.037" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="findSchemas [GET /api/v1/workflow/schemes] / invalidateSession" id="de833c13-edee-484b-acc2-dfeb36698acb" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="3.484">
+    <testcase name="Status code is 200" time="3.484" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="findSchemas [GET /api/v1/workflow/schemes] / UserCredentialsValidation" id="b4d0aa3b-f5cd-414a-b27f-97c0faebbd16" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="0.042">
+    <testcase name="Status code is 401, You need credentials" time="0.042" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="0.042" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="findSchemas [GET /api/v1/workflow/schemes] / SuccessListOfSchemes" id="1998a5b9-9a33-4f77-ad91-674e99a8d1cd" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="4.085">
+    <testcase name="Status code is 200" time="4.085" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Includes exiting Scheme" time="4.085" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="findAllSchemesAndSchemesByContentType / invalidateSession" id="df1b4d18-e9e0-4156-8674-07d6df60fde5" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="3.451">
+    <testcase name="Status code is 200" time="3.451" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="findAllSchemesAndSchemesByContentType / UserCredentialsValidation" id="3b7f8fc1-b594-4a81-be4f-9fce2f8b7805" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="0.041">
+    <testcase name="Status code is 401, You need credentials" time="0.041" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="0.041" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="findAllSchemesAndSchemesByContentType / Validate read permissions to the content type" id="47e634bd-5424-4e80-813b-59b76f4ee4f6" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="4.036">
+    <testcase name="Status code is 200, Content types permissions" time="4.036" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="4.036" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="findAllSchemesAndSchemesByContentType / Invalid cotnet type ID" id="e1cfab3d-9bda-42c3-a849-8dffe4caf917" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="3.070">
+    <testcase name="Status code is 404, Content types not found" time="3.070" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="3.070" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="findAllSchemesAndSchemesByContentType / SucessListOfSchemes" id="f5f0712d-3fb3-46c0-9329-4f10b7f71356" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="3.036">
+    <testcase name="Status code is 200" time="3.036" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Includes system workflow" time="3.036" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="findStepsByScheme [GET /api/v1/workflow/schemes/{schemeId}/steps] / invalidateSession" id="4c303e13-df84-4925-9f4a-db8040af76de" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="3.481">
+    <testcase name="Status code is 200" time="3.481" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="findStepsByScheme [GET /api/v1/workflow/schemes/{schemeId}/steps] / UserCredentialValidation" id="882f4768-a564-4f14-8468-0ee2322938dd" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="0.018">
+    <testcase name="Status code is 401, You need credentials" time="0.018" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="0.018" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="findStepsByScheme [GET /api/v1/workflow/schemes/{schemeId}/steps] / SuccessListOfSteps" id="f7002a6c-7838-4bfe-bc12-bc963e78b10a" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="4.058">
+    <testcase name="Status code is 200" time="4.058" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Includes existing step" time="4.058" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="findStepsByScheme [GET /api/v1/workflow/schemes/{schemeId}/steps] / InvalidSchemeId" id="0a1f6f0a-1114-4c1c-bd06-f07b2bc3aae7" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="3.028">
+    <testcase name="Status code is 404" time="3.028" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid Response" time="3.028" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="findStepsByScheme [GET /api/v1/workflow/schemes/{schemeId}/steps] / SupportShortly" id="1ea7715e-5eb9-40ed-95b2-e3a469ba7f49" timestamp="2023-07-17T18:32:09.737Z" tests="5" failures="0" errors="0" time="3.061">
+    <testcase name="Status code is 200" time="3.061" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Includes `New` step" time="3.061" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Includes Draft step" time="3.061" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Includes Published step" time="3.061" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Includes Archived step" time="3.061" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="findAvailableActions [GET }/api/v1/workflow/contentlet/{contentId}/actions] / invalidateSession" id="5f680ea6-dfe3-45eb-871a-0e3e245bb9f3" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="3.442">
+    <testcase name="Status code is 200" time="3.442" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="findAvailableActions [GET }/api/v1/workflow/contentlet/{contentId}/actions] / UserCredentialValidations" id="877cd989-0e7e-4ce4-950a-ddc7e457cb29" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="0.062">
+    <testcase name="Status code is 401, You need credentials" time="0.062" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="0.062" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="findAvailableActions [GET }/api/v1/workflow/contentlet/{contentId}/actions] / NonExistingInode" id="9d343bc8-cdf5-49b4-bdb1-130277f0a527" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="4.110">
+    <testcase name="Valid response" time="4.110" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Status code is 404" time="4.110" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="findAvailableActions [GET }/api/v1/workflow/contentlet/{contentId}/actions] / SuccessRequest" id="6c05a4d9-729a-4205-bf90-9fe54770ad8c" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="10.385">
+    <testcase name="Status code is 200 " time="10.385" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="10.385" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="findAvailableActions [GET }/api/v1/workflow/contentlet/{contentId}/actions] / Valid Inode" id="9e34c430-de8c-42c1-ba2f-838a9296064d" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="3.113">
+    <testcase name="Status code is 200" time="3.113" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="3.113" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="findAvailableActions [GET }/api/v1/workflow/contentlet/{contentId}/actions] / ShortlyIdValidation" id="372378b8-04c2-4d74-89b8-ea9b7acc1702" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="3.028">
+    <testcase name="Status code is 200" time="3.028" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="3.028" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="findAction [GET /api/v1/workflow/actions/{actionId}] / invalidateSession" id="64e9342d-fec5-46c5-b924-aea4af29e5eb" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="3.467">
+    <testcase name="Status code is 200" time="3.467" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="findAction [GET /api/v1/workflow/actions/{actionId}] / UserCredentialsValidation" id="04981a0f-41a3-4c7a-8df9-27f8e3dd1d32" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="0.013">
+    <testcase name="Status code is 401, You need credentials" time="0.013" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="0.013" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="findAction [GET /api/v1/workflow/actions/{actionId}] / NonExistingActionId" id="3aeaf4e7-67f7-45da-b543-868b2950f6cb" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="4.048">
+    <testcase name="Status code is 404, The action does not exist" time="4.048" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="4.048" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="findAction [GET /api/v1/workflow/actions/{actionId}] / findAction_GivenExistingActionId_ShouldReturnAction" id="78c7ec90-8774-4b5b-b14a-909f494f0f1c" timestamp="2023-07-17T18:32:09.737Z" tests="4" failures="0" errors="0" time="3.040">
+    <testcase name="Status code is 200" time="3.040" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Includes Action Id" time="3.040" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Includes Action name" time="3.040" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Includes Scheme Id" time="3.040" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="findAction [GET /api/v1/workflow/actions/{actionId}] / ShortlyIdValidation" id="df13d709-477d-4399-9cfa-940daa74f390" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="3.042">
+    <testcase name="Status code is 200" time="3.042" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="3.042" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="findActionByStep [GET /api/v1/workflow/steps/{{stepId}}/actions/{{actionId}}] / invalidateSession" id="f60d372a-f3db-48bf-9a04-8078f2250381" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="3.441">
+    <testcase name="Status code is 200" time="3.441" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="findActionByStep [GET /api/v1/workflow/steps/{{stepId}}/actions/{{actionId}}] / UserCredentialsValidation" id="82fe0ae4-024f-4d75-8b10-43dd47a727f8" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="0.018">
+    <testcase name="Status code is 401, You need credentials" time="0.018" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="0.018" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="findActionByStep [GET /api/v1/workflow/steps/{{stepId}}/actions/{{actionId}}] / InvalidStepId_ShouldReturn404" id="2b375489-4a18-4d30-a73e-7c9ae6ba3873" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="4.002">
+    <testcase name="Status code is 404, The step does not exist" time="4.002" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="4.002" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="findActionByStep [GET /api/v1/workflow/steps/{{stepId}}/actions/{{actionId}}] / ValidActionId" id="7aa44af6-614e-4b4a-97fc-ed1e2145c268" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="3.027">
+    <testcase name="Status code is 404, The action does not exist" time="3.027" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="3.027" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="findActionByStep [GET /api/v1/workflow/steps/{{stepId}}/actions/{{actionId}}] / ValidStepIdAndActionId_ShouldReturnAction" id="52a73e7f-3a5e-4925-86b8-8b011d0f3bf3" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="3.046">
+    <testcase name="Status code is 200" time="3.046" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="3.046" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="findActionByStep [GET /api/v1/workflow/steps/{{stepId}}/actions/{{actionId}}] / ShortlyIdvalidation" id="ae7f28a5-d5f2-42ca-b152-d7a270ab7870" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="3.037">
+    <testcase name="Status code is 200" time="3.037" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="3.037" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="findActionsByStep (all the actions) / invalidateSession" id="387073e5-ff19-47d7-9b46-5253b76bca10" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="3.438">
+    <testcase name="Status code is 200" time="3.438" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="findActionsByStep (all the actions) / userCredentialsValidation" id="9daf176c-b845-4be9-ae73-5fffb51436ef" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="0.013">
+    <testcase name="Status code is 401, You need credentials" time="0.013" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="0.013" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="findActionsByStep (all the actions) / InvalidStep_ShouldRespond404" id="8d22dbac-566d-4948-8859-c5b2943c55ed" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="4.038">
+    <testcase name="Status code is 404, The step does not exist" time="4.038" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="4.038" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="findActionsByStep (all the actions) / GivenExistingStepWithActions_ShouldReturnActions" id="e2730fc8-7b18-4b3c-bd0a-2477d045cb75" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="3.043">
+    <testcase name="Status code is 200" time="3.043" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Step returned" time="3.043" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="findActionsByStep (all the actions) / ShortlyIdValidation" id="fd615929-d6ce-4a05-b542-cd6107a1d2c3" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="3.035">
+    <testcase name="Status code is 200" time="3.035" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Step returned" time="3.035" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="findActionByScheme [GET /api/v1/workflow/schemes/{{schemeIdShorty}}/actions] / invalidateSession" id="8c560d47-54a9-45ac-866c-b88d59f5cfd2" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="3.455">
+    <testcase name="Status code is 200" time="3.455" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="findActionByScheme [GET /api/v1/workflow/schemes/{{schemeIdShorty}}/actions] / UserCredentialsValidation" id="c28cf532-3753-463c-94c1-191ae8a17b20" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="0.018">
+    <testcase name="Status code is 401, You need credentials" time="0.018" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="0.018" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="findActionByScheme [GET /api/v1/workflow/schemes/{{schemeIdShorty}}/actions] / InvalidSchemeId" id="ac36bae9-a08d-4349-924f-8d72f28257d2" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="4.027">
+    <testcase name="Status code is 404, The scheme does not exist" time="4.027" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="4.027" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="findActionByScheme [GET /api/v1/workflow/schemes/{{schemeIdShorty}}/actions] / GivenExistingSchemeWithActions_ShouldReturnActions" id="1cd0c787-762a-49b2-859d-599d45c4c3f5" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="3.037">
+    <testcase name="Status code is 200, Success request" time="3.037" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="3.037" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="findActionByScheme [GET /api/v1/workflow/schemes/{{schemeIdShorty}}/actions] / ShortlyIdValidation" id="d0cc7033-3094-471f-977a-e305ff296126" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="3.048">
+    <testcase name="Status code is 200, Success request" time="3.048" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="3.048" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="findStepById [GET /api/v1/workflow/steps/{stepId}] / invalidateSession" id="775a33b8-d03d-4492-a12c-2ea83e29f702" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="3.430">
+    <testcase name="Status code is 200" time="3.430" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="findStepById [GET /api/v1/workflow/steps/{stepId}] / UserCredentialValidation" id="5c325a39-8c7c-417b-bd6e-aeec06b78ebe" timestamp="2023-07-17T18:32:09.737Z" tests="4" failures="0" errors="0" time="0.020">
+    <testcase name="Status code is 401, You need credentials" time="0.020" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="0.020" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="findStepById [GET /api/v1/workflow/steps/{stepId}] / SuccessRequest" id="a70bc854-c3c1-49d9-9d82-4f4df27ddbfc" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="4.026">
+    <testcase name="Status code is 200 " time="4.026" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="4.026" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="findStepById [GET /api/v1/workflow/steps/{stepId}] / InvalidStepId" id="ff266174-7dff-4406-afea-040860ab7495" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="3.041">
+    <testcase name="Status code is 404, The action does not exist" time="3.041" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="3.041" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="findStepById [GET /api/v1/workflow/steps/{stepId}] / ShortyValidation" id="2f282c9a-4ef3-4e5e-b02e-4b8c9e2bbc93" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="3.038">
+    <testcase name="Status code is 200 " time="3.038" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="3.038" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="findAvailableDefaultActionsByContentType / invalidateSession" id="894da534-620e-4b24-87d2-1bd0964b8e3b" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="3.491">
+    <testcase name="Status code is 200" time="3.491" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="findAvailableDefaultActionsByContentType / UserCredentialsValidation" id="4a6498dd-9609-4faa-bd1b-0978449107cb" timestamp="2023-07-17T18:32:09.737Z" tests="4" failures="0" errors="0" time="0.013">
+    <testcase name="Status code is 401, You need credentials" time="0.013" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="0.013" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="findAvailableDefaultActionsByContentType / SuccessRequest" id="a5d99af1-0155-4ba1-9d0a-2c2d1e49232e" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="4.049">
+    <testcase name="Status code is 200 " time="4.049" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="4.049" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="findAvailableDefaultActionsByContentType / InvalidContentTypeId" id="39805bba-c932-4773-94bf-a8307c9b69a3" timestamp="2023-07-17T18:32:09.737Z" tests="3" failures="0" errors="0" time="3.032">
+    <testcase name="Status code is 404, The action does not exist" time="3.032" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="3.032" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="findAvailableDefaultActionsBySchemes / invalidateSession" id="c173dd39-2b56-48ce-b029-80eb4839cd77" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="3.439">
+    <testcase name="Status code is 200" time="3.439" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="findAvailableDefaultActionsBySchemes / UserCredentialsValidation" id="bfb832b9-d85a-4bd0-90f5-e367b4875748" timestamp="2023-07-17T18:32:09.737Z" tests="4" failures="0" errors="0" time="0.014">
+    <testcase name="Status code is 401, You need credentials" time="0.014" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="0.014" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="findAvailableDefaultActionsBySchemes / SuccessRequest" id="c281542c-48e4-44ea-9478-b1dbb28e8a69" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="4.043">
+    <testcase name="Status code is 200 " time="4.043" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="4.043" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="findAvailableDefaultActionsBySchemes / InvalidStepId" id="ccc6f3a2-02bd-4285-b57f-fb017b7d2cea" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="3.024">
+    <testcase name="Status code is 404, The action does not exist" time="3.024" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="3.024" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="findAvailableDefaultActionsBySchemes / ShortlySupport" id="510e2da5-d583-4e0a-952a-2c27985c2ff9" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="3.031">
+    <testcase name="Status code is 200 " time="3.031" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="3.031" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="findInitialAvailableActionsByContentType / invalidateSession" id="c23b6d86-a86b-47a4-85ec-c163d926e39a" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="3.454">
+    <testcase name="Status code is 200" time="3.454" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="findInitialAvailableActionsByContentType / UserCredentialValidation" id="419910c7-ec4a-463f-9bee-4e5ae45575db" timestamp="2023-07-17T18:32:09.737Z" tests="4" failures="0" errors="0" time="0.017">
+    <testcase name="Status code is 401, You need credentials" time="0.017" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="0.017" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="findInitialAvailableActionsByContentType / SuccessRequest" id="5e61ea45-fb56-4c0c-9439-a29c4f74d1a1" timestamp="2023-07-17T18:32:09.737Z" tests="3" failures="0" errors="0" time="4.051">
+    <testcase name="Status code is 200 " time="4.051" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="4.051" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="findInitialAvailableActionsByContentType / InvalidContentTypeId" id="58fdc496-54ad-4c38-9d4d-6b9eca7c69fe" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="3.051">
+    <testcase name="Status code is 404 " time="3.051" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="3.051" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="UpdateAction [PUT /api/v1/workflow/actions/{actionId}] / invalidateSession" id="e78086a4-1300-453c-b91e-8b071bb64622" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="3.503">
+    <testcase name="Status code is 200" time="3.503" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="UpdateAction [PUT /api/v1/workflow/actions/{actionId}] / UserCredentialsValidation" id="f452b1e2-b36c-4f91-b588-78dc3e338f72" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="0.020">
+    <testcase name="Status code is 401, You need credentials" time="0.020" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="0.020" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="UpdateAction [PUT /api/v1/workflow/actions/{actionId}] / SuccessRequest" id="3975c8aa-76f6-4679-81a0-d30c0d9cc3b6" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="7.079">
+    <testcase name="Status code is 200" time="7.079" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Body matches string" time="7.079" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="UpdateAction [PUT /api/v1/workflow/actions/{actionId}] / InvalidActionId" id="3c0c9b3a-f178-4896-a1ec-da0de7dd6d21" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="3.081">
+    <testcase name="Status code is 404, Action does not exist" time="3.081" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Body matches string" time="3.081" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="UpdateAction [PUT /api/v1/workflow/actions/{actionId}] / ShortlyId" id="72d0d1bf-f2fa-4247-95b3-f625ef5df9e8" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="6.052">
+    <testcase name="Status code is 200" time="6.052" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Body matches string" time="6.052" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="UpdateAction [PUT /api/v1/workflow/actions/{actionId}] / EmptyBody_ShouldRespond400" id="47e607b7-a289-4814-b087-69b854a3bcfb" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="3.033">
+    <testcase name="Status code is 400 " time="3.033" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="SaveActionToStep / invalidateSession" id="a5e88c62-22a9-4e62-be99-145becbcdeb7" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="3.437">
+    <testcase name="Status code is 200" time="3.437" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="SaveActionToStep / UserCredentialValidation" id="8df7c497-0a4c-4022-8d1f-d7f7f4bc618f" timestamp="2023-07-17T18:32:09.737Z" tests="4" failures="0" errors="0" time="0.050">
+    <testcase name="Status code is 401, You need credentials" time="0.050" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="0.050" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="SaveActionToStep / SuccessRequest" id="e534750f-398c-4919-9693-81d51ebccaba" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="7.067">
+    <testcase name="Status code is 200 " time="7.067" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="7.067" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="SaveActionToStep / InvalidStepId" id="177018ce-406e-454a-9f4a-90f42f03bc0d" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="3.085">
+    <testcase name="Status code is 404" time="3.085" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="3.085" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="SaveActionToStep / InvalidActionId" id="8e88fbe3-eda3-4b85-a42a-eb48703cf59a" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="3.044">
+    <testcase name="Status code is 404" time="3.044" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="3.044" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="SaveActionToStep / SupportShortly" id="ef1889ad-467d-42ad-b8fb-d3d5c0b7cde8" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="6.058">
+    <testcase name="Status code is 200 " time="6.058" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="6.058" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="SaveActionToStep / EmptyBody_ShouldRespond400" id="f7514bbb-21e1-4173-979a-8291349a9a2c" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="3.034">
+    <testcase name="Status code is 400 " time="3.034" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="ImportScheme / invalidateSession" id="54261b2a-f0c6-47b2-aa30-b6a70bab379b" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="3.431">
+    <testcase name="Status code is 200" time="3.431" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="ImportScheme / User Credentials Validations" id="33132097-1381-4f4a-825d-6d25f60da708" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="0.061">
+    <testcase name="Status code is 401, Invalid Credentials" time="0.061" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="0.061" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="ImportScheme / SucessImportAsAdmin" id="40855ade-db91-4bd0-af42-f0d1d55bb242" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="7.159">
+    <testcase name="Status code is 200" time="7.159" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Body matches string" time="7.159" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="ImportScheme / ImportSchemaExistingId_ShouldRespond400" id="4dece256-7231-46b5-b6c9-9edab37e75a2" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="3.060">
+    <testcase name="Status code is 400" time="3.060" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Already existing id" time="3.060" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="ImportScheme / EmptyBody_ShouldRespond400" id="a0e3f177-9bac-428b-8b35-33c962daff0b" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="3.028">
+    <testcase name="Status code is 400 " time="3.028" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="ImportScheme / ImportWithNotifyAssignActionlet" id="9ab01585-9da6-4d13-8990-76ff328c5312" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="6.087">
+    <testcase name="Status code is 200" time="6.087" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Body matches string" time="6.087" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="ImportScheme / CopySchemewithNotifyAssignActionlet" id="5b51ba00-cd8b-4620-92c7-224845d9dea8" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="6.140">
+    <testcase name="Status code is 200" time="6.140" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="ExportScheme / invalidateSession" id="e728fbc1-3943-48cd-89de-3da6e6931629" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="3.453">
+    <testcase name="Status code is 200" time="3.453" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="ExportScheme / User Credentials Validation" id="5f1cbe55-68b0-42b3-880a-fe4f3309e8f1" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="0.013">
+    <testcase name="Status code is 401, Invalid credentials" time="0.013" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Correct response" time="0.013" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="ExportScheme / Sucess Export As Admin" id="3ba1778c-54d0-4945-9701-9c745c73eda1" timestamp="2023-07-17T18:32:09.737Z" tests="4" failures="0" errors="0" time="4.036">
+    <testcase name="Status code is 200" time="4.036" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Includes scheme" time="4.036" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Includes step" time="4.036" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Includes action" time="4.036" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="ExportScheme / ShortlyIdValidation" id="f8fb4a77-d97e-42b8-b6f1-36bd8ea3bf0c" timestamp="2023-07-17T18:32:09.737Z" tests="4" failures="0" errors="0" time="3.030">
+    <testcase name="Status code is 200" time="3.030" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Includes scheme" time="3.030" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Includes step" time="3.030" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Includes action" time="3.030" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="UpdateStep / invalidateSession" id="537a26f5-c88b-4489-91a9-a85fee457fc6" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="3.503">
+    <testcase name="Status code is 200" time="3.503" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="UpdateStep / UserCredentialsValidation" id="9709b520-be99-426e-b9d2-682abbd4838c" timestamp="2023-07-17T18:32:09.737Z" tests="4" failures="0" errors="0" time="0.016">
+    <testcase name="Status code is 401, You need credentials" time="0.016" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="0.016" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="UpdateStep / SuccessUpdate" id="8177882e-941d-4614-a58f-72ac1a043945" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="7.023">
+    <testcase name="Status code is 200 " time="7.023" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="7.023" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="UpdateStep / InvalidStepId" id="0a1b86a4-c652-44b0-92ea-fe428ebda37a" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="3.067">
+    <testcase name="Status code is 404" time="3.067" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="3.067" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="UpdateStep / SupportShortlyId" id="7cb4fdbf-d851-42cb-8a85-7aa132fd9e7d" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="6.042">
+    <testcase name="Status code is 200 " time="6.042" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="6.042" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="UpdateStep / EmptyBody_shouldRespond400" id="19f045c3-d913-4985-98f3-122ca20fdb3b" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="3.030">
+    <testcase name="Status code is 400 " time="3.030" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="ReorderStep / invalidateSession" id="37e0e10c-a994-4206-a56b-3d7c623aa85b" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="3.489">
+    <testcase name="Status code is 200" time="3.489" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="ReorderStep / UserCredentialValidation" id="2c41cd27-4af5-45c5-b78e-2bff8c659bae" timestamp="2023-07-17T18:32:09.737Z" tests="4" failures="0" errors="0" time="0.017">
+    <testcase name="Status code is 401, You need credentials" time="0.017" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="0.017" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="ReorderStep / SuccessReorder" id="5533d046-e48f-4c3d-a6fa-ca03ec88f898" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="7.092">
+    <testcase name="Status code is 200 " time="7.092" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="7.092" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="ReorderStep / InvalidStepId" id="c1a31708-d81f-469c-ac7e-f8ef3fdc9af9" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="3.077">
+    <testcase name="Status code is 404" time="3.077" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="3.077" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="ReorderStep / SupportShortlyId" id="e939c54d-a82c-4dd2-a862-2f169795713b" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="6.039">
+    <testcase name="Status code is 200 " time="6.039" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="6.039" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="UpdateScheme / invalidateSession" id="70dfbaae-c5dd-4032-bb08-872c87bb4cbe" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="3.446">
+    <testcase name="Status code is 200" time="3.446" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="UpdateScheme / UserCredentialsValidation" id="98e2e69e-f646-40be-9f18-14e2c00bd48d" timestamp="2023-07-17T18:32:09.737Z" tests="4" failures="0" errors="0" time="0.018">
+    <testcase name="Status code is 401, You need credentials" time="0.018" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="0.018" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="UpdateScheme / SuccessUpdate" id="840fd62f-ab47-4569-bc4b-5efdb49b5ab3" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="7.032">
+    <testcase name="Status code is 200 " time="7.032" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="7.032" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="UpdateScheme / InvalidSchemeId" id="7a31d265-c47b-4511-9e89-cb1108c2b040" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="3.069">
+    <testcase name="Status code is 404 " time="3.069" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="3.069" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="UpdateScheme / SupportShorty" id="3f170bf4-361a-45bf-8184-db672a53f2be" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="6.034">
+    <testcase name="Status code is 200 " time="6.034" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="6.034" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="UpdateScheme / EmptyBody_ShouldRespond400" id="2f59b97b-9bb5-48be-9753-7a7a202792bf" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="3.037">
+    <testcase name="Status code is 400 " time="3.037" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="ReorderAction / invalidateSession" id="9dee273a-42e3-4ff5-8a7e-d2994cb0b976" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="3.436">
+    <testcase name="Status code is 200" time="3.436" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="ReorderAction / UserCredentialValidation" id="c8ef684e-fdf8-49fc-b439-a49b6d9d7366" timestamp="2023-07-17T18:32:09.737Z" tests="4" failures="0" errors="0" time="0.027">
+    <testcase name="Status code is 401, You need credentials" time="0.027" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="0.027" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="ReorderAction / SuccessRequest" id="76f8e93e-897a-4bf4-b064-c8d4d5979de6" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="7.048">
+    <testcase name="Status code is 200 " time="7.048" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="7.048" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="ReorderAction / InvalidOrderValue" id="0fcba132-bfe6-4ba0-88f6-a85ea1645eab" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="3.084">
+    <testcase name="Status code is 400, Bad request" time="3.084" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="3.084" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="ReorderAction / InvalidStepId" id="289b58be-ee06-44cf-8985-b605823ba84e" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="3.038">
+    <testcase name="Status code is 404" time="3.038" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="3.038" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="ReorderAction / InvalidActionId " id="09760b4d-aa04-4a02-80f9-6f88e4be552a" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="3.043">
+    <testcase name="Status code is 404" time="3.043" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="3.043" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="ReorderAction / SupportShortly" id="7d586d2b-4323-4d63-b881-ffa64d88e2f0" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="6.064">
+    <testcase name="Status code is 200 " time="6.064" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="6.064" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="ReorderAction / EmptyBody_shouldRespond400" id="901041f3-e7e3-43ea-beca-1b61c9bb73ab" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="3.038">
+    <testcase name="Status code is 400 " time="3.038" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="FireActionById / Fire Destroy / Create ContentType" id="10672a3c-ce0c-433d-b079-d8394eb8c75b" timestamp="2023-07-17T18:32:09.737Z" tests="3" failures="0" errors="0" time="9.630">
+    <testcase name="Status code should be ok 200" time="9.630" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="fields check" time="9.630" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="description check" time="9.630" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="FireActionById / Fire Destroy / Create contentlet" id="9014ef33-ad21-489c-85cc-719fed242fd3" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="9.331">
+    <testcase name="Status code should be ok 200" time="9.331" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="FireActionById / Fire Destroy / Archive contentlet" id="dd2b39a9-7ee5-4fe4-a33b-44c9b4904f3a" timestamp="2023-07-17T18:32:09.737Z" tests="0" failures="0" errors="0" time="9.429"/>
+  <testsuite name="FireActionById / Fire Destroy / Destroy Contentlet" id="3da75524-d0df-4be1-9cce-c41027440bcb" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="12.589">
+    <testcase name="Status code should be ok 200" time="12.589" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="FireActionById / invalidateSession" id="b4502a6d-cd38-4838-be6f-19005c013acb" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="3.470">
+    <testcase name="Status code is 200" time="3.470" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="FireActionById / SuccessRequest" id="42ea0b85-9908-4709-b12c-1638cdb67f4c" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="10.367">
+    <testcase name="Status code is 200 " time="10.367" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="10.367" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="FireActionById / InvalidActionId" id="b511d417-fe46-459d-8927-48566d127d54" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="3.070">
+    <testcase name="Status code is 404" time="3.070" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="3.070" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="FireActionById / InvalidContentTypeId" id="8662154d-9979-4159-9491-7280d1b46df9" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="3.036">
+    <testcase name="Status code is 400" time="3.036" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="3.036" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="FireActionById / SupportShorlty" id="a5bcfc6e-b550-4401-8dd2-197e411631a9" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="9.296">
+    <testcase name="Status code is 200 " time="9.296" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="9.296" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="FireActionById / FireActionWithoutBody" id="39b89466-4747-4452-892d-a35fc74963af" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="9.384">
+    <testcase name="Status code is 200 " time="9.384" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="9.384" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="FireActionById / ExistingUniqueContent_ShouldRespond400" id="4c56baea-10cf-4bcd-923d-adca82346c8d" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="3.199">
+    <testcase name="Status code is 400, BadRequest" time="3.199" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="3.199" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="FireActionById / BadRequest" id="1ba71346-3708-4690-aa93-264d454c5562" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="3.032">
+    <testcase name="Status code is 400 " time="3.032" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="FireActionById / SuccessRequest_Mutipart" id="5ccc21ad-c77e-4f47-a238-9c9ac2e1436b" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="9.613">
+    <testcase name="Status code is 200 " time="9.613" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="First binary included" time="9.613" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="FireDefaultAction / invalidateSession" id="274d938c-ce10-4d98-a4c4-279a33fa18d6" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="3.458">
+    <testcase name="Status code is 200" time="3.458" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="FireDefaultAction / SuccessRequest" id="428b6eb6-3d94-43c8-9cac-2c6f5328fcb1" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="10.382">
+    <testcase name="Status code is 200 " time="10.382" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="10.382" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="FireDefaultAction / Fire Publish BaseType Can Not Be Resolved BadRequest" id="a04fabe2-4662-4bc1-80cc-27dd1ee4dd0b" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="3.056">
+    <testcase name="Status code is 200 " time="3.056" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="FireDefaultAction / InvalidActionId" id="085a7d67-c085-4482-a486-8590a9ce44bf" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="3.062">
+    <testcase name="Status code is 400" time="3.062" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="3.062" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="FireDefaultAction / InvalidContentTypeId" id="293321ee-b1da-4f54-b0ec-e7d42bf99d95" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="3.049">
+    <testcase name="Status code is 400" time="3.049" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="3.049" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="FireDefaultAction / FireActionWithoutBody" id="5431e729-cbe5-4943-ac60-fb8a0ca73c76" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="9.410">
+    <testcase name="Status code is 200 " time="9.410" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="9.410" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="FireDefaultAction / ExistingUniqueContent_ShouldRespond400" id="f3061b0e-eee8-4143-ab1f-b54f35aaf2b7" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="3.141">
+    <testcase name="Status code is 400, BadRequest" time="3.141" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="3.141" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="FireDefaultAction / BadRequest" id="9ab03cf1-c687-4be4-b431-016502e70e50" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="3.044">
+    <testcase name="Status code is 400 " time="3.044" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="FireDefaultAction / SuccessRequest_Mutipart" id="668b920c-ea89-4d48-9002-a4248c9f8266" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="9.371">
+    <testcase name="Status code is 200 " time="9.371" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="First binary included" time="9.371" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="CopyScheme / invalidateSession" id="f46fabcc-aa72-40ec-bc0b-944c74ae0fc4" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="3.472">
+    <testcase name="Status code is 200" time="3.472" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="CopyScheme / UserCredentialsValidation" id="b7f3bae3-d3f7-4e85-a104-c3c6d669b569" timestamp="2023-07-17T18:32:09.737Z" tests="4" failures="0" errors="0" time="0.025">
+    <testcase name="Status code is 401, You need credentials" time="0.025" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="0.025" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="CopyScheme / SuccessCopy" id="2efcdcc9-d30f-42e0-a6a7-ec8ade6c57dd" timestamp="2023-07-17T18:32:09.737Z" tests="3" failures="0" errors="0" time="7.097">
+    <testcase name="Status code is 200 " time="7.097" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="7.097" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="CopyScheme / InvalidSchemeId" id="e0f73595-21ce-4628-b155-2dc832d4abe8" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="3.062">
+    <testcase name="Status code is 404" time="3.062" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="3.062" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="CopyScheme / CopyWithAlreadyExistingName" id="45c056b4-1d8f-45a6-b8c6-caf01b482ea5" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="6.078">
+    <testcase name="Status code is 200" time="6.078" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="6.078" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="CopyScheme / CopyWithotNameParam" id="98298737-8468-4c61-a871-40a9d5f9dfe2" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="6.089">
+    <testcase name="Status code is 200" time="6.089" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="6.089" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="CopyScheme / SupportShortly" id="579a3dbd-92a3-4577-b806-749265221d9f" timestamp="2023-07-17T18:32:09.737Z" tests="3" failures="0" errors="0" time="6.133">
+    <testcase name="Status code is 200 " time="6.133" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="6.133" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="DeleteStep / invalidateSession" id="ec68f279-aed5-412e-aa0f-5325779cbe6c" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="3.499">
+    <testcase name="Status code is 200" time="3.499" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="DeleteStep / UserCredentialsValidation" id="fea657e4-e179-4290-978d-e00a3205d2ad" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="0.044">
+    <testcase name="Status code is 401, You need credentials" time="0.044" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="0.044" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="DeleteStep / SuccessDelete" id="7fe15b99-b01a-41dd-9f58-ad63735102c5" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="7.055">
+    <testcase name="Status code is 200 " time="7.055" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="7.055" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="DeleteStep / ReferencedStepValidation" id="efbf41b2-06f6-47cb-9441-8a356463b60f" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="4.003">
+    <testcase name="Status code is 400" time="4.003" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="4.003" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="DeleteStep / InvalidStepId" id="50cd0114-bf84-4188-8eb1-8c86ec572f5b" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="4.013">
+    <testcase name="Status code is 404" time="4.013" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="4.013" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="DeleteStep / GivenValidStep_shouldSave" id="9c5ec244-6c61-463b-9d41-4fb64175e827" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="6.964">
+    <testcase name="Status code is 200 " time="6.964" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="6.964" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="DeleteStep / SupportShortly" id="12121152-0b59-47b1-b04f-1292b8f372df" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="6.044">
+    <testcase name="Status code is 200 " time="6.044" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="6.044" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="DeleteAction (Permanently) / invalidateSession" id="6579189c-f836-498a-a9fe-84c5e667caeb" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="3.487">
+    <testcase name="Status code is 200" time="3.487" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="DeleteAction (Permanently) / UserCredentialValidation" id="6a7c5958-72dc-4493-b63b-0c5fd38b1832" timestamp="2023-07-17T18:32:09.737Z" tests="4" failures="0" errors="0" time="0.051">
+    <testcase name="Status code is 401, You need credentials" time="0.051" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="0.051" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="DeleteAction (Permanently) / SuccessRequest" id="d0815b2c-e0cc-4b09-8485-0be26f194d5b" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="7.053">
+    <testcase name="Status code is 200 " time="7.053" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="7.053" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="DeleteAction (Permanently) / InvalidActionId" id="263248b5-4ab8-4887-9121-f1a3ed563f05" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="3.049">
+    <testcase name="Status code is 404" time="3.049" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="3.049" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="DeleteAction (Permanently) / GivenValidStep_shouldSave" id="6165d198-36f4-4fb1-8db7-8ab2b687d6f3" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="6.065">
+    <testcase name="Status code is 200 " time="6.065" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="6.065" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="DeleteAction (Permanently) / ValidAction_shouldSave" id="3af565ea-af16-4245-b1a1-8253d072d20d" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="9.097">
+    <testcase name="Status code is 200 " time="9.097" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="9.097" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="DeleteAction (Permanently) / SupportShortly" id="9bbcca1b-231e-44e6-81d7-8c545bb16321" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="6.060">
+    <testcase name="Status code is 200" time="6.060" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="6.060" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="DeleteAction (from step) / GivenValidStep_shouldSave" id="e1670ca7-9f80-4ca8-b334-a353de487b20" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="6.042">
+    <testcase name="Status code is 200 " time="6.042" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="6.042" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="DeleteAction (from step) / ValidAction_shouldSave" id="5f81dd10-53ee-49e5-aa0e-2eac372baa14" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="9.065">
+    <testcase name="Status code is 200 " time="9.065" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="9.065" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="DeleteAction (from step) / invalidateSession" id="3085146a-8631-482c-84bf-3d2c833f8952" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="3.495">
+    <testcase name="Status code is 200" time="3.495" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="DeleteAction (from step) / UserCredentialValidation" id="8f0e88ca-3da7-4a30-84a8-82fc1939ce9d" timestamp="2023-07-17T18:32:09.737Z" tests="4" failures="0" errors="0" time="0.021">
+    <testcase name="Status code is 401, You need credentials" time="0.021" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="0.021" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="DeleteAction (from step) / SuceessDelete" id="5e844f48-7b75-4439-b9c9-1b6d65f62f34" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="7.020">
+    <testcase name="Status code is 200 " time="7.020" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="7.020" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="DeleteAction (from step) / InvalidStepId" id="423b2e49-f808-4102-918e-fccf1164d953" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="3.066">
+    <testcase name="Status code is 404" time="3.066" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="3.066" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="DeleteAction (from step) / InvalidActionId" id="215499e9-177f-4587-9b1c-71995723a590" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="3.029">
+    <testcase name="Status code is 404" time="3.029" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="3.029" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="DeleteAction (from step) / GivenValidStep_shouldSave" id="831891bf-694e-4cdd-b1f3-6b79274a0e68" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="6.041">
+    <testcase name="Status code is 200 " time="6.041" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="6.041" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="DeleteAction (from step) / ValidAction_shouldSave" id="bdbbe95e-d6ce-4c2c-b2d4-1d3a97e1c976" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="9.047">
+    <testcase name="Status code is 200 " time="9.047" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="9.047" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="DeleteAction (from step) / SupportShortlyId" id="d9d2429d-b14f-4c8a-a588-f598f5c9dc12" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="6.049">
+    <testcase name="Status code is 200 " time="6.049" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="6.049" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="DeleteScheme / invalidateSession" id="526a8baf-d1f9-49c3-b7b0-45259ce232df" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="3.507">
+    <testcase name="Status code is 200" time="3.507" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="DeleteScheme / UserCredentialsValidation" id="62fe21c6-bbac-4227-9dfd-7c694212029a" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="0.014">
+    <testcase name="Status code is 401, You need credentials" time="0.014" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="0.014" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="DeleteScheme / archiveScheme" id="50cd697b-724d-4fa5-8db8-b301b6db7bef" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="7.021">
+    <testcase name="Status code is 200 " time="7.021" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="7.021" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="DeleteScheme / SuccessDelete" id="eb7650d1-d337-4da4-b5e6-2dab0475d82a" timestamp="2023-07-17T18:32:09.737Z" tests="3" failures="0" errors="0" time="6.298">
+    <testcase name="Status code is 200 " time="6.298" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="6.298" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="DeleteScheme / InvalidSchemeId" id="c37dbf41-8e99-4bf1-9248-8760840ee15d" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="3.036">
+    <testcase name="Status code is 404" time="3.036" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="3.036" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="DeleteScheme / GivenValidScheme_ShouldSave" id="65769b70-ad13-417c-9456-fed91e4e65b5" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="6.023">
+    <testcase name="Status code is 200 " time="6.023" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Response includes name" time="6.023" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="DeleteScheme / archiveScheme" id="ef26ede8-69a2-414d-8459-f244270a1324" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="6.029">
+    <testcase name="Status code is 200 " time="6.029" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="6.029" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="DeleteScheme / SupportShorlty" id="91eb818a-ff1a-4c51-a4a0-f8160f930717" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="6.055">
+    <testcase name="Status code is 200, You need credentials" time="6.055" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="6.055" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="systemActions / Creates a Content Type" id="dd2b1a7d-222b-4ac0-8ac0-8ec370f85c6c" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="9.124">
+    <testcase name="Status code is 200" time="9.124" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="systemActions / Create System Workflow Action for New Content Type" id="95dbf761-c09a-442c-a4be-e8cac2db07b2" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="6.044">
+    <testcase name="Status code is 200" time="6.044" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="systemActions / Get Content Type System Actions" id="daf33b10-c47c-42d7-b40d-37b839d034c0" timestamp="2023-07-17T18:32:09.737Z" tests="6" failures="0" errors="0" time="3.052">
+    <testcase name="No errors" time="3.052" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Return 2 items" time="3.052" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Has New System Action" time="3.052" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="New  has a Save Action" time="3.052" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Has Edit System Action" time="3.052" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="New  has a Save/Publish Action" time="3.052" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="systemActions / Fires a default New Action" id="9105f862-b8b4-4f8e-8822-c9fc430c71dc" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="9.297">
+    <testcase name="No errors" time="9.297" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Information Saved Correctly" time="9.297" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="systemActions / Fires a default EDIT Action" id="e75d05d6-81af-4f3c-a27d-974f8ebdefe4" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="9.251">
+    <testcase name="No errors" time="9.251" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Information Saved Correctly" time="9.251" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="systemActions / Fires a default PUBLISH Action " id="a8496e34-3401-4cec-b6e3-3ebf04e4c0d3" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="9.242">
+    <testcase name="No errors" time="9.242" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Information Publish Correctly" time="9.242" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="mergeAction / SetDefaultHostJustInCase" id="d4cd57d4-8586-413a-9838-64e37ca78fe3" timestamp="2023-07-17T18:32:09.737Z" tests="0" failures="0" errors="0" time="3.086"/>
+  <testsuite name="mergeAction / AddMergeContentlet" id="52cbd401-ccc7-4138-b8b1-a6b11e1f5af8" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="9.310">
+    <testcase name="No errors" time="9.310" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Information Saved Correctly" time="9.310" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="mergeAction / PublishMerge" id="208417f7-a146-468e-a838-f26931973fb7" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="11.073">
+    <testcase name="No errors" time="11.073" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Information Saved Correctly" time="11.073" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="mergeAction / CreateNewGenericContentlet" id="a1164702-be12-45d1-a848-6c1452785b51" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="9.285">
+    <testcase name="No errors" time="9.285" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="mergeAction / PublishMergeIndividual" id="cde3b4ed-c393-476d-aba8-84ec756732f1" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="3.052">
+    <testcase name="No errors" time="3.052" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Information Saved Correctly" time="3.052" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="mergeAction / PublishMergeNotExists" id="bb19ceb2-08c8-4cd0-aa35-1f67d2083a26" timestamp="2023-07-17T18:32:09.737Z" tests="3" failures="0" errors="0" time="3.030">
+    <testcase name="No errors" time="3.030" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Information Saved Correctly" time="3.030" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Content Not Found" time="3.030" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="saveMultiple / Save Multiple Generic Contentlets" id="bd51fed0-6a22-43f6-8bc9-71a2e571f69d" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="66.385">
+    <testcase name="No errors" time="66.385" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Information Saved Correctly" time="66.385" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="saveMultiple / Save Multiple Generic Contentlets Some Without Content Type" id="51bb9828-5e70-466a-b0fe-b49710e6b471" timestamp="2023-07-17T18:32:09.737Z" tests="3" failures="0" errors="0" time="9.229">
+    <testcase name="Errors" time="9.229" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Success" time="9.229" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Affected" time="9.229" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="saveMultiple / Create Temporal File" id="4ab7131c-5d97-4924-a8e6-a35b8b2a5e18" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="3.748">
+    <testcase name="File name check" time="3.748" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="saveMultiple / Save Multiple With Temp File" id="4b0a8197-3665-42fb-bb1a-5755fce8dd31" timestamp="2023-07-17T18:32:09.737Z" tests="3" failures="0" errors="0" time="9.426">
+    <testcase name="Errors" time="9.426" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Success" time="9.426" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Affected" time="9.426" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="Move / Content Already Exist At New Path / CreateMoveSystemWorkflow" id="f4db446d-88c7-4440-913d-da5839438631" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="9.045">
+    <testcase name="No errors" time="9.045" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="Move / Content Already Exist At New Path / Add move actionlet" id="d56375da-71d6-4e5c-ac2e-5e17d98496c6" timestamp="2023-07-17T18:32:09.737Z" tests="0" failures="0" errors="0" time="6.042"/>
+  <testsuite name="Move / Content Already Exist At New Path / Create Page One" id="ce351c7b-a46c-4f36-ae31-9432c9773f9d" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="9.871">
+    <testcase name="Status code should be 200" time="9.871" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Identifier must contains path" time="9.871" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="Move / Content Already Exist At New Path / Fire Move Over Page One" id="7097e87e-5193-4bb5-9933-7e49a6ca36cf" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="13.049">
+    <testcase name="Status code is 200 " time="13.049" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="Move / Content Already Exist At New Path / Create Page Two" id="dfbfcc8a-397e-44be-95e4-f4963cbc958d" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="9.515">
+    <testcase name="Status code should be 200" time="9.515" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Identifier must contains path" time="9.515" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="Move / Content Already Exist At New Path / Fire Move Over Page Two" id="204cdd3c-3190-4ba3-aebb-962caaea3f76" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="3.134">
+    <testcase name="Status code is 400 " time="3.134" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="Move / Success / CreateMoveSystemWorkflow" id="a1600691-28f7-4be3-adb5-394aa679aa47" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="9.051">
+    <testcase name="No errors" time="9.051" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="Move / Success / Add move actionlet" id="ecf1d76b-ca78-4d47-8ac7-364595bdb729" timestamp="2023-07-17T18:32:09.737Z" tests="0" failures="0" errors="0" time="6.040"/>
+  <testsuite name="Move / Success / CreatesTestingContentlet" id="52d8c634-f7f6-4df4-9eb9-69749c1f8584" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="9.269">
+    <testcase name="Status code is 200 " time="9.269" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="Move / Success / Fire Move" id="611c9ce7-207d-4671-96d9-ebdd0c4959ae" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="9.339">
+    <testcase name="Status code is 200 " time="9.339" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="Move / Success / Check Folder" id="04594262-7821-454f-a75f-db1edc459dc0" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="3.068">
+    <testcase name="Status code is 200 " time="3.068" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid response" time="3.068" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="fire / Broken-Binary-Field-Update / create-content-type-with-binaries" id="0fac00b0-e22f-40a1-8d26-cbb2d5ae610d" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="15.144">
+    <testcase name="Status code is 200" time="15.144" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="fire / Broken-Binary-Field-Update / get-contentlet-identifier-by-contnet-type" id="aca8783e-3d15-420b-914f-54272125ac48" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="3.733">
+    <testcase name="Status code is 200" time="3.733" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="fire / Broken-Binary-Field-Update / update-contentlet-no-binaries-sent-expect-binaries-not-modified" id="01ae68af-f74f-4031-bad7-5dbae2d77cff" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="9.299">
+    <testcase name="Status code is 200" time="9.299" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="fire / Broken-Binary-Field-Update / update-contentlet-remove-one-binary" id="d49e03e0-2974-4def-ab80-17a4bc73e424" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="9.250">
+    <testcase name="Status code is 200" time="9.250" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="FireContentWithPermissions / RequestRoles" id="4f667150-bf13-4543-9e42-b93a7bb3fc7d" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="3.121">
+    <testcase name="Status code should be 200" time="3.121" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="length check" time="3.121" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="FireContentWithPermissions / FireWithPermissions" id="a8092f7e-ccaa-477f-979c-1ec52195bab8" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="15.327">
+    <testcase name="Status code should be 200" time="15.327" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="FireContentWithPermissions / Check the permissions" id="88aa62d0-ad84-489c-9678-2f485b98e89c" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="3.056">
+    <testcase name="Status code should be 200" time="3.056" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="The permission should be EDIT" time="3.056" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="Categories / create-content-type-with-categories" id="5eff772b-3369-48a9-86d8-66d8166aff03" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="14.415">
+    <testcase name="Status code is 200" time="14.415" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="Categories / get-contentlet-identifier-by-contnet-type" id="19272a5f-2082-4b1a-814e-fd671de2d1f0" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="3.506">
+    <testcase name="Status code is 200" time="3.506" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="Categories / update-contentlet-add-category" id="0c2732cc-6ea4-4cd7-bd94-b96c74f4ab38" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="9.328">
+    <testcase name="Status code is 200" time="9.328" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="Categories / update-contentlet-add-category-ignore-fields" id="c2e38584-4852-4667-bcef-0d83d5e1f2cf" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="9.291">
+    <testcase name="Status code is 200" time="9.291" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="Categories / get-contentlet-identifier-by-contnet-type-verify-ignored-fields" id="0df582a3-9931-4540-b504-5dcc725773ae" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="3.056">
+    <testcase name="Status code is 200" time="3.056" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="Categories / update-contentlet-remove-category" id="5ecc4704-9268-4556-a5c8-3cf9acf117bc" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="9.238">
+    <testcase name="Status code is 200" time="9.238" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="Categories / update-contentlet-add-invalid-category" id="b6eea5a9-09be-415e-859f-fd6ad6a36e8e" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="3.077">
+    <testcase name="Status code is 400" time="3.077" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="Categories / update-contentlet-add-category-string" id="d75048d1-72ba-4972-8fe7-c79c8c6ed8af" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="9.275">
+    <testcase name="Status code is 200" time="9.275" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="Categories / update-contentlet-add-category-pass-null" id="35c06415-72b7-4401-8030-e8628b867574" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="9.246">
+    <testcase name="Status code is 200" time="9.246" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="SaveContentWIthJSONField / pre_ImportBundleWithContentType" id="c7c9d35d-3050-436f-b0d9-c494d2629ad6" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="17.198">
+    <testcase name="Bundle uploaded sucessfully" time="17.198" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="SaveContentWIthJSONField / GivenContentWithJSONFIeld_ShouldSave" id="2ad6fa6d-46e1-4080-a782-fb1cd7ad145b" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="9.436">
+    <testcase name="Status code is 200 " time="9.436" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid JSON field in response" time="9.436" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="SaveFileAssetWithPlainText / SaveFileAssetSuccess" id="20aadb0e-ba2b-4527-a5ff-ff82582453bf" timestamp="2023-07-17T18:32:09.737Z" tests="2" failures="0" errors="0" time="9.636">
+    <testcase name="Status code is 200 " time="9.636" classname="WorkflowResourceTestsApiV1Workflows"/>
+    <testcase name="Valid JSON field in response" time="9.636" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="404Test / FirePublish404BodyId" id="963c8f51-ffb2-4d61-be21-7c6be7eca7b0" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="3.066">
+    <testcase name="Status code is 404 " time="3.066" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="404Test / FirePublish404BodyInode" id="fee78643-258a-4495-8ec5-92a1cb5c4060" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="3.053">
+    <testcase name="Status code is 404 " time="3.053" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="404Test / FirePublish404QueryId" id="03394985-d9de-4f9f-b1dc-be7c53a76ed3" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="3.059">
+    <testcase name="Status code is 404 " time="3.059" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+  <testsuite name="404Test / FirePublish404QueryInode" id="68bdcaef-0be6-46ad-8e5f-70447a04688d" timestamp="2023-07-17T18:32:09.737Z" tests="1" failures="0" errors="0" time="3.027">
+    <testcase name="Status code is 404 " time="3.027" classname="WorkflowResourceTestsApiV1Workflows"/>
+  </testsuite>
+</testsuites>
