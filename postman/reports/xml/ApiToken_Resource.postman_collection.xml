@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="ApiToken Resource" tests="18" time="211.936">
+  <testsuite name="remote / set ENABLE_PROXY_TOKEN_REQUESTS to false" id="1ac5ee24-f43d-458d-9d10-5915435eddde" timestamp="2023-07-17T23:43:44.256Z" tests="0" failures="0" errors="0" time="3.973"/>
+  <testsuite name="remote / createToken remote (disabled)" id="bc78ec2a-64d7-4219-85ee-afc4a7e86e9f" timestamp="2023-07-17T23:43:44.256Z" tests="1" failures="0" errors="0" time="3.102">
+    <testcase name="Status code should be 403" time="3.102" classname="ApiTokenResource"/>
+  </testsuite>
+  <testsuite name="remote / set ENABLE_PROXY_TOKEN_REQUESTS to true" id="83fad18c-e93d-4a89-9b46-d4485cbbea31" timestamp="2023-07-17T23:43:44.256Z" tests="0" failures="0" errors="0" time="3.029"/>
+  <testsuite name="remote / createToken remote" id="60252beb-2af8-4e35-bb0f-b6b4074f9ea1" timestamp="2023-07-17T23:43:44.256Z" tests="2" failures="0" errors="0" time="7.190">
+    <testcase name="Status code should be 200" time="7.190" classname="ApiTokenResource"/>
+    <testcase name="User Id should be dotcms.org.1" time="7.190" classname="ApiTokenResource"/>
+  </testsuite>
+  <testsuite name="remote / logout" id="04c9a2ef-063a-4bd0-a545-7c9f061ba3e1" timestamp="2023-07-17T23:43:44.256Z" tests="1" failures="0" errors="0" time="3.546">
+    <testcase name="Status code is 200" time="3.546" classname="ApiTokenResource"/>
+  </testsuite>
+  <testsuite name="remote / createToken remote with invalid local user" id="ba96ceb2-94d1-4130-8cf9-eba2ddcf9d38" timestamp="2023-07-17T23:43:44.256Z" tests="1" failures="0" errors="0" time="0.022">
+    <testcase name="Status code should be 401" time="0.022" classname="ApiTokenResource"/>
+  </testsuite>
+  <testsuite name="remote / createToken remote with invalid remote host" id="e1d79f5f-0b87-46fd-ad3f-a64744270281" timestamp="2023-07-17T23:43:44.256Z" tests="1" failures="0" errors="0" time="5.077">
+    <testcase name="Status code should be 404" time="5.077" classname="ApiTokenResource"/>
+  </testsuite>
+  <testsuite name="remote / createToken remote with invalid remote host witn numbers" id="d1b42758-ec5c-4663-a759-d41ae611c034" timestamp="2023-07-17T23:43:44.256Z" tests="1" failures="0" errors="0" time="134.675">
+    <testcase name="Status code should be 404" time="134.675" classname="ApiTokenResource"/>
+  </testsuite>
+  <testsuite name="remote / createToken remote with invalid remote user" id="da107e82-cf93-4396-9318-aed31140060e" timestamp="2023-07-17T23:43:44.256Z" tests="1" failures="0" errors="0" time="4.000">
+    <testcase name="Status code should be 401" time="4.000" classname="ApiTokenResource"/>
+  </testsuite>
+  <testsuite name="remote / createToken remote with empty remote user" id="e5fe742b-3b41-473f-b232-15b6f3eeddd7" timestamp="2023-07-17T23:43:44.256Z" tests="1" failures="0" errors="0" time="3.936">
+    <testcase name="Status code should be 400" time="3.936" classname="ApiTokenResource"/>
+  </testsuite>
+  <testsuite name="createToken" id="4c30f67a-29e1-48f6-b034-e830a2180ec2" timestamp="2023-07-17T23:43:44.256Z" tests="2" failures="0" errors="0" time="3.913">
+    <testcase name="Status code should be 200" time="3.913" classname="ApiTokenResource"/>
+    <testcase name="User Id should be dotcms.org.1" time="3.913" classname="ApiTokenResource"/>
+  </testsuite>
+  <testsuite name="createToken with userId equal to null" id="1e533f61-478f-465a-9a27-82d1c5575cc7" timestamp="2023-07-17T23:43:44.256Z" tests="2" failures="0" errors="0" time="3.911">
+    <testcase name="Status code should be 200" time="3.911" classname="ApiTokenResource"/>
+    <testcase name="User Id should be dotcms.org.1" time="3.911" classname="ApiTokenResource"/>
+  </testsuite>
+  <testsuite name="getApiTokens" id="cb07eac8-227d-457c-bf66-51ae6876ded0" timestamp="2023-07-17T23:43:44.256Z" tests="2" failures="0" errors="0" time="3.916">
+    <testcase name="Status code should be 200" time="3.916" classname="ApiTokenResource"/>
+    <testcase name="User Id should be dotcms.org.1" time="3.916" classname="ApiTokenResource"/>
+  </testsuite>
+  <testsuite name="getJwtFromApiToken" id="2b9f1dda-1111-4285-9ec9-b317360fdc76" timestamp="2023-07-17T23:43:44.256Z" tests="1" failures="0" errors="0" time="3.950">
+    <testcase name="Status code should be 200" time="3.950" classname="ApiTokenResource"/>
+  </testsuite>
+  <testsuite name="revokeApiToken" id="bba8b6ea-0649-43d5-86e7-7c5f615c2215" timestamp="2023-07-17T23:43:44.256Z" tests="1" failures="0" errors="0" time="3.933">
+    <testcase name="Status code should be 200" time="3.933" classname="ApiTokenResource"/>
+  </testsuite>
+  <testsuite name="revokeApiToken Copy" id="794cdd1e-5096-49f5-ade7-4719e46091e2" timestamp="2023-07-17T23:43:44.256Z" tests="1" failures="0" errors="0" time="3.904">
+    <testcase name="Status code should be 200" time="3.904" classname="ApiTokenResource"/>
+  </testsuite>
+  <testsuite name="revokeUserToken" id="c9bd8e52-f9f8-42c5-8776-ba329b065097" timestamp="2023-07-17T23:43:44.256Z" tests="1" failures="0" errors="0" time="6.907">
+    <testcase name="Status code should be 200" time="6.907" classname="ApiTokenResource"/>
+  </testsuite>
+  <testsuite name="revokeUsersToken" id="9df9ca84-9316-4efc-aa9f-9c940fedf718" timestamp="2023-07-17T23:43:44.256Z" tests="1" failures="0" errors="0" time="12.952">
+    <testcase name="Status code should be 200" time="12.952" classname="ApiTokenResource"/>
+  </testsuite>
+</testsuites>
