@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Visitor" tests="6" time="33.047">
+  <testsuite name="pre_ImportBundleWithPage" id="9f9add78-b199-471a-8317-3f68e5bf1a40" timestamp="2023-07-21T18:52:32.309Z" tests="1" failures="0" errors="0" time="15.171">
+    <testcase name="Bundle uploaded sucessfully" time="15.171" classname="Visitor"/>
+  </testsuite>
+  <testsuite name="Switch site to 'default'" id="3ad5e096-9d22-4884-b620-8113574f6e94" timestamp="2023-07-21T18:52:32.309Z" tests="2" failures="0" errors="0" time="3.025">
+    <testcase name="Status code is 200 " time="3.025" classname="Visitor"/>
+    <testcase name="Valid response" time="3.025" classname="Visitor"/>
+  </testsuite>
+  <testsuite name="invalidateSession" id="f2bfeedc-5155-4611-b11a-73bd991f0520" timestamp="2023-07-21T18:52:32.309Z" tests="1" failures="0" errors="0" time="3.508">
+    <testcase name="Status code is 200" time="3.508" classname="Visitor"/>
+  </testsuite>
+  <testsuite name="Update aliases of Demo Host to remove localhost" id="3936abb7-5f9d-40aa-8d3d-0bae02342c57" timestamp="2023-07-21T18:52:32.309Z" tests="1" failures="0" errors="0" time="11.017">
+    <testcase name="Status code should be 200" time="11.017" classname="Visitor"/>
+  </testsuite>
+  <testsuite name="GivenX-Forwarded-ForSetToAnIp_VisitorIpShouldBeTheSame" id="d96503ed-cdb4-43a8-bdf1-0dc1c33bcf64" timestamp="2023-07-21T18:52:32.309Z" tests="1" failures="1" errors="0" time="0.314">
+    <testcase name="Verify Visitor's IP" time="0.314" classname="Visitor">
+      <failure type="AssertionFailure" message="expected '' to include '/3.22.136.122'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 577b6e4e-8dd3-4eaa-9dbd-89631d92af49.]]>
+        <![CDATA[Collection name: Visitor.]]>
+        <![CDATA[Request name: GivenX-Forwarded-ForSetToAnIp_VisitorIpShouldBeTheSame.]]>
+        <![CDATA[Test description: Verify Visitor's IP.]]>
+        <![CDATA[Error message: expected '' to include '/3.22.136.122'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected '' to include '/3.22.136.122'
+   at Object.eval sandbox-script.js:1:5).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="GivenX-Forwarded-ForSetToAnInvalidIp_VisitorIpShouldBeLocalhost" id="fb2188e0-e999-4e75-872f-a215132926eb" timestamp="2023-07-21T18:52:32.309Z" tests="1" failures="1" errors="0" time="0.012">
+    <testcase name="Verify Visitor's IP" time="0.012" classname="Visitor">
+      <failure type="AssertionFailure" message="expected '' to include '/127.0.0.1'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 577b6e4e-8dd3-4eaa-9dbd-89631d92af49.]]>
+        <![CDATA[Collection name: Visitor.]]>
+        <![CDATA[Request name: GivenX-Forwarded-ForSetToAnInvalidIp_VisitorIpShouldBeLocalhost.]]>
+        <![CDATA[Test description: Verify Visitor's IP.]]>
+        <![CDATA[Error message: expected '' to include '/127.0.0.1'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected '' to include '/127.0.0.1'
+   at Object.eval sandbox-script.js:1:6).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+</testsuites>
