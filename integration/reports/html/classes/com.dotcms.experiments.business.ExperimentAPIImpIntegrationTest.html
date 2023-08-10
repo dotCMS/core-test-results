@@ -23,7 +23,7 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">107</div>
+<div class="counter">121</div>
 <p>tests</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">3m29.37s</div>
+<div class="counter">3m52.01s</div>
 <p>duration</p>
 </div>
 </td>
@@ -75,10 +75,10 @@
 <span class="code">
 <pre>java.lang.IllegalArgumentException: Experiment needs to be RUNNING
 	at com.dotcms.util.DotPreconditions.isTrue(DotPreconditions.java:1209)
-	at com.dotcms.experiments.business.ExperimentsAPIImpl.publishContentOnExperimentVariants(ExperimentsAPIImpl.java:758)
-	at com.dotcms.experiments.business.ExperimentsAPIImpl.innerStart(ExperimentsAPIImpl.java:732)
+	at com.dotcms.experiments.business.ExperimentsAPIImpl.publishContentOnExperimentVariants(ExperimentsAPIImpl.java:755)
+	at com.dotcms.experiments.business.ExperimentsAPIImpl.innerStart(ExperimentsAPIImpl.java:729)
 	at com.dotcms.experiments.business.ExperimentsAPIImpl.startScheduled(ExperimentsAPIImpl.java:715)
-	at com.dotcms.experiments.business.ExperimentAPIImpIntegrationTest.createRunningIdWithStartScheduled(ExperimentAPIImpIntegrationTest.java:209)
+	at com.dotcms.experiments.business.ExperimentAPIImpIntegrationTest.createRunningIdWithStartScheduled(ExperimentAPIImpIntegrationTest.java:211)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -146,10 +146,10 @@
 <span class="code">
 <pre>java.lang.IllegalArgumentException: Experiment needs to be RUNNING
 	at com.dotcms.util.DotPreconditions.isTrue(DotPreconditions.java:1209)
-	at com.dotcms.experiments.business.ExperimentsAPIImpl.publishContentOnExperimentVariants(ExperimentsAPIImpl.java:758)
-	at com.dotcms.experiments.business.ExperimentsAPIImpl.innerStart(ExperimentsAPIImpl.java:732)
+	at com.dotcms.experiments.business.ExperimentsAPIImpl.publishContentOnExperimentVariants(ExperimentsAPIImpl.java:755)
+	at com.dotcms.experiments.business.ExperimentsAPIImpl.innerStart(ExperimentsAPIImpl.java:729)
 	at com.dotcms.experiments.business.ExperimentsAPIImpl.startScheduled(ExperimentsAPIImpl.java:715)
-	at com.dotcms.experiments.business.ExperimentAPIImpIntegrationTest.restartExperimentUsingTheStartScheduled(ExperimentAPIImpIntegrationTest.java:302)
+	at com.dotcms.experiments.business.ExperimentAPIImpIntegrationTest.restartExperimentUsingTheStartScheduled(ExperimentAPIImpIntegrationTest.java:304)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -224,537 +224,607 @@
 </thead>
 <tr>
 <td class="success">UrlParameterWithExistsOperatorNotSuccess</td>
-<td class="success">1.870s</td>
+<td class="success">1.767s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">UrlParameterWithExistsOperatorSuccess</td>
-<td class="success">0.982s</td>
+<td class="success">1.152s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">addUrlConditionToExitRateCondition</td>
-<td class="success">2.092s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">addUrlConditionToReachPageGoal</td>
-<td class="success">1.998s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">bounceRate</td>
-<td class="success">2.495s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">bounceRateNotSessions</td>
-<td class="success">1.271s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">bounceRateWithIndex[0: /index]</td>
-<td class="success">0.756s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">bounceRateWithIndex[1: /INDEX]</td>
-<td class="success">2.044s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">bounceRateWithIndex[2: /IndEX]</td>
-<td class="success">2.092s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">bounceRateWithIndex[3: &lt;empty string&gt;]</td>
-<td class="success">1.987s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">bounceRateWithIndex[4: /]</td>
-<td class="success">2.081s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">bounceRateWithIndex[5: /?variantName=dotexperiment-fcaef4575a-variant-1&amp;redirect=true]</td>
-<td class="success">1.951s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">createRunningIdWhenExperimentIsTurnToRunning</td>
-<td class="success">2.299s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="failures">createRunningIdWithStartScheduled</td>
-<td class="failures">2.105s</td>
-<td class="failures">failed</td>
-</tr>
-<tr>
-<td class="success">exitRate</td>
-<td class="success">2.466s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">exitRateWithIndex[0: /index]</td>
-<td class="success">2.856s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">exitRateWithIndex[1: /INDEX]</td>
-<td class="success">1.986s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">exitRateWithIndex[2: /IndEX]</td>
-<td class="success">2.141s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">exitRateWithIndex[3: &lt;empty string&gt;]</td>
-<td class="success">1.842s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">exitRateWithIndex[4: /]</td>
-<td class="success">1.928s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">exitRateWithIndex[5: /?variantName=dotexperiment-fcaef4575a-variant-1&amp;redirect=true]</td>
-<td class="success">0.946s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">getEvents</td>
-<td class="success">1.581s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">getRunningExperiment</td>
-<td class="success">5.794s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">getSplitTrafficInsideExperimentResults</td>
-<td class="success">2.025s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">multiDaysEvent</td>
-<td class="success">2.621s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">noBounceRateWithIndexFirst[0: /index]</td>
-<td class="success">1.942s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">noBounceRateWithIndexFirst[1: /INDEX]</td>
-<td class="success">1.996s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">noBounceRateWithIndexFirst[2: /IndEX]</td>
-<td class="success">1.983s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">noBounceRateWithIndexFirst[3: &lt;empty string&gt;]</td>
-<td class="success">2.093s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">noBounceRateWithIndexFirst[4: /]</td>
-<td class="success">1.177s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">noBounceRateWithIndexFirst[5: /?variantName=dotexperiment-fcaef4575a-variant-1&amp;redirect=true]</td>
-<td class="success">1.824s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">noBounceRateWithIndexLast[0: /index]</td>
-<td class="success">1.075s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">noBounceRateWithIndexLast[1: /INDEX]</td>
-<td class="success">1.961s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">noBounceRateWithIndexLast[2: /IndEX]</td>
-<td class="success">1.086s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">noBounceRateWithIndexLast[3: &lt;empty string&gt;]</td>
-<td class="success">1.942s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">noBounceRateWithIndexLast[4: /]</td>
-<td class="success">1.111s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">noBounceRateWithIndexLast[5: /?variantName=dotexperiment-fcaef4575a-variant-1&amp;redirect=true]</td>
-<td class="success">1.061s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">noExitRateWithIndex[0: /index]</td>
-<td class="success">1.515s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">noExitRateWithIndex[1: /INDEX]</td>
-<td class="success">1.100s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">noExitRateWithIndex[2: /IndEX]</td>
-<td class="success">1.845s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">noExitRateWithIndex[3: &lt;empty string&gt;]</td>
-<td class="success">2.040s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">noExitRateWithIndex[4: /]</td>
-<td class="success">1.078s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">noExitRateWithIndex[5: /?variantName=dotexperiment-fcaef4575a-variant-1&amp;redirect=true]</td>
-<td class="success">1.128s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">notBounceRateFirst</td>
-<td class="success">1.220s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">notBounceRateLast</td>
-<td class="success">2.410s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">notBounceRateMiddle</td>
-<td class="success">1.783s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">notExitRate</td>
-<td class="success">2.592s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">notExitRateSession</td>
-<td class="success">2.523s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">pageNotReachButExperimentPageWasView</td>
-<td class="success">3.321s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">pageReachAfterExperimentPageButNotDirectReferer</td>
-<td class="success">2.100s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">pageReachButBeforeExperimentPage</td>
-<td class="success">1.867s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">pageReachButExperimentPageWasNotView</td>
-<td class="success">2.135s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">pageReachDirectReferer</td>
-<td class="success">2.171s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">pageReachDirectRefererMultiDays</td>
-<td class="success">3.020s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">pageReachWhenExperimentPageIsIndexPage[0: /index]</td>
-<td class="success">1.898s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">pageReachWhenExperimentPageIsIndexPage[1: /INDEX]</td>
-<td class="success">2.876s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">pageReachWhenExperimentPageIsIndexPage[2: /IndEX]</td>
-<td class="success">2.823s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">pageReachWhenExperimentPageIsIndexPage[3: &lt;empty string&gt;]</td>
-<td class="success">2.250s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">pageReachWhenExperimentPageIsIndexPage[4: /]</td>
-<td class="success">1.291s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">pageReachWhenExperimentPageIsIndexPage[5: /?variantName=dotexperiment-fcaef4575a-variant-1&amp;redirect=true]</td>
-<td class="success">2.733s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">pageReachWhenExperimentPageIsRootIndexPage[0: /index]</td>
-<td class="success">1.194s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">pageReachWhenExperimentPageIsRootIndexPage[1: /INDEX]</td>
-<td class="success">2.109s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">pageReachWhenExperimentPageIsRootIndexPage[2: /IndEX]</td>
-<td class="success">2.115s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">pageReachWhenExperimentPageIsRootIndexPage[3: &lt;empty string&gt;]</td>
-<td class="success">1.897s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">pageReachWhenExperimentPageIsRootIndexPage[4: /]</td>
-<td class="success">2.006s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">pageReachWhenExperimentPageIsRootIndexPage[5: /?variantName=dotexperiment-fcaef4575a-variant-1&amp;redirect=true]</td>
-<td class="success">2.092s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">renderUrlMapPageWithExperiment</td>
-<td class="success">2.850s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">restartExperimentMustGenerateTwoRunningIds</td>
-<td class="success">1.831s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="failures">restartExperimentUsingTheStartScheduled</td>
-<td class="failures">1.676s</td>
-<td class="failures">failed</td>
-</tr>
-<tr>
-<td class="success">resultWithPagination</td>
-<td class="success">2.316s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">resultWithPaginationWhenTheLastPageIsNotComplte</td>
-<td class="success">2.361s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">resultWithUrlMap</td>
-<td class="success">1.634s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">savingExperimentWithReachPage</td>
-<td class="success">2.274s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">savingExperimentWithUrlParameter</td>
-<td class="success">1.520s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testADeleteOriginalVariant_shouldFail</td>
-<td class="success">2.184s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testAddMoreThanOneOriginalVariant_shouldFail</td>
-<td class="success">2.025s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testSaveExperiment_shouldNotValidateSchedule</td>
-<td class="success">1.657s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testStartExperiment_shouldPublishContent</td>
-<td class="success">2.875s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">test_calcBayesian_ABC</td>
-<td class="success">1.345s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">test_calcBayesian_AOverB</td>
 <td class="success">1.975s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
+<td class="success">addUrlConditionToReachPageGoal</td>
+<td class="success">1.639s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">bounceRate</td>
+<td class="success">0.900s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">bounceRateGoalSuccessButWithCaseInsensitiveURL[0: com.dotcms.experiments.business.ExperimentAPIImpIntegrationTest$$Lambda$1296/0x0000000100efe440@21dc0465]</td>
+<td class="success">1.198s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">bounceRateGoalSuccessButWithCaseInsensitiveURL[1: com.dotcms.experiments.business.ExperimentAPIImpIntegrationTest$$Lambda$1297/0x0000000100eff840@6f8a4a49]</td>
+<td class="success">1.242s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">bounceRateNotSessions</td>
+<td class="success">1.337s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">bounceRateWithIndex[0: /index]</td>
+<td class="success">1.879s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">bounceRateWithIndex[1: /INDEX]</td>
+<td class="success">1.008s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">bounceRateWithIndex[2: /IndEX]</td>
+<td class="success">1.160s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">bounceRateWithIndex[3: &lt;empty string&gt;]</td>
+<td class="success">0.803s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">bounceRateWithIndex[4: /]</td>
+<td class="success">1.093s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">bounceRateWithIndex[5: /?variantName=dotexperiment-fcaef4575a-variant-1&amp;redirect=true]</td>
+<td class="success">1.095s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">createRunningIdWhenExperimentIsTurnToRunning</td>
+<td class="success">2.268s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="failures">createRunningIdWithStartScheduled</td>
+<td class="failures">2.067s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="success">exitRate</td>
+<td class="success">1.991s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">exitRateGoalSuccessButWithCaseInsensitiveURL[0: com.dotcms.experiments.business.ExperimentAPIImpIntegrationTest$$Lambda$1296/0x0000000100efe440@21dc0465]</td>
+<td class="success">3.037s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">exitRateGoalSuccessButWithCaseInsensitiveURL[1: com.dotcms.experiments.business.ExperimentAPIImpIntegrationTest$$Lambda$1297/0x0000000100eff840@6f8a4a49]</td>
+<td class="success">3.080s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">exitRateWithIndex[0: /index]</td>
+<td class="success">2.648s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">exitRateWithIndex[1: /INDEX]</td>
+<td class="success">1.458s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">exitRateWithIndex[2: /IndEX]</td>
+<td class="success">2.590s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">exitRateWithIndex[3: &lt;empty string&gt;]</td>
+<td class="success">2.141s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">exitRateWithIndex[4: /]</td>
+<td class="success">1.143s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">exitRateWithIndex[5: /?variantName=dotexperiment-fcaef4575a-variant-1&amp;redirect=true]</td>
+<td class="success">1.802s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getEvents</td>
+<td class="success">1.692s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getRunningExperiment</td>
+<td class="success">5.812s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getSplitTrafficInsideExperimentResults</td>
+<td class="success">2.629s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">multiDaysEvent</td>
+<td class="success">1.492s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">noBounceRateWithIndexFirst[0: /index]</td>
+<td class="success">2.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">noBounceRateWithIndexFirst[1: /INDEX]</td>
+<td class="success">2.123s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">noBounceRateWithIndexFirst[2: /IndEX]</td>
+<td class="success">0.858s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">noBounceRateWithIndexFirst[3: &lt;empty string&gt;]</td>
+<td class="success">1.096s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">noBounceRateWithIndexFirst[4: /]</td>
+<td class="success">1.235s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">noBounceRateWithIndexFirst[5: /?variantName=dotexperiment-fcaef4575a-variant-1&amp;redirect=true]</td>
+<td class="success">1.841s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">noBounceRateWithIndexLast[0: /index]</td>
+<td class="success">2.798s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">noBounceRateWithIndexLast[1: /INDEX]</td>
+<td class="success">1.254s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">noBounceRateWithIndexLast[2: /IndEX]</td>
+<td class="success">2.041s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">noBounceRateWithIndexLast[3: &lt;empty string&gt;]</td>
+<td class="success">2.764s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">noBounceRateWithIndexLast[4: /]</td>
+<td class="success">2.154s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">noBounceRateWithIndexLast[5: /?variantName=dotexperiment-fcaef4575a-variant-1&amp;redirect=true]</td>
+<td class="success">0.970s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">noBounceRateWithIndexMiddle[0: /index]</td>
+<td class="success">1.871s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">noBounceRateWithIndexMiddle[1: /INDEX]</td>
+<td class="success">1.367s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">noBounceRateWithIndexMiddle[2: /IndEX]</td>
+<td class="success">1.694s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">noBounceRateWithIndexMiddle[3: &lt;empty string&gt;]</td>
+<td class="success">2.112s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">noBounceRateWithIndexMiddle[4: /]</td>
+<td class="success">1.777s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">noBounceRateWithIndexMiddle[5: /?variantName=dotexperiment-fcaef4575a-variant-1&amp;redirect=true]</td>
+<td class="success">1.196s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">noExitRateWithIndex[0: /index]</td>
+<td class="success">1.734s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">noExitRateWithIndex[1: /INDEX]</td>
+<td class="success">1.984s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">noExitRateWithIndex[2: /IndEX]</td>
+<td class="success">1.192s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">noExitRateWithIndex[3: &lt;empty string&gt;]</td>
+<td class="success">1.985s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">noExitRateWithIndex[4: /]</td>
+<td class="success">1.960s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">noExitRateWithIndex[5: /?variantName=dotexperiment-fcaef4575a-variant-1&amp;redirect=true]</td>
+<td class="success">1.879s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">notBounceRateFirst</td>
+<td class="success">2.349s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">notBounceRateLast</td>
+<td class="success">2.285s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">notBounceRateMiddle</td>
+<td class="success">1.937s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">notExitRate</td>
+<td class="success">2.179s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">notExitRateSession</td>
+<td class="success">1.631s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">pageNotReachButExperimentPageWasView</td>
+<td class="success">1.802s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">pageReachAfterExperimentPageButNotDirectReferer</td>
+<td class="success">2.202s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">pageReachButBeforeExperimentPage</td>
+<td class="success">2.239s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">pageReachButExperimentPageWasNotView</td>
+<td class="success">2.114s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">pageReachDirectReferer</td>
+<td class="success">2.100s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">pageReachDirectRefererMultiDays</td>
+<td class="success">2.859s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">pageReachWhenExperimentPageIsIndexPage[0: /index]</td>
+<td class="success">1.875s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">pageReachWhenExperimentPageIsIndexPage[1: /INDEX]</td>
+<td class="success">2.969s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">pageReachWhenExperimentPageIsIndexPage[2: /IndEX]</td>
+<td class="success">1.960s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">pageReachWhenExperimentPageIsIndexPage[3: &lt;empty string&gt;]</td>
+<td class="success">1.936s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">pageReachWhenExperimentPageIsIndexPage[4: /]</td>
+<td class="success">2.214s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">pageReachWhenExperimentPageIsIndexPage[5: /?variantName=dotexperiment-fcaef4575a-variant-1&amp;redirect=true]</td>
+<td class="success">1.920s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">pageReachWhenExperimentPageIsRootIndexPage[0: /index]</td>
+<td class="success">1.383s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">pageReachWhenExperimentPageIsRootIndexPage[1: /INDEX]</td>
+<td class="success">2.851s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">pageReachWhenExperimentPageIsRootIndexPage[2: /IndEX]</td>
+<td class="success">1.311s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">pageReachWhenExperimentPageIsRootIndexPage[3: &lt;empty string&gt;]</td>
+<td class="success">2.985s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">pageReachWhenExperimentPageIsRootIndexPage[4: /]</td>
+<td class="success">1.809s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">pageReachWhenExperimentPageIsRootIndexPage[5: /?variantName=dotexperiment-fcaef4575a-variant-1&amp;redirect=true]</td>
+<td class="success">2.098s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">reachPageGoalSuccessButWithCaseInsensitiveURL[0: com.dotcms.experiments.business.ExperimentAPIImpIntegrationTest$$Lambda$1296/0x0000000100efe440@21dc0465]</td>
+<td class="success">2.191s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">reachPageGoalSuccessButWithCaseInsensitiveURL[1: com.dotcms.experiments.business.ExperimentAPIImpIntegrationTest$$Lambda$1297/0x0000000100eff840@6f8a4a49]</td>
+<td class="success">2.229s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">renderUrlMapPageWithExperiment</td>
+<td class="success">4.033s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">restartExperimentMustGenerateTwoRunningIds</td>
+<td class="success">1.742s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="failures">restartExperimentUsingTheStartScheduled</td>
+<td class="failures">2.202s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="success">resultWithPagination</td>
+<td class="success">2.181s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">resultWithPaginationWhenTheLastPageIsNotComplte</td>
+<td class="success">2.376s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">resultWithUrlMap</td>
+<td class="success">1.869s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">savingExperimentWithReachPage</td>
+<td class="success">2.524s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">savingExperimentWithUrlParameter</td>
+<td class="success">2.312s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testADeleteOriginalVariant_shouldFail</td>
+<td class="success">1.533s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testAddMoreThanOneOriginalVariant_shouldFail</td>
+<td class="success">2.060s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testSaveExperiment_shouldNotValidateSchedule</td>
+<td class="success">1.173s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testStartExperiment_shouldPublishContent</td>
+<td class="success">2.995s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">test_calcBayesian_ABC</td>
+<td class="success">1.340s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">test_calcBayesian_AOverB</td>
+<td class="success">1.055s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
 <td class="success">test_calcBayesian_AOverB_ended</td>
-<td class="success">1.085s</td>
+<td class="success">2.035s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">test_calcBayesian_BOverA</td>
-<td class="success">1.950s</td>
+<td class="success">0.997s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">test_calcBayesian_BOverA_ExitRate</td>
-<td class="success">1.762s</td>
+<td class="success">2.893s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">test_getResults_missingAnalyticsApp</td>
-<td class="success">1.743s</td>
+<td class="success">1.955s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">tryToGetResultFromExperimentNotSaved</td>
-<td class="success">1.745s</td>
+<td class="success">1.593s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">tryToGetResultFromExperimentNotStarted</td>
-<td class="success">1.555s</td>
+<td class="success">2.044s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">urlParameterExperimentPageNotVisited</td>
-<td class="success">2.439s</td>
+<td class="success">1.301s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">urlParameterGoalSuccessButWithCaseInsensitiveURL[0: com.dotcms.experiments.business.ExperimentAPIImpIntegrationTest$$Lambda$1296/0x0000000100efe440@21dc0465]</td>
+<td class="success">2.581s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">urlParameterGoalSuccessButWithCaseInsensitiveURL[1: com.dotcms.experiments.business.ExperimentAPIImpIntegrationTest$$Lambda$1297/0x0000000100eff840@6f8a4a49]</td>
+<td class="success">1.950s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">urlParameterMeetBeforeExperimentPage</td>
-<td class="success">1.591s</td>
+<td class="success">1.236s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">urlParameterMeetInExperimentPage</td>
-<td class="success">2.681s</td>
+<td class="success">1.914s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">urlParameterMeetTwice</td>
-<td class="success">3.041s</td>
+<td class="success">1.840s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">urlParameterWhenExperimentPageIsIndexPage[0: /index]</td>
-<td class="success">2.835s</td>
+<td class="success">1.633s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">urlParameterWhenExperimentPageIsIndexPage[1: /INDEX]</td>
-<td class="success">1.908s</td>
+<td class="success">1.062s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">urlParameterWhenExperimentPageIsIndexPage[2: /IndEX]</td>
-<td class="success">1.999s</td>
+<td class="success">1.985s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">urlParameterWhenExperimentPageIsIndexPage[3: &lt;empty string&gt;]</td>
-<td class="success">0.872s</td>
+<td class="success">1.931s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">urlParameterWhenExperimentPageIsIndexPage[4: /]</td>
-<td class="success">1.468s</td>
+<td class="success">1.179s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">urlParameterWhenExperimentPageIsIndexPage[5: /?variantName=dotexperiment-fcaef4575a-variant-1&amp;redirect=true]</td>
-<td class="success">1.757s</td>
+<td class="success">2.851s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">urlParameterWhenExperimentPageIsRootIndexPage[0: /index]</td>
-<td class="success">1.782s</td>
+<td class="success">1.826s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">urlParameterWhenExperimentPageIsRootIndexPage[1: /INDEX]</td>
-<td class="success">1.864s</td>
+<td class="success">2.095s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">urlParameterWhenExperimentPageIsRootIndexPage[2: /IndEX]</td>
-<td class="success">1.273s</td>
+<td class="success">1.896s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">urlParameterWhenExperimentPageIsRootIndexPage[3: &lt;empty string&gt;]</td>
-<td class="success">2.064s</td>
+<td class="success">2.010s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">urlParameterWhenExperimentPageIsRootIndexPage[4: /]</td>
-<td class="success">2.827s</td>
+<td class="success">1.099s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">urlParameterWhenExperimentPageIsRootIndexPage[5: /?variantName=dotexperiment-fcaef4575a-variant-1&amp;redirect=true]</td>
-<td class="success">1.981s</td>
+<td class="success">1.884s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">urlParameterWithContainerOperatorSuccess</td>
-<td class="success">0.886s</td>
+<td class="success">2.877s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">urlParameterWithContainsOperatorNotSuccess</td>
-<td class="success">2.133s</td>
+<td class="success">2.037s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">urlParameterWithEqualsOperatorNotSuccess</td>
-<td class="success">0.875s</td>
+<td class="success">2.835s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">urlParameterWithEqualsOperatorSuccess</td>
-<td class="success">2.139s</td>
+<td class="success">0.974s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">withJustOnePageVisited</td>
-<td class="success">2.003s</td>
+<td class="success">0.693s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -767,7 +837,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.3.3</a> at Aug 4, 2023, 10:08:10 PM</p>
+<a href="http://www.gradle.org">Gradle 7.3.3</a> at Aug 10, 2023, 6:21:31 PM</p>
 </div>
 </div>
 </body>
