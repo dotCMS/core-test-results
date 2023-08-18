@@ -1,2 +1,2 @@
 <tr><td><a href="./Template_Resource.postman_collection.html">Template Resource.postman_collection.json</a></td><td style="color: #ffffff; background-color: #28a745; font-weight: bold;">PASSED</td>
-      <td>727.086</td></tr>
+      <td>637.318</td></tr>
