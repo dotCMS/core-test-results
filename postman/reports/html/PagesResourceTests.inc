@@ -1,2 +1,2 @@
 <tr><td><a href="./PagesResourceTests.html">PagesResourceTests.json</a></td><td style="color: #ffffff; background-color: #dc3545; font-weight: bold;">FAILED</td>
-      <td>642.092</td></tr>
+      <td>578.701</td></tr>
