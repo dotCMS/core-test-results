@@ -29,7 +29,7 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">0</div>
+<div class="counter">1</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">32.493s</div>
+<div class="counter">29.821s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox success" id="successRate">
-<div class="percent">100%</div>
+<div class="infoBox failures" id="successRate">
+<div class="percent">96%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,10 +61,45 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Tests</a>
+<a href="#tab0">Failed tests</a>
+</li>
+<li>
+<a href="#tab1">Tests</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="getTagInodesByInode"></a>
+<h3 class="failures">getTagInodesByInode</h3>
+<span class="code">
+<pre>com.dotmarketing.business.DotStateException: unable to delete folder:/home/runner/work/core/custom/dotsecure/h22cache/1/2023-08-22_21-31-26
+	at app//com.dotmarketing.business.cache.provider.h22.H22CacheCleanupThread.run(H22CacheCleanupThread.java:48)
+Caused by: java.io.IOException: Is a directory
+	at java.base/sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at java.base/sun.nio.ch.FileDispatcherImpl.read(FileDispatcherImpl.java:48)
+	at java.base/sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:276)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:245)
+	at java.base/sun.nio.ch.FileChannelImpl.read(FileChannelImpl.java:223)
+	at java.base/sun.nio.ch.ChannelInputStream.read(ChannelInputStream.java:65)
+	at java.base/sun.nio.ch.ChannelInputStream.read(ChannelInputStream.java:107)
+	at java.base/sun.nio.ch.ChannelInputStream.read(ChannelInputStream.java:101)
+	at java.base/java.nio.channels.Channels$ReadableByteChannelImpl.read(Channels.java:388)
+	at com.liferay.util.FileUtil.fastCopyUsingNio(FileUtil.java:828)
+	at com.liferay.util.FileUtil.copyFile(FileUtil.java:275)
+	at com.liferay.util.FileUtil.copyFile(FileUtil.java:225)
+	at com.liferay.util.FileUtil.copyFile(FileUtil.java:189)
+	at com.liferay.util.FileUtil.copyFile(FileUtil.java:172)
+	at com.liferay.util.FileUtil.move(FileUtil.java:662)
+	at com.liferay.util.FileUtil.move(FileUtil.java:609)
+	at com.dotmarketing.util.TrashUtils.moveFileToTrash(TrashUtils.java:34)
+	at com.dotmarketing.util.TrashUtils.moveFileToTrash(TrashUtils.java:50)
+	at com.dotmarketing.business.cache.provider.h22.H22CacheCleanupThread.run(H22CacheCleanupThread.java:45)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -76,27 +111,27 @@
 </thead>
 <tr>
 <td class="success">addTag</td>
-<td class="success">0.006s</td>
+<td class="success">0.004s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">addTagInode</td>
-<td class="success">2.745s</td>
+<td class="success">2.974s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">deleteTag</td>
-<td class="success">0.007s</td>
+<td class="success">0.009s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">deleteTagInode</td>
-<td class="success">3.844s</td>
+<td class="success">3.097s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">editTag</td>
-<td class="success">0.004s</td>
+<td class="success">0.009s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -111,7 +146,7 @@
 </tr>
 <tr>
 <td class="success">getSuggestedTag</td>
-<td class="success">0.003s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -131,52 +166,52 @@
 </tr>
 <tr>
 <td class="success">getTagByTagId</td>
-<td class="success">0.001s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">getTagInode</td>
-<td class="success">3.726s</td>
+<td class="success">3.151s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">getTagInodesByInode</td>
-<td class="success">3.709s</td>
-<td class="success">passed</td>
+<td class="failures">getTagInodesByInode</td>
+<td class="failures">3.570s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
 <td class="success">getTagInodesByTagId</td>
-<td class="success">3.709s</td>
+<td class="success">3.442s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">getTagsByInode</td>
-<td class="success">3.670s</td>
+<td class="success">3.054s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">getTagsForUserByUserId</td>
-<td class="success">0.006s</td>
+<td class="success">0.024s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">getTagsForUserByUserInode</td>
-<td class="success">0.005s</td>
+<td class="success">0.006s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">getTagsInText</td>
-<td class="success">0.007s</td>
+<td class="success">0.008s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">getTagsInText_givenTagWithPersonaSuffix_shouldNotCreateDup</td>
-<td class="success">0.003s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">removeTagRelationAndTagWhenPossible</td>
-<td class="success">3.350s</td>
+<td class="success">3.378s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -186,7 +221,7 @@
 </tr>
 <tr>
 <td class="success">testGetTagsByHostId_returnAllTagsOfAHost</td>
-<td class="success">0.001s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -196,17 +231,17 @@
 </tr>
 <tr>
 <td class="success">updateTagReferences</td>
-<td class="success">2.377s</td>
+<td class="success">2.146s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">validatePersonaTags</td>
-<td class="success">1.663s</td>
+<td class="success">1.729s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">validateTagCache</td>
-<td class="success">3.610s</td>
+<td class="success">3.165s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -219,7 +254,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.3.3</a> at Aug 21, 2023, 5:50:17 PM</p>
+<a href="http://www.gradle.org">Gradle 7.3.3</a> at Aug 22, 2023, 9:58:15 PM</p>
 </div>
 </div>
 </body>
