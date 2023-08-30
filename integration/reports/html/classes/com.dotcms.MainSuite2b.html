@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.011s</div>
+<div class="counter">0.017s</div>
 <p>duration</p>
 </div>
 </td>
@@ -73,7 +73,7 @@
 <a name="initializationError"></a>
 <h3 class="failures">initializationError</h3>
 <span class="code">
-<pre>java.lang.Error: Cannot explode 'StoragePersistenceAPITest.Test_Attempt_Push_Same_Binary_Twice' using 'getDupeBinaryTestCases' due to: Exception while invoking dataprovider method 'getDupeBinaryTestCases': Could not initialize class com.dotcms.util.ConfigTestHelper
+<pre>java.lang.Error: Cannot explode 'FileMetadataAPITest.Test_Force_Set_Metadata' using 'getFileAssetMetadataTestCases' due to: Exception while invoking dataprovider method 'getFileAssetMetadataTestCases': No Company!
 	at com.tngtech.java.junit.dataprovider.internal.TestGenerator.generateExplodedTestMethodsFor(TestGenerator.java:60)
 	at com.dotcms.junit.CustomDataProviderRunner$1.generateExplodedTestMethodsFor(CustomDataProviderRunner.java:65)
 	at com.tngtech.java.junit.dataprovider.DataProviderRunner.generateExplodedTestMethodsFor(DataProviderRunner.java:227)
@@ -122,21 +122,28 @@
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-Caused by: java.lang.IllegalArgumentException: Exception while invoking dataprovider method 'getDupeBinaryTestCases': Could not initialize class com.dotcms.util.ConfigTestHelper
+Caused by: java.lang.IllegalArgumentException: Exception while invoking dataprovider method 'getFileAssetMetadataTestCases': No Company!
 	at com.tngtech.java.junit.dataprovider.internal.TestGenerator.explodeTestMethod(TestGenerator.java:107)
 	at com.tngtech.java.junit.dataprovider.internal.TestGenerator.generateExplodedTestMethodsFor(TestGenerator.java:58)
 	... 47 more
-Caused by: java.lang.NoClassDefFoundError: Could not initialize class com.dotcms.util.ConfigTestHelper
-	at com.dotcms.storage.StoragePersistenceAPITest.getDupeBinaryTestCases(StoragePersistenceAPITest.java:253)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at com.dotcms.junit.CustomDataProviderRunner$1$1.invokeExplosively(CustomDataProviderRunner.java:59)
-	at com.tngtech.java.junit.dataprovider.internal.TestGenerator.explodeTestMethod(TestGenerator.java:100)
+Caused by: com.dotmarketing.exception.DotRuntimeException: No Company!
+	at app//com.dotmarketing.cms.factories.PublicCompanyFactory.getDefaultCompany(PublicCompanyFactory.java:59)
+	at app//com.dotmarketing.util.CompanyUtils.getDefaultCompany(CompanyUtils.java:12)
+	at app//com.dotcms.company.CompanyAPIFactory$CompanyAPIImpl.getDefaultCompany(CompanyAPIFactory.java:83)
+	at app//com.dotmarketing.portlets.languagesmanager.business.LanguageFactoryImpl.readDefaultLanguage(LanguageFactoryImpl.java:251)
+	at app//com.dotmarketing.portlets.languagesmanager.business.LanguageFactoryImpl.transactionalGetDefaultLanguage(LanguageFactoryImpl.java:228)
+	at app//com.dotmarketing.portlets.languagesmanager.business.LanguageFactoryImpl.getDefaultLanguage(LanguageFactoryImpl.java:212)
+	at app//com.dotmarketing.portlets.languagesmanager.business.LanguageAPIImpl.getDefaultLanguage(LanguageAPIImpl.java:186)
+	at app//com.dotcms.storage.FileMetadataAPITest.getFileAssetMetadataTestCases(FileMetadataAPITest.java:251)
+	at java.base@11.0.20/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base@11.0.20/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base@11.0.20/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@11.0.20/java.lang.reflect.Method.invoke(Method.java:566)
+	at app//org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at app//org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at app//org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at app//com.dotcms.junit.CustomDataProviderRunner$1$1.invokeExplosively(CustomDataProviderRunner.java:59)
+	at app//com.tngtech.java.junit.dataprovider.internal.TestGenerator.explodeTestMethod(TestGenerator.java:100)
 	... 48 more
 </pre>
 </span>
@@ -154,7 +161,7 @@ Caused by: java.lang.NoClassDefFoundError: Could not initialize class com.dotcms
 </thead>
 <tr>
 <td class="failures">initializationError</td>
-<td class="failures">0.011s</td>
+<td class="failures">0.017s</td>
 <td class="failures">failed</td>
 </tr>
 </table>
@@ -167,7 +174,7 @@ Caused by: java.lang.NoClassDefFoundError: Could not initialize class com.dotcms
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.3.3</a> at Aug 29, 2023, 9:13:07 PM</p>
+<a href="http://www.gradle.org">Gradle 7.3.3</a> at Aug 30, 2023, 5:38:51 PM</p>
 </div>
 </div>
 </body>
