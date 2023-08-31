@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.010s</div>
+<div class="counter">0.004s</div>
 <p>duration</p>
 </div>
 </td>
@@ -73,7 +73,7 @@
 <a name="initializationError"></a>
 <h3 class="failures">initializationError</h3>
 <span class="code">
-<pre>java.lang.Error: Cannot explode 'FileMetadataAPITest.Test_Force_Set_Metadata' using 'getFileAssetMetadataTestCases' due to: Exception while invoking dataprovider method 'getFileAssetMetadataTestCases': No Company!
+<pre>java.lang.Error: Cannot explode 'FileMetadataAPITest.Test_Force_Set_Metadata' using 'getFileAssetMetadataTestCases' due to: Exception while invoking dataprovider method 'getFileAssetMetadataTestCases': Could not initialize class com.dotcms.system.event.local.business.LocalSystemEventsAPIFactory$SingletonHolder
 	at com.tngtech.java.junit.dataprovider.internal.TestGenerator.generateExplodedTestMethodsFor(TestGenerator.java:60)
 	at com.dotcms.junit.CustomDataProviderRunner$1.generateExplodedTestMethodsFor(CustomDataProviderRunner.java:65)
 	at com.tngtech.java.junit.dataprovider.DataProviderRunner.generateExplodedTestMethodsFor(DataProviderRunner.java:227)
@@ -122,28 +122,35 @@
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-Caused by: java.lang.IllegalArgumentException: Exception while invoking dataprovider method 'getFileAssetMetadataTestCases': No Company!
+Caused by: java.lang.IllegalArgumentException: Exception while invoking dataprovider method 'getFileAssetMetadataTestCases': Could not initialize class com.dotcms.system.event.local.business.LocalSystemEventsAPIFactory$SingletonHolder
 	at com.tngtech.java.junit.dataprovider.internal.TestGenerator.explodeTestMethod(TestGenerator.java:107)
 	at com.tngtech.java.junit.dataprovider.internal.TestGenerator.generateExplodedTestMethodsFor(TestGenerator.java:58)
 	... 47 more
-Caused by: com.dotmarketing.exception.DotRuntimeException: No Company!
-	at app//com.dotmarketing.cms.factories.PublicCompanyFactory.getDefaultCompany(PublicCompanyFactory.java:59)
-	at app//com.dotmarketing.util.CompanyUtils.getDefaultCompany(CompanyUtils.java:12)
-	at app//com.dotcms.company.CompanyAPIFactory$CompanyAPIImpl.getDefaultCompany(CompanyAPIFactory.java:83)
-	at app//com.dotmarketing.portlets.languagesmanager.business.LanguageFactoryImpl.readDefaultLanguage(LanguageFactoryImpl.java:251)
-	at app//com.dotmarketing.portlets.languagesmanager.business.LanguageFactoryImpl.transactionalGetDefaultLanguage(LanguageFactoryImpl.java:228)
-	at app//com.dotmarketing.portlets.languagesmanager.business.LanguageFactoryImpl.getDefaultLanguage(LanguageFactoryImpl.java:212)
-	at app//com.dotmarketing.portlets.languagesmanager.business.LanguageAPIImpl.getDefaultLanguage(LanguageAPIImpl.java:186)
-	at app//com.dotcms.storage.FileMetadataAPITest.getFileAssetMetadataTestCases(FileMetadataAPITest.java:251)
-	at java.base@11.0.20/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base@11.0.20/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base@11.0.20/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base@11.0.20/java.lang.reflect.Method.invoke(Method.java:566)
-	at app//org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at app//org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at app//org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at app//com.dotcms.junit.CustomDataProviderRunner$1$1.invokeExplosively(CustomDataProviderRunner.java:59)
-	at app//com.tngtech.java.junit.dataprovider.internal.TestGenerator.explodeTestMethod(TestGenerator.java:100)
+Caused by: java.lang.NoClassDefFoundError: Could not initialize class com.dotcms.system.event.local.business.LocalSystemEventsAPIFactory$SingletonHolder
+	at com.dotcms.system.event.local.business.LocalSystemEventsAPIFactory.getInstance(LocalSystemEventsAPIFactory.java:43)
+	at com.dotmarketing.business.APIIndex.create(APILocator.java:1363)
+	at com.dotmarketing.business.APILocator.createService(APILocator.java:1182)
+	at com.dotmarketing.business.APILocator.createService(APILocator.java:172)
+	at com.dotmarketing.business.Locator.getServiceInstance(Locator.java:41)
+	at com.dotmarketing.business.APILocator.getInstance(APILocator.java:1155)
+	at com.dotmarketing.business.APILocator.getLocalSystemEventsAPI(APILocator.java:992)
+	at com.dotmarketing.portlets.languagesmanager.business.LanguageAPIImpl.&lt;init&gt;(LanguageAPIImpl.java:60)
+	at com.dotmarketing.business.APIIndex.create(APILocator.java:1316)
+	at com.dotmarketing.business.APILocator.createService(APILocator.java:1182)
+	at com.dotmarketing.business.APILocator.createService(APILocator.java:172)
+	at com.dotmarketing.business.Locator.getServiceInstance(Locator.java:41)
+	at com.dotmarketing.business.APILocator.getInstance(APILocator.java:1155)
+	at com.dotmarketing.business.APILocator.getLanguageAPI(APILocator.java:493)
+	at com.dotcms.storage.FileMetadataAPITest.getFileAssetMetadataTestCases(FileMetadataAPITest.java:251)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at com.dotcms.junit.CustomDataProviderRunner$1$1.invokeExplosively(CustomDataProviderRunner.java:59)
+	at com.tngtech.java.junit.dataprovider.internal.TestGenerator.explodeTestMethod(TestGenerator.java:100)
 	... 48 more
 </pre>
 </span>
@@ -161,7 +168,7 @@ Caused by: com.dotmarketing.exception.DotRuntimeException: No Company!
 </thead>
 <tr>
 <td class="failures">initializationError</td>
-<td class="failures">0.010s</td>
+<td class="failures">0.004s</td>
 <td class="failures">failed</td>
 </tr>
 </table>
@@ -174,7 +181,7 @@ Caused by: com.dotmarketing.exception.DotRuntimeException: No Company!
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.3.3</a> at Aug 31, 2023, 6:48:25 PM</p>
+<a href="http://www.gradle.org">Gradle 7.3.3</a> at Aug 31, 2023, 7:56:34 PM</p>
 </div>
 </div>
 </body>
