@@ -472,7 +472,7 @@ body.theme-light code {
                 <a class="nav-link text-white" id="pills-requests-tab" data-toggle="pill" href="#pills-requests" role="tab" aria-controls="pills-requests" aria-selected="false">Total Requests <span class="badge badge-light">2</span></a>
             </li>
             <li class="nav-item bg-danger" data-toggle="tooltip" title="Click to view the Failed Tests">
-                <a class="nav-link text-white" id="pills-failed-tab" data-toggle="pill" href="#pills-failed" role="tab" aria-controls="pills-failed" aria-selected="false">Failed Tests <span class="badge badge-light">0</span></a>
+                <a class="nav-link text-white" id="pills-failed-tab" data-toggle="pill" href="#pills-failed" role="tab" aria-controls="pills-failed" aria-selected="false">Failed Tests <span class="badge badge-light">1</span></a>
             </li>
             <li class="nav-item bg-warning" data-toggle="tooltip" title="Click to view the Skipped Tests">
                 <a class="nav-link text-white" id="pills-skipped-tab" data-toggle="pill" href="#pills-skipped" role="tab" aria-controls="pills-skipped" aria-selected="false">Skipped Tests <span class="badge badge-light">0</span></a>
@@ -483,11 +483,11 @@ body.theme-light code {
 <div class="row">
   <div class="col-md-9 col-lg-12 main">
    <h1 class="display-2 text-center">Newman Run Dashboard</h1>
-   <h5 class="text-center">Wednesday, 13 September 2023 03:02:40</h5>
+   <h5 class="text-center">Wednesday, 13 September 2023 15:58:04</h5>
    <div class="row">
     <div class="col-lg-3 col-md-6">
      <div class="card text-white card-success">
-      <div class="card-body bg-success">
+      <div class="card-body bg-danger">
        <div class="rotate">
         <i class="fa fa-retweet fa-5x"></i>
        </div>
@@ -509,12 +509,12 @@ body.theme-light code {
     </div>
     <div class="col-lg-3 col-md-6">
      <div class="card text-white card-info">
-      <div class="card-body bg-success">
+      <div class="card-body bg-danger">
        <div class="rotate">
         <i class="fa fa-plus-circle fa-5x"></i>
        </div>
        <h6 class="text-uppercase">Total Failed Tests</h6>
-       <h1 class="display-1">0</h1>
+       <h1 class="display-1">1</h1>
       </div>
      </div>
     </div>
@@ -550,9 +550,9 @@ body.theme-light code {
             <div class="card border-info">
                 <div class="card-body">
                 <h5 class="card-title text-uppercase text-white text-center bg-info">Timings and Data</h5>
-                <span><i class="fas fa-stopwatch"></i></span><strong> Total run duration:</strong> 4.7s<br>
+                <span><i class="fas fa-stopwatch"></i></span><strong> Total run duration:</strong> 4.4s<br>
                 <span><i class="fas fa-database"></i></span><strong> Total data received:</strong> 887B<br>
-                <span><i class="fas fa-stopwatch"></i></span><strong> Average response time:</strong> 2.3s<br>
+                <span><i class="fas fa-stopwatch"></i></span><strong> Average response time:</strong> 2.1s<br>
                 </div>
             </div>
         </div>
@@ -584,10 +584,10 @@ body.theme-light code {
                         <td class="text-center">2</td>
                         <td class="text-center">0</td>
                     </tr>
-                    <tr class="">
+                    <tr class="table-danger">
                         <td>Assertions</td>
                         <td class="text-center">2</td>
-                        <td class="text-center">0</td>
+                        <td class="text-center">1</td>
                     </tr>
                     <tr class="">
                         <td>Skipped Tests</td>
@@ -608,9 +608,36 @@ body.theme-light code {
             <div class="tab-pane fade" id="pills-failed" role="tabcard" aria-labelledby="pills-failed-tab">
                 <button id="topOfFailuresScreen" class="btn btn-outline-success btn-sm backToTop" onclick="topFunction()">Go To Top</button>
 
-                <div class="alert alert-success text-uppercase text-center">
-                     <br><br><h1 class="text-center">There are no failed tests <span><i class="far fa-thumbs-up"></i></span></h1><br><br>
-                </div>
+                    <div class="btn-group float-right" role="group" aria-label="Button Group">
+                        <button id="openAllFailed" class="btn btn-outline-success btn-sm float-right" style="text-align: center; width: 185px;">Expand All Failed Tests</button>
+                    </div>
+                    <br>
+                    <br>
+
+                    <div class="alert alert-danger text-uppercase text-center">
+                        <h4>Showing 1 Failure</h4>
+                    </div>
+                    <div class="col-sm-12 mb-3">
+                    <div class="card-deck">
+                        <div class="card border-danger">
+                            <div class="card-header bg-danger">
+                                <a data-toggle="collapse" href="#" data-target="#fails-collapse-30794cab-292a-4a2d-90fe-61c6f19da89a" aria-expanded="false" aria-controls="collapse" id="fails-30794cab-292a-4a2d-90fe-61c6f19da89a" class="collapsed text-white z-block">
+                                    Iteration 1 - AssertionError - TempAPI - Upload Multiple with one wrong file <i class="float-lg-right fa fa-chevron-down" style="padding-top:5px;"></i>
+                                </a>
+                            </div>
+                            <div id="fails-collapse-30794cab-292a-4a2d-90fe-61c6f19da89a" class="collapse" aria-labelledby="fails-30794cab-292a-4a2d-90fe-61c6f19da89a">
+                            <div class="card-body">
+                                <h5 ><strong>Failed Test:</strong> File name check</h5>
+                            <hr>
+                            <h5 class="card-title text-uppercase text-white text-center bg-danger">Assertion Error Message</h5>
+                            <div>
+                                <pre><code >expected undefined to deeply equal &#x27;16475687531_eac8a30914_b.jpeg&#x27;</code></pre>
+                            </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
             </div>
 
             <div class="tab-pane fade" id="pills-skipped" role="tabcard" aria-labelledby="pills-skipped-tab">
@@ -625,6 +652,7 @@ body.theme-light code {
             <button id="topOfRequestsScreen" class="btn btn-outline-success btn-sm backToTop" onclick="topFunction()">Go To Top</button>
 
             <div class="btn-group float-right" role="group" aria-label="Button Group">
+                <button id="showOnlyFailures" class="btn btn-outline-success btn-sm float-right" style="text-align: center; width:160px;">Show Failed Iterations</button>
                 <button id="openAll" class="btn btn-outline-success btn-sm float-right" style="text-align: center; width: 140px;">Expand Folders</button>
                 <button id="openAllRequests" class="btn btn-outline-success btn-sm float-right" style="text-align: center; width: 140px;">Expand Requests</button>
             </div>
@@ -639,16 +667,16 @@ body.theme-light code {
     </div>
     <h6 class="text-uppercase text-muted" id="iterationSelected" style="padding-top: 10px;"></h6>
 	<div class="tab-content" id="execution-data">
-            <div id="folder-b4e2d3f3-2bce-49d2-8c91-73537448d78a" class="card-deck iteration-0">
+            <div id="folder-2907ddaa-a2a3-4c38-994e-6d2065172978" class="card-deck iteration-0">
             <div class="row iteration-0">
                 <div class="col-sm-12 mb-3 iteration-0">
                 <div class="card iteration-0">
-                    <div class="card-header  bg-success iteration-0">
-                        <a data-toggle="collapse" href="#" data-target="#collapse-b4e2d3f3-2bce-49d2-8c91-73537448d78a" aria-expanded="false" aria-controls="collapse" id="requests-b4e2d3f3-2bce-49d2-8c91-73537448d78a" class="collapsed text-white z-block">
+                    <div class="card-header  bg-danger iteration-0">
+                        <a data-toggle="collapse" href="#" data-target="#collapse-2907ddaa-a2a3-4c38-994e-6d2065172978" aria-expanded="false" aria-controls="collapse" id="requests-2907ddaa-a2a3-4c38-994e-6d2065172978" class="collapsed text-white z-block">
                     Iteration: 1 - Upload Multiple with one wrong file <i class="float-lg-right fa fa-chevron-down" style="padding-top: 5px;"></i>
                 </a>
                     </div>
-                    <div id="collapse-b4e2d3f3-2bce-49d2-8c91-73537448d78a" class="collapse" aria-labelledby="requests-b4e2d3f3-2bce-49d2-8c91-73537448d78a">
+                    <div id="collapse-2907ddaa-a2a3-4c38-994e-6d2065172978" class="collapse" aria-labelledby="requests-2907ddaa-a2a3-4c38-994e-6d2065172978">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-12 mb-3">
@@ -664,14 +692,14 @@ body.theme-light code {
                                     <div class="card-body">
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Response Information</h5>
                                     <span><i class="fas fa-info-circle"></i></span><strong> Response Code:</strong> <span class="float-right badge-outline badge badge-success"> 200 - OK</span><br>
-                                    <span><i class="fas fa-stopwatch"></i></span><strong> Mean time per request:</strong> <span class="float-right badge-outline badge badge-success"> 4.5s</span><br>
+                                    <span><i class="fas fa-stopwatch"></i></span><strong> Mean time per request:</strong> <span class="float-right badge-outline badge badge-success"> 4.2s</span><br>
                                     <span><i class="fas fa-database"></i></span><strong> Mean size per request:</strong> <span class="float-right badge-outline badge badge-success"> 875B</span><br>
                                     <hr>
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Test Pass Percentage</h5>
                                     <div>
                                         <div class="progress" style="height: 40px;">
-                                            <div class="progress-bar  bg-success" style="width: 100%" role="progressbar">
-                                            <h5 style="padding-top:5px;"><strong>100 %</strong></h5>
+                                            <div class="progress-bar  bg-danger" style="width: 100%" role="progressbar">
+                                            <h5 style="padding-top:5px;"><strong>0 %</strong></h5>
                                             </div>
                                         </div>
                                     </div>
@@ -712,7 +740,7 @@ body.theme-light code {
                                                     </tr>
                                                     <tr>
                                                         <td class="text-nowrap">Postman-Token</td>
-                                                        <td class="text-wrap">56a32e17-4dcd-4265-975f-d609d5c7946d</td>
+                                                        <td class="text-wrap">947a9fd5-3142-45b6-a420-f89f4aa25c92</td>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-nowrap">Host</td>
@@ -779,15 +807,15 @@ body.theme-light code {
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">x-dot-server</td>
-                                                    <td class="text-wrap">9a0b6d86a7bb|d27f070f38</td>
+                                                    <td class="text-wrap">e916cb44c5ce|9ffc1f07fa</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Set-Cookie</td>
-                                                    <td class="text-wrap">JSESSIONID&#x3D;D84A2752B6A7517269638B3A19299B8C; Path&#x3D;/; Secure; HttpOnly; SameSite&#x3D;Lax</td>
+                                                    <td class="text-wrap">JSESSIONID&#x3D;07654229541388DF953AC694EBAA0DD0; Path&#x3D;/; Secure; HttpOnly; SameSite&#x3D;Lax</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Set-Cookie</td>
-                                                    <td class="text-wrap">access_token&#x3D;eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI5MDZkY2Q3Yi0yNGM5LTQwNDAtODBmYi05Nzc2NTE3YzJlYmYiLCJ4bW9kIjoxNjk0NTc0MTU3MjUxLCJzdWIiOiJkb3RjbXMub3JnLjEiLCJpYXQiOjE2OTQ1NzQxNjAsImlzcyI6IjYzNTAxOGM5NDMiLCJleHAiOjE2OTQ2NjA1NjB9.ISylej_i0VmCrd-Dfb4O1G4jaQ8uoogaiQvdMUxn77w; Path&#x3D;/; HttpOnly; SameSite&#x3D;Lax</td>
+                                                    <td class="text-wrap">access_token&#x3D;eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI3ZTM2YTNhYS1lNTUyLTQ0NTctYTVjMC1jNmI1YjA5NDFhMjMiLCJ4bW9kIjoxNjk0NjIwNjgxMzUwLCJzdWIiOiJkb3RjbXMub3JnLjEiLCJpYXQiOjE2OTQ2MjA2ODQsImlzcyI6ImI2ZDMyM2EzMWUiLCJleHAiOjE2OTQ3MDcwODR9.18OVoE_70-S9xBB2SFdW1OyerHipe8mP96q_cUApAMU; Path&#x3D;/; HttpOnly; SameSite&#x3D;Lax</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Access-Control-Allow-Origin</td>
@@ -839,7 +867,7 @@ body.theme-light code {
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Date</td>
-                                                    <td class="text-wrap">Wed, 13 Sep 2023 03:02:40 GMT</td>
+                                                    <td class="text-wrap">Wed, 13 Sep 2023 15:58:04 GMT</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Keep-Alive</td>
@@ -864,10 +892,10 @@ body.theme-light code {
                                 <div class="card-body">
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Response Body</h5>
                                         <div class="dyn-height">
-                                                <pre><code id="copyText-13a3f0d5-3fed-49d7-b107-d36acf2cc2a6" class="prettyPrint">{&quot;tempFiles&quot;:[{&quot;fileName&quot;:&quot;Landscape_2009_romantic_country_garden.jpeg&quot;,&quot;folder&quot;:&quot;&quot;,&quot;id&quot;:&quot;temp_a5dc14e023&quot;,&quot;image&quot;:true,&quot;length&quot;:707207,&quot;mimeType&quot;:&quot;image/jpeg&quot;,&quot;referenceUrl&quot;:&quot;/dA/temp_a5dc14e023/tmp/Landscape_2009_romantic_country_garden.jpeg&quot;,&quot;thumbnailUrl&quot;:&quot;/contentAsset/image/temp_a5dc14e023/tmp/filter/Thumbnail/thumbnail_w/250/thumbnail_h/250/Landscape_2009_romantic_country_garden.jpeg&quot;},{&quot;fileName&quot;:&quot;16475687531_eac8a30914_b.jpeg&quot;,&quot;folder&quot;:&quot;&quot;,&quot;id&quot;:&quot;temp_aec6ebc70d&quot;,&quot;image&quot;:true,&quot;length&quot;:220875,&quot;mimeType&quot;:&quot;image/jpeg&quot;,&quot;referenceUrl&quot;:&quot;/dA/temp_aec6ebc70d/tmp/16475687531_eac8a30914_b.jpeg&quot;,&quot;thumbnailUrl&quot;:&quot;/contentAsset/image/temp_aec6ebc70d/tmp/filter/Thumbnail/thumbnail_w/250/thumbnail_h/250/16475687531_eac8a30914_b.jpeg&quot;},{&quot;errorCode&quot;:&quot;400&quot;,&quot;fieldName&quot;:&quot;1&quot;,&quot;message&quot;:&quot;Invalid Binary Part, Message: The maximum file size for this field is 1024.0 K., index: 1&quot;}]}</code></pre>
+                                                <pre><code id="copyText-3b352df5-e411-4df9-9c3b-ef0ac450937e" class="prettyPrint">{&quot;tempFiles&quot;:[{&quot;fileName&quot;:&quot;Landscape_2009_romantic_country_garden.jpeg&quot;,&quot;folder&quot;:&quot;&quot;,&quot;id&quot;:&quot;temp_56435411a9&quot;,&quot;image&quot;:true,&quot;length&quot;:707207,&quot;mimeType&quot;:&quot;image/jpeg&quot;,&quot;referenceUrl&quot;:&quot;/dA/temp_56435411a9/tmp/Landscape_2009_romantic_country_garden.jpeg&quot;,&quot;thumbnailUrl&quot;:&quot;/contentAsset/image/temp_56435411a9/tmp/filter/Thumbnail/thumbnail_w/250/thumbnail_h/250/Landscape_2009_romantic_country_garden.jpeg&quot;},{&quot;errorCode&quot;:&quot;400&quot;,&quot;fieldName&quot;:&quot;1&quot;,&quot;message&quot;:&quot;Invalid Binary Part, Message: The maximum file size for this field is 1024.0 K., index: 1&quot;},{&quot;fileName&quot;:&quot;16475687531_eac8a30914_b.jpeg&quot;,&quot;folder&quot;:&quot;&quot;,&quot;id&quot;:&quot;temp_dc9ec64114&quot;,&quot;image&quot;:true,&quot;length&quot;:220875,&quot;mimeType&quot;:&quot;image/jpeg&quot;,&quot;referenceUrl&quot;:&quot;/dA/temp_dc9ec64114/tmp/16475687531_eac8a30914_b.jpeg&quot;,&quot;thumbnailUrl&quot;:&quot;/contentAsset/image/temp_dc9ec64114/tmp/filter/Thumbnail/thumbnail_w/250/thumbnail_h/250/16475687531_eac8a30914_b.jpeg&quot;}]}</code></pre>
                                         </div>
                                         <div class="card-footer">
-                                            <button class="btn btn-outline-secondary btn-sm copyButton" type="button" data-clipboard-action="copy" data-clipboard-target="#copyText-13a3f0d5-3fed-49d7-b107-d36acf2cc2a6">Copy to Clipboard</button>
+                                            <button class="btn btn-outline-secondary btn-sm copyButton" type="button" data-clipboard-action="copy" data-clipboard-target="#copyText-3b352df5-e411-4df9-9c3b-ef0ac450937e">Copy to Clipboard</button>
                                         </div>
                                 </div>
                             </div>
@@ -884,22 +912,22 @@ body.theme-light code {
                                             <tbody>
                                                 <tr >
                                                     <td >File name check</td>
-                                                    <td class="text-center bg-success">1</td>
                                                     <td class="text-center ">0</td>
+                                                    <td class="text-center bg-danger">1</td>
                                                     <td class="text-center ">0</td>
                                                 </tr>
                                             </tbody>
                                             <tfoot>
                                                 <tr class="bg-light">
                                                     <td><strong>Total</strong></td>
-                                                    <td class="text-center">1</td>
                                                     <td class="text-center">0</td>
+                                                    <td class="text-center">1</td>
                                                     <td class="text-center">0</td>
                                                 </tr>
                                             </tfoot>
                                         </table>
                                     </div>
-                                    <div class="row d-none">
+                                    <div class="row ">
                                     <div class="col-sm-12 mb-3">
                                         <div class="card-deck">
                                         <div class="card border-danger" style="width: 50rem;">
@@ -909,6 +937,10 @@ body.theme-light code {
                                                     <table class="table table-hover">
                                                     <thead><tr class="text-nowrap"><th>Test Name</th><th>Assertion Error</th></tr></thead>
                                                         <tbody>
+                                                            <tr>
+                                                                <td class="w-45 text-nowrap ">File name check</td>
+                                                                <td class="w-55"><pre><code >expected undefined to deeply equal &#x27;16475687531_eac8a30914_b.jpeg&#x27;</code></pre></td>
+                                                            </tr>
                                                         </tbody>
                                                     </table>
                                                 </div>
@@ -926,16 +958,16 @@ body.theme-light code {
                 </div>
             </div>
             </div>
-            <div id="folder-6acb226c-501b-4e26-b08f-fc5c632241ef" class="card-deck iteration-0">
+            <div id="folder-3cde2708-07aa-4204-ac90-2747f7cc38f3" class="card-deck iteration-0">
             <div class="row iteration-0">
                 <div class="col-sm-12 mb-3 iteration-0">
                 <div class="card iteration-0">
                     <div class="card-header  bg-success iteration-0">
-                        <a data-toggle="collapse" href="#" data-target="#collapse-6acb226c-501b-4e26-b08f-fc5c632241ef" aria-expanded="false" aria-controls="collapse" id="requests-6acb226c-501b-4e26-b08f-fc5c632241ef" class="collapsed text-white z-block">
+                        <a data-toggle="collapse" href="#" data-target="#collapse-3cde2708-07aa-4204-ac90-2747f7cc38f3" aria-expanded="false" aria-controls="collapse" id="requests-3cde2708-07aa-4204-ac90-2747f7cc38f3" class="collapsed text-white z-block">
                     Iteration: 1 - Given_AnonUser_Unable_To_Upload <i class="float-lg-right fa fa-chevron-down" style="padding-top: 5px;"></i>
                 </a>
                     </div>
-                    <div id="collapse-6acb226c-501b-4e26-b08f-fc5c632241ef" class="collapse" aria-labelledby="requests-6acb226c-501b-4e26-b08f-fc5c632241ef">
+                    <div id="collapse-3cde2708-07aa-4204-ac90-2747f7cc38f3" class="collapse" aria-labelledby="requests-3cde2708-07aa-4204-ac90-2747f7cc38f3">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-12 mb-3">
@@ -951,7 +983,7 @@ body.theme-light code {
                                     <div class="card-body">
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Response Information</h5>
                                     <span><i class="fas fa-info-circle"></i></span><strong> Response Code:</strong> <span class="float-right badge-outline badge badge-success"> 401 - Unauthorized</span><br>
-                                    <span><i class="fas fa-stopwatch"></i></span><strong> Mean time per request:</strong> <span class="float-right badge-outline badge badge-success"> 100ms</span><br>
+                                    <span><i class="fas fa-stopwatch"></i></span><strong> Mean time per request:</strong> <span class="float-right badge-outline badge badge-success"> 90ms</span><br>
                                     <span><i class="fas fa-database"></i></span><strong> Mean size per request:</strong> <span class="float-right badge-outline badge badge-success"> 12B</span><br>
                                     <hr>
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Test Pass Percentage</h5>
@@ -995,7 +1027,7 @@ body.theme-light code {
                                                     </tr>
                                                     <tr>
                                                         <td class="text-nowrap">Postman-Token</td>
-                                                        <td class="text-wrap">f4185c70-fc39-4e7b-9bdf-a6858ef55847</td>
+                                                        <td class="text-wrap">0073f9be-bff5-4e1d-ad5a-dcf6628ac1bc</td>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-nowrap">Host</td>
@@ -1062,7 +1094,7 @@ body.theme-light code {
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">x-dot-server</td>
-                                                    <td class="text-wrap">9a0b6d86a7bb|d27f070f38</td>
+                                                    <td class="text-wrap">e916cb44c5ce|9ffc1f07fa</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Access-Control-Allow-Origin</td>
@@ -1094,7 +1126,7 @@ body.theme-light code {
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Date</td>
-                                                    <td class="text-wrap">Wed, 13 Sep 2023 03:02:40 GMT</td>
+                                                    <td class="text-wrap">Wed, 13 Sep 2023 15:58:04 GMT</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Keep-Alive</td>
@@ -1119,10 +1151,10 @@ body.theme-light code {
                                 <div class="card-body">
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Response Body</h5>
                                         <div class="dyn-height">
-                                                <pre><code id="copyText-bf70c811-2b74-4fc0-b86d-be5315a317c5" class="prettyPrint">Invalid User</code></pre>
+                                                <pre><code id="copyText-ffc98b65-c22a-4563-b7ad-f5484c9c50f8" class="prettyPrint">Invalid User</code></pre>
                                         </div>
                                         <div class="card-footer">
-                                            <button class="btn btn-outline-secondary btn-sm copyButton" type="button" data-clipboard-action="copy" data-clipboard-target="#copyText-bf70c811-2b74-4fc0-b86d-be5315a317c5">Copy to Clipboard</button>
+                                            <button class="btn btn-outline-secondary btn-sm copyButton" type="button" data-clipboard-action="copy" data-clipboard-target="#copyText-ffc98b65-c22a-4563-b7ad-f5484c9c50f8">Copy to Clipboard</button>
                                         </div>
                                 </div>
                             </div>
@@ -1269,25 +1301,25 @@ $('#openAllRequests').on('click', function(e) {
 let clickCount = $(this).data("clickCount") || 1
 switch (clickCount){
     case 1:
-            $('#requests-b4e2d3f3-2bce-49d2-8c91-73537448d78a').removeClass('collapsed')
-            $('#collapse-b4e2d3f3-2bce-49d2-8c91-73537448d78a').removeClass('collapsed')
-            $('#requests-b4e2d3f3-2bce-49d2-8c91-73537448d78a').addClass('show')
-            $('#collapse-b4e2d3f3-2bce-49d2-8c91-73537448d78a').addClass('show')
-            $('#requests-6acb226c-501b-4e26-b08f-fc5c632241ef').removeClass('collapsed')
-            $('#collapse-6acb226c-501b-4e26-b08f-fc5c632241ef').removeClass('collapsed')
-            $('#requests-6acb226c-501b-4e26-b08f-fc5c632241ef').addClass('show')
-            $('#collapse-6acb226c-501b-4e26-b08f-fc5c632241ef').addClass('show')
+            $('#requests-2907ddaa-a2a3-4c38-994e-6d2065172978').removeClass('collapsed')
+            $('#collapse-2907ddaa-a2a3-4c38-994e-6d2065172978').removeClass('collapsed')
+            $('#requests-2907ddaa-a2a3-4c38-994e-6d2065172978').addClass('show')
+            $('#collapse-2907ddaa-a2a3-4c38-994e-6d2065172978').addClass('show')
+            $('#requests-3cde2708-07aa-4204-ac90-2747f7cc38f3').removeClass('collapsed')
+            $('#collapse-3cde2708-07aa-4204-ac90-2747f7cc38f3').removeClass('collapsed')
+            $('#requests-3cde2708-07aa-4204-ac90-2747f7cc38f3').addClass('show')
+            $('#collapse-3cde2708-07aa-4204-ac90-2747f7cc38f3').addClass('show')
         $('#openAllRequests').html("Collapse Requests");
         break;
     case 2:
-            $('#requests-b4e2d3f3-2bce-49d2-8c91-73537448d78a').addClass('collapsed')
-            $('#collapse-b4e2d3f3-2bce-49d2-8c91-73537448d78a').addClass('collapsed')
-            $('#requests-b4e2d3f3-2bce-49d2-8c91-73537448d78a').removeClass('show')
-            $('#collapse-b4e2d3f3-2bce-49d2-8c91-73537448d78a').removeClass('show')
-            $('#requests-6acb226c-501b-4e26-b08f-fc5c632241ef').addClass('collapsed')
-            $('#collapse-6acb226c-501b-4e26-b08f-fc5c632241ef').addClass('collapsed')
-            $('#requests-6acb226c-501b-4e26-b08f-fc5c632241ef').removeClass('show')
-            $('#collapse-6acb226c-501b-4e26-b08f-fc5c632241ef').removeClass('show')
+            $('#requests-2907ddaa-a2a3-4c38-994e-6d2065172978').addClass('collapsed')
+            $('#collapse-2907ddaa-a2a3-4c38-994e-6d2065172978').addClass('collapsed')
+            $('#requests-2907ddaa-a2a3-4c38-994e-6d2065172978').removeClass('show')
+            $('#collapse-2907ddaa-a2a3-4c38-994e-6d2065172978').removeClass('show')
+            $('#requests-3cde2708-07aa-4204-ac90-2747f7cc38f3').addClass('collapsed')
+            $('#collapse-3cde2708-07aa-4204-ac90-2747f7cc38f3').addClass('collapsed')
+            $('#requests-3cde2708-07aa-4204-ac90-2747f7cc38f3').removeClass('show')
+            $('#collapse-3cde2708-07aa-4204-ac90-2747f7cc38f3').removeClass('show')
         $('#openAllRequests').html("Expand Requests");
         break;
 }
@@ -1303,25 +1335,25 @@ $('#openAllSkipped').on('click', function(e) {
 let clickCount = $(this).data("clickCount") || 1
 switch (clickCount){
     case 1:
-            $('#skipped-b4e2d3f3-2bce-49d2-8c91-73537448d78a').removeClass('collapsed')
-            $('#skipped-collapse-b4e2d3f3-2bce-49d2-8c91-73537448d78a').removeClass('collapsed')
-            $('#skipped-b4e2d3f3-2bce-49d2-8c91-73537448d78a').addClass('show')
-            $('#skipped-collapse-b4e2d3f3-2bce-49d2-8c91-73537448d78a').addClass('show')
-            $('#skipped-6acb226c-501b-4e26-b08f-fc5c632241ef').removeClass('collapsed')
-            $('#skipped-collapse-6acb226c-501b-4e26-b08f-fc5c632241ef').removeClass('collapsed')
-            $('#skipped-6acb226c-501b-4e26-b08f-fc5c632241ef').addClass('show')
-            $('#skipped-collapse-6acb226c-501b-4e26-b08f-fc5c632241ef').addClass('show')
+            $('#skipped-2907ddaa-a2a3-4c38-994e-6d2065172978').removeClass('collapsed')
+            $('#skipped-collapse-2907ddaa-a2a3-4c38-994e-6d2065172978').removeClass('collapsed')
+            $('#skipped-2907ddaa-a2a3-4c38-994e-6d2065172978').addClass('show')
+            $('#skipped-collapse-2907ddaa-a2a3-4c38-994e-6d2065172978').addClass('show')
+            $('#skipped-3cde2708-07aa-4204-ac90-2747f7cc38f3').removeClass('collapsed')
+            $('#skipped-collapse-3cde2708-07aa-4204-ac90-2747f7cc38f3').removeClass('collapsed')
+            $('#skipped-3cde2708-07aa-4204-ac90-2747f7cc38f3').addClass('show')
+            $('#skipped-collapse-3cde2708-07aa-4204-ac90-2747f7cc38f3').addClass('show')
         $('#openAllSkipped').html("Collapse All Skipped Tests");
         break;
     case 2:
-            $('#skipped-b4e2d3f3-2bce-49d2-8c91-73537448d78a').addClass('collapsed')
-            $('#skipped-collapse-b4e2d3f3-2bce-49d2-8c91-73537448d78a').addClass('collapsed')
-            $('#skipped-b4e2d3f3-2bce-49d2-8c91-73537448d78a').removeClass('show')
-            $('#skipped-collapse-b4e2d3f3-2bce-49d2-8c91-73537448d78a').removeClass('show')
-            $('#skipped-6acb226c-501b-4e26-b08f-fc5c632241ef').addClass('collapsed')
-            $('#skipped-collapse-6acb226c-501b-4e26-b08f-fc5c632241ef').addClass('collapsed')
-            $('#skipped-6acb226c-501b-4e26-b08f-fc5c632241ef').removeClass('show')
-            $('#skipped-collapse-6acb226c-501b-4e26-b08f-fc5c632241ef').removeClass('show')
+            $('#skipped-2907ddaa-a2a3-4c38-994e-6d2065172978').addClass('collapsed')
+            $('#skipped-collapse-2907ddaa-a2a3-4c38-994e-6d2065172978').addClass('collapsed')
+            $('#skipped-2907ddaa-a2a3-4c38-994e-6d2065172978').removeClass('show')
+            $('#skipped-collapse-2907ddaa-a2a3-4c38-994e-6d2065172978').removeClass('show')
+            $('#skipped-3cde2708-07aa-4204-ac90-2747f7cc38f3').addClass('collapsed')
+            $('#skipped-collapse-3cde2708-07aa-4204-ac90-2747f7cc38f3').addClass('collapsed')
+            $('#skipped-3cde2708-07aa-4204-ac90-2747f7cc38f3').removeClass('show')
+            $('#skipped-collapse-3cde2708-07aa-4204-ac90-2747f7cc38f3').removeClass('show')
         $('#openAllSkipped').html("Expand All Skipped Tests");
         break;
 }
@@ -1339,9 +1371,21 @@ let failedItemContent
 let failedItemHeading
 switch (clickCount){
     case 1:
+            failedItemHeading = $('#fails-30794cab-292a-4a2d-90fe-61c6f19da89a');
+            failedItemContent = $("#fails-collapse-30794cab-292a-4a2d-90fe-61c6f19da89a");
+            failedItemHeading.removeClass('collapsed')
+            failedItemContent.removeClass('collapsed')
+            failedItemHeading.addClass('show')
+            failedItemContent.addClass('show')
         $('#openAllFailed').html("Collapse All Failed Tests");
         break;
     case 2:
+            failedItemHeading = $('#fails-30794cab-292a-4a2d-90fe-61c6f19da89a');
+            failedItemContent = $("#fails-collapse-30794cab-292a-4a2d-90fe-61c6f19da89a");
+            failedItemHeading.removeClass('show')
+            failedItemContent.removeClass('show')
+            failedItemHeading.addClass('collapsed')
+            failedItemContent.addClass('collapsed')
         $('#openAllFailed').html("Expand All Failed Tests");
         break;
 }
@@ -1466,6 +1510,8 @@ function scrollFunction() {
     document.getElementById("openAllRequests").style.display = "none";
 
 
+    document.getElementById("showOnlyFailures").style.display = "none";
+    document.getElementById("openAllFailed").style.display = "none";
   } else {
     document.getElementById("topOfRequestsScreen").style.display = "none";
     document.getElementById("topOfFailuresScreen").style.display = "none";
@@ -1473,6 +1519,8 @@ function scrollFunction() {
     document.getElementById("openAll").style.display = "block";
     document.getElementById("openAllRequests").style.display = "block";
 
+    document.getElementById("showOnlyFailures").style.display = "block";
+    document.getElementById("openAllFailed").style.display = "block";
   }
 }
 
@@ -1535,6 +1583,7 @@ window.onload = function () {
   document.getElementById('iteration-0').click();
   document.getElementById('iterationSelected').innerHTML = `Iteration ${document.getElementById('iteration-0').innerHTML} selected`
 
+    $("#iteration-0").removeClass('itPassed').addClass('itFailed')
 }
 </script>
 
