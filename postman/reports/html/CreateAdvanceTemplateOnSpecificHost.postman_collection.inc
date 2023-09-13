@@ -1,2 +1,2 @@
 <tr><td><a href="./CreateAdvanceTemplateOnSpecificHost.postman_collection.html">CreateAdvanceTemplateOnSpecificHost.postman_collection.json</a></td><td style="color: #ffffff; background-color: #28a745; font-weight: bold;">PASSED</td>
-      <td>20.334</td></tr>
+      <td>21.014</td></tr>
