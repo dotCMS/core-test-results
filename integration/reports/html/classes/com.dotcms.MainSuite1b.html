@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.004s</div>
+<div class="counter">0.001s</div>
 <p>duration</p>
 </div>
 </td>
@@ -127,25 +127,7 @@ Caused by: java.lang.IllegalArgumentException: Exception while invoking dataprov
 	at com.tngtech.java.junit.dataprovider.internal.TestGenerator.generateExplodedTestMethodsFor(TestGenerator.java:58)
 	... 47 more
 Caused by: java.lang.ExceptionInInitializerError
-	at com.dotcms.concurrent.DotConcurrentFactory.getInstance(DotConcurrentFactory.java:326)
-	at com.dotcms.system.event.local.business.LocalSystemEventsAPIImpl.&lt;init&gt;(LocalSystemEventsAPIImpl.java:38)
-	at com.dotcms.system.event.local.business.LocalSystemEventsAPIFactory.&lt;init&gt;(LocalSystemEventsAPIFactory.java:21)
-	at com.dotcms.system.event.local.business.LocalSystemEventsAPIFactory$SingletonHolder.&lt;clinit&gt;(LocalSystemEventsAPIFactory.java:29)
-	at com.dotcms.system.event.local.business.LocalSystemEventsAPIFactory.getInstance(LocalSystemEventsAPIFactory.java:43)
-	at com.dotmarketing.business.APIIndex.create(APILocator.java:1363)
-	at com.dotmarketing.business.APILocator.createService(APILocator.java:1182)
-	at com.dotmarketing.business.APILocator.createService(APILocator.java:172)
-	at com.dotmarketing.business.Locator.getServiceInstance(Locator.java:41)
-	at com.dotmarketing.business.APILocator.getInstance(APILocator.java:1155)
-	at com.dotmarketing.business.APILocator.getLocalSystemEventsAPI(APILocator.java:992)
-	at com.dotmarketing.portlets.languagesmanager.business.LanguageAPIImpl.&lt;init&gt;(LanguageAPIImpl.java:60)
-	at com.dotmarketing.business.APIIndex.create(APILocator.java:1316)
-	at com.dotmarketing.business.APILocator.createService(APILocator.java:1182)
-	at com.dotmarketing.business.APILocator.createService(APILocator.java:172)
-	at com.dotmarketing.business.Locator.getServiceInstance(Locator.java:41)
-	at com.dotmarketing.business.APILocator.getInstance(APILocator.java:1155)
-	at com.dotmarketing.business.APILocator.getLanguageAPI(APILocator.java:493)
-	at com.dotcms.datagen.TestDataUtils.getSpanishLanguage(TestDataUtils.java:1427)
+	at com.dotcms.datagen.TestDataUtils.getSpanishLanguage(TestDataUtils.java:1429)
 	at com.dotcms.rendering.velocity.viewtools.navigation.NavToolTest.dataProviderShouldAddFileInAnotherLang(NavToolTest.java:295)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -157,53 +139,16 @@ Caused by: java.lang.ExceptionInInitializerError
 	at com.dotcms.junit.CustomDataProviderRunner$1$1.invokeExplosively(CustomDataProviderRunner.java:59)
 	at com.tngtech.java.junit.dataprovider.internal.TestGenerator.explodeTestMethod(TestGenerator.java:100)
 	... 48 more
-Caused by: com.dotmarketing.exception.DotRuntimeException: com.dotmarketing.exception.DotDataException: com.dotmarketing.exception.DotRuntimeException: javax.naming.NoInitialContextException: Need to specify class name in environment or system property, or in an application resource file: java.naming.factory.initial{
-  &quot;SQL&quot;: [&quot; SELECT * FROM system_table WHERE key = ? &quot;],
-  &quot;maxRows&quot;: [-1],
-  &quot;offest&quot;: [0],
-  &quot;params&quot;: &quot;DOT_DOTCMS_CONCURRENT_POOLSIZE&quot;
-}
-	at app//com.dotcms.business.SystemTableImpl.lambda$get$1(SystemTableImpl.java:31)
-	at app//io.vavr.control.Try.getOrElseThrow(Try.java:748)
-	at app//com.dotcms.business.SystemTableImpl.get(SystemTableImpl.java:31)
-	at app//com.dotcms.config.SystemTableConfigSource.getValue(SystemTableConfigSource.java:39)
-	at app//com.dotmarketing.util.Config.getSystemTableValue(Config.java:385)
-	at app//com.dotmarketing.util.Config.getIntProperty(Config.java:579)
-	at app//com.dotcms.concurrent.DotConcurrentFactory.&lt;init&gt;(DotConcurrentFactory.java:116)
-	at app//com.dotcms.concurrent.DotConcurrentFactory$SingletonHolder.&lt;clinit&gt;(DotConcurrentFactory.java:318)
-	... 77 more
-Caused by: java.lang.RuntimeException: com.dotmarketing.exception.DotDataException: com.dotmarketing.exception.DotRuntimeException: javax.naming.NoInitialContextException: Need to specify class name in environment or system property, or in an application resource file: java.naming.factory.initial{
-  &quot;SQL&quot;: [&quot; SELECT * FROM system_table WHERE key = ? &quot;],
-  &quot;maxRows&quot;: [-1],
-  &quot;offest&quot;: [0],
-  &quot;params&quot;: &quot;DOT_DOTCMS_CONCURRENT_POOLSIZE&quot;
-}
-	at com.dotcms.business.SystemTableFactoryImpl.lambda$find$0(SystemTableFactoryImpl.java:47)
-	at com.dotmarketing.business.CachableSupport.getOrUpdate(CachableSupport.java:42)
-	at com.dotcms.business.SystemTableFactoryImpl.find(SystemTableFactoryImpl.java:38)
-	at com.dotcms.business.SystemTableImpl.lambda$get$2ca636df$1(SystemTableImpl.java:30)
-	at io.vavr.control.Try.of(Try.java:75)
-	at com.dotcms.business.SystemTableImpl.get(SystemTableImpl.java:30)
-	... 82 more
-Caused by: com.dotmarketing.exception.DotDataException: com.dotmarketing.exception.DotRuntimeException: javax.naming.NoInitialContextException: Need to specify class name in environment or system property, or in an application resource file: java.naming.factory.initial{
-  &quot;SQL&quot;: [&quot; SELECT * FROM system_table WHERE key = ? &quot;],
-  &quot;maxRows&quot;: [-1],
-  &quot;offest&quot;: [0],
-  &quot;params&quot;: &quot;DOT_DOTCMS_CONCURRENT_POOLSIZE&quot;
-}
-	at app//com.dotmarketing.common.db.DotConnect.loadResult(DotConnect.java:276)
-	at app//com.dotmarketing.common.db.DotConnect.loadObjectResults(DotConnect.java:967)
-	at app//com.dotcms.business.SystemTableFactoryImpl.lambda$find$0(SystemTableFactoryImpl.java:45)
-	... 87 more
-Caused by: com.dotmarketing.exception.DotRuntimeException: com.dotmarketing.exception.DotRuntimeException: javax.naming.NoInitialContextException: Need to specify class name in environment or system property, or in an application resource file: java.naming.factory.initial
-	at app//com.dotmarketing.db.DbConnectionFactory.getConnection(DbConnectionFactory.java:236)
-	at app//com.dotmarketing.common.db.DotConnect.executeQuery(DotConnect.java:565)
-	at app//com.dotmarketing.common.db.DotConnect.loadResult(DotConnect.java:274)
-	... 89 more
-Caused by: com.dotmarketing.exception.DotRuntimeException: com.dotmarketing.exception.DotRuntimeException: javax.naming.NoInitialContextException: Need to specify class name in environment or system property, or in an application resource file: java.naming.factory.initial
-	at app//com.dotmarketing.db.DbConnectionFactory.getDataSource(DbConnectionFactory.java:122)
-	at app//com.dotmarketing.db.DbConnectionFactory.getConnection(DbConnectionFactory.java:222)
-	... 91 more
+Caused by: com.dotmarketing.exception.DotRuntimeException: No Company!
+	at app//com.dotmarketing.cms.factories.PublicCompanyFactory.getDefaultCompany(PublicCompanyFactory.java:59)
+	at app//com.dotmarketing.util.CompanyUtils.getDefaultCompany(CompanyUtils.java:12)
+	at app//com.dotcms.company.CompanyAPIFactory$CompanyAPIImpl.getDefaultCompany(CompanyAPIFactory.java:83)
+	at app//com.dotmarketing.business.UserAPIImpl.createUser(UserAPIImpl.java:176)
+	at app//com.dotmarketing.business.UserAPIImpl.createSystemUser(UserAPIImpl.java:251)
+	at app//com.dotmarketing.business.UserAPIImpl._getSystemUser(UserAPIImpl.java:237)
+	at app//com.dotmarketing.business.UserAPIImpl.getSystemUser(UserAPIImpl.java:222)
+	at app//com.dotcms.datagen.AbstractDataGen.&lt;clinit&gt;(AbstractDataGen.java:19)
+	... 59 more
 </pre>
 </span>
 </div>
@@ -220,7 +165,7 @@ Caused by: com.dotmarketing.exception.DotRuntimeException: com.dotmarketing.exce
 </thead>
 <tr>
 <td class="failures">initializationError</td>
-<td class="failures">0.004s</td>
+<td class="failures">0.001s</td>
 <td class="failures">failed</td>
 </tr>
 </table>
@@ -233,7 +178,7 @@ Caused by: com.dotmarketing.exception.DotRuntimeException: com.dotmarketing.exce
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.3.3</a> at Sep 12, 2023, 11:53:04 PM</p>
+<a href="http://www.gradle.org">Gradle 7.3.3</a> at Sep 14, 2023, 11:17:28 PM</p>
 </div>
 </div>
 </body>

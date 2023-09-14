@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.009s</div>
+<div class="counter">0s</div>
 <p>duration</p>
 </div>
 </td>
@@ -73,7 +73,7 @@
 <a name="initializationError"></a>
 <h3 class="failures">initializationError</h3>
 <span class="code">
-<pre>java.lang.Error: Cannot explode 'ContentletTransformerTest.Transformer_Backwards_Compatibility_Test' using 'listTestCases' due to: Exception while invoking dataprovider method 'listTestCases': Could not initialize class com.dotcms.concurrent.DotConcurrentFactory$SingletonHolder
+<pre>java.lang.Error: Cannot explode 'ContentletTransformerTest.Transformer_Backwards_Compatibility_Test' using 'listTestCases' due to: Exception while invoking dataprovider method 'listTestCases': No Company!
 	at com.tngtech.java.junit.dataprovider.internal.TestGenerator.generateExplodedTestMethodsFor(TestGenerator.java:60)
 	at com.dotcms.junit.CustomDataProviderRunner$1.generateExplodedTestMethodsFor(CustomDataProviderRunner.java:65)
 	at com.tngtech.java.junit.dataprovider.DataProviderRunner.generateExplodedTestMethodsFor(DataProviderRunner.java:227)
@@ -122,45 +122,33 @@
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-Caused by: java.lang.IllegalArgumentException: Exception while invoking dataprovider method 'listTestCases': Could not initialize class com.dotcms.concurrent.DotConcurrentFactory$SingletonHolder
+Caused by: java.lang.IllegalArgumentException: Exception while invoking dataprovider method 'listTestCases': No Company!
 	at com.tngtech.java.junit.dataprovider.internal.TestGenerator.explodeTestMethod(TestGenerator.java:107)
 	at com.tngtech.java.junit.dataprovider.internal.TestGenerator.generateExplodedTestMethodsFor(TestGenerator.java:58)
 	... 47 more
-Caused by: java.lang.NoClassDefFoundError: Could not initialize class com.dotcms.concurrent.DotConcurrentFactory$SingletonHolder
-	at com.dotcms.concurrent.DotConcurrentFactory.getInstance(DotConcurrentFactory.java:326)
-	at com.dotmarketing.business.PermissionBitFactoryImpl.&lt;init&gt;(PermissionBitFactoryImpl.java:98)
-	at com.dotmarketing.business.FactoryIndex.create(FactoryLocator.java:352)
-	at com.dotmarketing.business.FactoryLocator.createService(FactoryLocator.java:291)
-	at com.dotmarketing.business.FactoryLocator.createService(FactoryLocator.java:81)
-	at com.dotmarketing.business.Locator.getServiceInstance(Locator.java:41)
-	at com.dotmarketing.business.FactoryLocator.getInstance(FactoryLocator.java:281)
-	at com.dotmarketing.business.FactoryLocator.getPermissionFactory(FactoryLocator.java:96)
-	at com.dotmarketing.business.PermissionBitAPIImpl.&lt;init&gt;(PermissionBitAPIImpl.java:69)
-	at com.dotmarketing.business.APIIndex.create(APILocator.java:1301)
-	at com.dotmarketing.business.APILocator.createService(APILocator.java:1182)
-	at com.dotmarketing.business.APILocator.createService(APILocator.java:172)
-	at com.dotmarketing.business.Locator.getServiceInstance(Locator.java:41)
-	at com.dotmarketing.business.APILocator.getInstance(APILocator.java:1155)
-	at com.dotmarketing.business.APILocator.getPermissionAPI(APILocator.java:301)
-	at com.dotmarketing.business.UserAPIImpl.&lt;init&gt;(UserAPIImpl.java:71)
-	at com.dotmarketing.business.APIIndex.create(APILocator.java:1303)
-	at com.dotmarketing.business.APILocator.createService(APILocator.java:1182)
-	at com.dotmarketing.business.APILocator.createService(APILocator.java:172)
-	at com.dotmarketing.business.Locator.getServiceInstance(Locator.java:41)
-	at com.dotmarketing.business.APILocator.getInstance(APILocator.java:1155)
-	at com.dotmarketing.business.APILocator.getUserAPI(APILocator.java:319)
-	at com.dotmarketing.business.APILocator.systemUser(APILocator.java:912)
-	at com.dotmarketing.portlets.contentlet.transform.ContentletTransformerTest.listTestCases(ContentletTransformerTest.java:407)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at com.dotcms.junit.CustomDataProviderRunner$1$1.invokeExplosively(CustomDataProviderRunner.java:59)
-	at com.tngtech.java.junit.dataprovider.internal.TestGenerator.explodeTestMethod(TestGenerator.java:100)
+Caused by: com.dotmarketing.business.DotStateException: No Company!
+	at app//com.dotmarketing.business.APILocator.systemUser(APILocator.java:915)
+	at app//com.dotmarketing.portlets.contentlet.transform.ContentletTransformerTest.listTestCases(ContentletTransformerTest.java:407)
+	at java.base@11.0.20.1/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base@11.0.20.1/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base@11.0.20.1/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@11.0.20.1/java.lang.reflect.Method.invoke(Method.java:566)
+	at app//org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at app//org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at app//org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at app//com.dotcms.junit.CustomDataProviderRunner$1$1.invokeExplosively(CustomDataProviderRunner.java:59)
+	at app//com.tngtech.java.junit.dataprovider.internal.TestGenerator.explodeTestMethod(TestGenerator.java:100)
 	... 48 more
+Caused by: com.dotmarketing.exception.DotRuntimeException: No Company!
+	at app//com.dotmarketing.cms.factories.PublicCompanyFactory.getDefaultCompany(PublicCompanyFactory.java:59)
+	at app//com.dotmarketing.util.CompanyUtils.getDefaultCompany(CompanyUtils.java:12)
+	at app//com.dotcms.company.CompanyAPIFactory$CompanyAPIImpl.getDefaultCompany(CompanyAPIFactory.java:83)
+	at app//com.dotmarketing.business.UserAPIImpl.createUser(UserAPIImpl.java:176)
+	at app//com.dotmarketing.business.UserAPIImpl.createSystemUser(UserAPIImpl.java:251)
+	at app//com.dotmarketing.business.UserAPIImpl._getSystemUser(UserAPIImpl.java:237)
+	at app//com.dotmarketing.business.UserAPIImpl.getSystemUser(UserAPIImpl.java:222)
+	at app//com.dotmarketing.business.APILocator.systemUser(APILocator.java:912)
+	... 58 more
 </pre>
 </span>
 </div>
@@ -177,7 +165,7 @@ Caused by: java.lang.NoClassDefFoundError: Could not initialize class com.dotcms
 </thead>
 <tr>
 <td class="failures">initializationError</td>
-<td class="failures">0.009s</td>
+<td class="failures">0s</td>
 <td class="failures">failed</td>
 </tr>
 </table>
@@ -190,7 +178,7 @@ Caused by: java.lang.NoClassDefFoundError: Could not initialize class com.dotcms
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.3.3</a> at Sep 12, 2023, 11:53:04 PM</p>
+<a href="http://www.gradle.org">Gradle 7.3.3</a> at Sep 14, 2023, 11:17:28 PM</p>
 </div>
 </div>
 </body>
