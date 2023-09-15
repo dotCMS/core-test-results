@@ -73,7 +73,7 @@
 <a name="initializationError"></a>
 <h3 class="failures">initializationError</h3>
 <span class="code">
-<pre>java.lang.Error: Cannot explode 'ContentletTransformerTest.Transformer_Backwards_Compatibility_Test' using 'listTestCases' due to: Exception while invoking dataprovider method 'listTestCases': No Company!
+<pre>java.lang.Error: Cannot explode 'ContentletTransformerTest.Transformer_Backwards_Compatibility_Test' using 'listTestCases' due to: Exception while invoking dataprovider method 'listTestCases': Error setting Query
 	at com.tngtech.java.junit.dataprovider.internal.TestGenerator.generateExplodedTestMethodsFor(TestGenerator.java:60)
 	at com.dotcms.junit.CustomDataProviderRunner$1.generateExplodedTestMethodsFor(CustomDataProviderRunner.java:65)
 	at com.tngtech.java.junit.dataprovider.DataProviderRunner.generateExplodedTestMethodsFor(DataProviderRunner.java:227)
@@ -122,11 +122,11 @@
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-Caused by: java.lang.IllegalArgumentException: Exception while invoking dataprovider method 'listTestCases': No Company!
+Caused by: java.lang.IllegalArgumentException: Exception while invoking dataprovider method 'listTestCases': Error setting Query
 	at com.tngtech.java.junit.dataprovider.internal.TestGenerator.explodeTestMethod(TestGenerator.java:107)
 	at com.tngtech.java.junit.dataprovider.internal.TestGenerator.generateExplodedTestMethodsFor(TestGenerator.java:58)
 	... 47 more
-Caused by: com.dotmarketing.business.DotStateException: No Company!
+Caused by: com.dotmarketing.business.DotStateException: Error setting Query
 	at app//com.dotmarketing.business.APILocator.systemUser(APILocator.java:915)
 	at app//com.dotmarketing.portlets.contentlet.transform.ContentletTransformerTest.listTestCases(ContentletTransformerTest.java:407)
 	at java.base@11.0.20.1/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -139,16 +139,26 @@ Caused by: com.dotmarketing.business.DotStateException: No Company!
 	at app//com.dotcms.junit.CustomDataProviderRunner$1$1.invokeExplosively(CustomDataProviderRunner.java:59)
 	at app//com.tngtech.java.junit.dataprovider.internal.TestGenerator.explodeTestMethod(TestGenerator.java:100)
 	... 48 more
-Caused by: com.dotmarketing.exception.DotRuntimeException: No Company!
-	at app//com.dotmarketing.cms.factories.PublicCompanyFactory.getDefaultCompany(PublicCompanyFactory.java:59)
-	at app//com.dotmarketing.util.CompanyUtils.getDefaultCompany(CompanyUtils.java:12)
-	at app//com.dotcms.company.CompanyAPIFactory$CompanyAPIImpl.getDefaultCompany(CompanyAPIFactory.java:83)
-	at app//com.dotmarketing.business.UserAPIImpl.createUser(UserAPIImpl.java:176)
-	at app//com.dotmarketing.business.UserAPIImpl.createSystemUser(UserAPIImpl.java:251)
-	at app//com.dotmarketing.business.UserAPIImpl._getSystemUser(UserAPIImpl.java:237)
+Caused by: com.dotmarketing.exception.DotHibernateException: Error setting Query
+	at app//com.dotmarketing.db.HibernateUtil.setQuery(HibernateUtil.java:216)
+	at app//com.dotmarketing.business.RoleFactoryImpl.loadRoleByKey(RoleFactoryImpl.java:743)
+	at app//com.dotmarketing.business.RoleAPIImpl.loadCMSAdminRole(RoleAPIImpl.java:374)
+	at app//com.dotmarketing.business.UserAPIImpl._getSystemUser(UserAPIImpl.java:232)
 	at app//com.dotmarketing.business.UserAPIImpl.getSystemUser(UserAPIImpl.java:222)
 	at app//com.dotmarketing.business.APILocator.systemUser(APILocator.java:912)
 	... 58 more
+Caused by: com.dotmarketing.business.DotStateException: Unable to get Hibernate Session 
+	at app//com.dotmarketing.db.HibernateUtil.getSession(HibernateUtil.java:854)
+	at app//com.dotmarketing.db.HibernateUtil.setQuery(HibernateUtil.java:212)
+	... 63 more
+Caused by: com.dotmarketing.exception.DotRuntimeException: com.dotmarketing.exception.DotRuntimeException: javax.naming.NoInitialContextException: Need to specify class name in environment or system property, or in an application resource file: java.naming.factory.initial
+	at app//com.dotmarketing.db.DbConnectionFactory.getConnection(DbConnectionFactory.java:236)
+	at app//com.dotmarketing.db.HibernateUtil.getSession(HibernateUtil.java:818)
+	... 64 more
+Caused by: com.dotmarketing.exception.DotRuntimeException: com.dotmarketing.exception.DotRuntimeException: javax.naming.NoInitialContextException: Need to specify class name in environment or system property, or in an application resource file: java.naming.factory.initial
+	at app//com.dotmarketing.db.DbConnectionFactory.getDataSource(DbConnectionFactory.java:122)
+	at app//com.dotmarketing.db.DbConnectionFactory.getConnection(DbConnectionFactory.java:222)
+	... 65 more
 </pre>
 </span>
 </div>
@@ -178,7 +188,7 @@ Caused by: com.dotmarketing.exception.DotRuntimeException: No Company!
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.3.3</a> at Sep 14, 2023, 11:17:28 PM</p>
+<a href="http://www.gradle.org">Gradle 7.3.3</a> at Sep 15, 2023, 12:42:07 AM</p>
 </div>
 </div>
 </body>

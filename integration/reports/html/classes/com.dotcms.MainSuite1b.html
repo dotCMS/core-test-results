@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.001s</div>
+<div class="counter">0s</div>
 <p>duration</p>
 </div>
 </td>
@@ -73,7 +73,15 @@
 <a name="initializationError"></a>
 <h3 class="failures">initializationError</h3>
 <span class="code">
-<pre>java.lang.Error: Cannot explode 'NavToolTest.testShouldAddFileInAnotherLang' using 'dataProviderShouldAddFileInAnotherLang' due to: Exception while invoking dataprovider method 'dataProviderShouldAddFileInAnotherLang': null
+<pre>java.lang.Error: Cannot explode 'NavToolTest.testShouldAddFileInAnotherLang' using 'dataProviderShouldAddFileInAnotherLang' due to: Exception while invoking dataprovider method 'dataProviderShouldAddFileInAnotherLang': com.dotmarketing.exception.DotRuntimeException: javax.naming.NoInitialContextException: Need to specify class name in environment or system property, or in an application resource file: java.naming.factory.initial{
+  &quot;SQL&quot;: [&quot;select * from language where lower(language_code) = ? and lower(country_code) = ?&quot;],
+  &quot;maxRows&quot;: [-1],
+  &quot;offest&quot;: [0],
+  &quot;params&quot;: [
+    &quot;es&quot;,
+    &quot;es&quot;
+  ]
+}
 	at com.tngtech.java.junit.dataprovider.internal.TestGenerator.generateExplodedTestMethodsFor(TestGenerator.java:60)
 	at com.dotcms.junit.CustomDataProviderRunner$1.generateExplodedTestMethodsFor(CustomDataProviderRunner.java:65)
 	at com.tngtech.java.junit.dataprovider.DataProviderRunner.generateExplodedTestMethodsFor(DataProviderRunner.java:227)
@@ -122,33 +130,63 @@
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-Caused by: java.lang.IllegalArgumentException: Exception while invoking dataprovider method 'dataProviderShouldAddFileInAnotherLang': null
+Caused by: java.lang.IllegalArgumentException: Exception while invoking dataprovider method 'dataProviderShouldAddFileInAnotherLang': com.dotmarketing.exception.DotRuntimeException: javax.naming.NoInitialContextException: Need to specify class name in environment or system property, or in an application resource file: java.naming.factory.initial{
+  &quot;SQL&quot;: [&quot;select * from language where lower(language_code) = ? and lower(country_code) = ?&quot;],
+  &quot;maxRows&quot;: [-1],
+  &quot;offest&quot;: [0],
+  &quot;params&quot;: [
+    &quot;es&quot;,
+    &quot;es&quot;
+  ]
+}
 	at com.tngtech.java.junit.dataprovider.internal.TestGenerator.explodeTestMethod(TestGenerator.java:107)
 	at com.tngtech.java.junit.dataprovider.internal.TestGenerator.generateExplodedTestMethodsFor(TestGenerator.java:58)
 	... 47 more
-Caused by: java.lang.ExceptionInInitializerError
-	at com.dotcms.datagen.TestDataUtils.getSpanishLanguage(TestDataUtils.java:1429)
-	at com.dotcms.rendering.velocity.viewtools.navigation.NavToolTest.dataProviderShouldAddFileInAnotherLang(NavToolTest.java:295)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at com.dotcms.junit.CustomDataProviderRunner$1$1.invokeExplosively(CustomDataProviderRunner.java:59)
-	at com.tngtech.java.junit.dataprovider.internal.TestGenerator.explodeTestMethod(TestGenerator.java:100)
+Caused by: com.dotmarketing.exception.DotRuntimeException: com.dotmarketing.exception.DotRuntimeException: javax.naming.NoInitialContextException: Need to specify class name in environment or system property, or in an application resource file: java.naming.factory.initial{
+  &quot;SQL&quot;: [&quot;select * from language where lower(language_code) = ? and lower(country_code) = ?&quot;],
+  &quot;maxRows&quot;: [-1],
+  &quot;offest&quot;: [0],
+  &quot;params&quot;: [
+    &quot;es&quot;,
+    &quot;es&quot;
+  ]
+}
+	at app//com.dotmarketing.portlets.languagesmanager.business.LanguageFactoryImpl.getLanguage(LanguageFactoryImpl.java:125)
+	at app//com.dotmarketing.portlets.languagesmanager.business.LanguageAPIImpl.getLanguage(LanguageAPIImpl.java:108)
+	at app//com.dotcms.datagen.TestDataUtils.getSpanishLanguage(TestDataUtils.java:1427)
+	at app//com.dotcms.rendering.velocity.viewtools.navigation.NavToolTest.dataProviderShouldAddFileInAnotherLang(NavToolTest.java:295)
+	at java.base@11.0.20.1/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base@11.0.20.1/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base@11.0.20.1/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@11.0.20.1/java.lang.reflect.Method.invoke(Method.java:566)
+	at app//org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at app//org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at app//org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at app//com.dotcms.junit.CustomDataProviderRunner$1$1.invokeExplosively(CustomDataProviderRunner.java:59)
+	at app//com.tngtech.java.junit.dataprovider.internal.TestGenerator.explodeTestMethod(TestGenerator.java:100)
 	... 48 more
-Caused by: com.dotmarketing.exception.DotRuntimeException: No Company!
-	at app//com.dotmarketing.cms.factories.PublicCompanyFactory.getDefaultCompany(PublicCompanyFactory.java:59)
-	at app//com.dotmarketing.util.CompanyUtils.getDefaultCompany(CompanyUtils.java:12)
-	at app//com.dotcms.company.CompanyAPIFactory$CompanyAPIImpl.getDefaultCompany(CompanyAPIFactory.java:83)
-	at app//com.dotmarketing.business.UserAPIImpl.createUser(UserAPIImpl.java:176)
-	at app//com.dotmarketing.business.UserAPIImpl.createSystemUser(UserAPIImpl.java:251)
-	at app//com.dotmarketing.business.UserAPIImpl._getSystemUser(UserAPIImpl.java:237)
-	at app//com.dotmarketing.business.UserAPIImpl.getSystemUser(UserAPIImpl.java:222)
-	at app//com.dotcms.datagen.AbstractDataGen.&lt;clinit&gt;(AbstractDataGen.java:19)
-	... 59 more
+Caused by: com.dotmarketing.exception.DotDataException: com.dotmarketing.exception.DotRuntimeException: javax.naming.NoInitialContextException: Need to specify class name in environment or system property, or in an application resource file: java.naming.factory.initial{
+  &quot;SQL&quot;: [&quot;select * from language where lower(language_code) = ? and lower(country_code) = ?&quot;],
+  &quot;maxRows&quot;: [-1],
+  &quot;offest&quot;: [0],
+  &quot;params&quot;: [
+    &quot;es&quot;,
+    &quot;es&quot;
+  ]
+}
+	at app//com.dotmarketing.common.db.DotConnect.loadResult(DotConnect.java:276)
+	at app//com.dotmarketing.common.db.DotConnect.loadObjectResults(DotConnect.java:967)
+	at app//com.dotmarketing.portlets.languagesmanager.business.LanguageFactoryImpl.getLanguage(LanguageFactoryImpl.java:110)
+	... 60 more
+Caused by: com.dotmarketing.exception.DotRuntimeException: com.dotmarketing.exception.DotRuntimeException: javax.naming.NoInitialContextException: Need to specify class name in environment or system property, or in an application resource file: java.naming.factory.initial
+	at app//com.dotmarketing.db.DbConnectionFactory.getConnection(DbConnectionFactory.java:236)
+	at app//com.dotmarketing.common.db.DotConnect.executeQuery(DotConnect.java:565)
+	at app//com.dotmarketing.common.db.DotConnect.loadResult(DotConnect.java:274)
+	... 62 more
+Caused by: com.dotmarketing.exception.DotRuntimeException: com.dotmarketing.exception.DotRuntimeException: javax.naming.NoInitialContextException: Need to specify class name in environment or system property, or in an application resource file: java.naming.factory.initial
+	at app//com.dotmarketing.db.DbConnectionFactory.getDataSource(DbConnectionFactory.java:122)
+	at app//com.dotmarketing.db.DbConnectionFactory.getConnection(DbConnectionFactory.java:222)
+	... 64 more
 </pre>
 </span>
 </div>
@@ -165,7 +203,7 @@ Caused by: com.dotmarketing.exception.DotRuntimeException: No Company!
 </thead>
 <tr>
 <td class="failures">initializationError</td>
-<td class="failures">0.001s</td>
+<td class="failures">0s</td>
 <td class="failures">failed</td>
 </tr>
 </table>
@@ -178,7 +216,7 @@ Caused by: com.dotmarketing.exception.DotRuntimeException: No Company!
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.3.3</a> at Sep 14, 2023, 11:17:28 PM</p>
+<a href="http://www.gradle.org">Gradle 7.3.3</a> at Sep 15, 2023, 12:42:07 AM</p>
 </div>
 </div>
 </body>
