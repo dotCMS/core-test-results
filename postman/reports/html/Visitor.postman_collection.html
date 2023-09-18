@@ -472,7 +472,7 @@ body.theme-light code {
                 <a class="nav-link text-white" id="pills-requests-tab" data-toggle="pill" href="#pills-requests" role="tab" aria-controls="pills-requests" aria-selected="false">Total Requests <span class="badge badge-light">6</span></a>
             </li>
             <li class="nav-item bg-danger" data-toggle="tooltip" title="Click to view the Failed Tests">
-                <a class="nav-link text-white" id="pills-failed-tab" data-toggle="pill" href="#pills-failed" role="tab" aria-controls="pills-failed" aria-selected="false">Failed Tests <span class="badge badge-light">0</span></a>
+                <a class="nav-link text-white" id="pills-failed-tab" data-toggle="pill" href="#pills-failed" role="tab" aria-controls="pills-failed" aria-selected="false">Failed Tests <span class="badge badge-light">7</span></a>
             </li>
             <li class="nav-item bg-warning" data-toggle="tooltip" title="Click to view the Skipped Tests">
                 <a class="nav-link text-white" id="pills-skipped-tab" data-toggle="pill" href="#pills-skipped" role="tab" aria-controls="pills-skipped" aria-selected="false">Skipped Tests <span class="badge badge-light">0</span></a>
@@ -483,11 +483,11 @@ body.theme-light code {
 <div class="row">
   <div class="col-md-9 col-lg-12 main">
    <h1 class="display-2 text-center">Newman Run Dashboard</h1>
-   <h5 class="text-center">Friday, 15 September 2023 21:54:46</h5>
+   <h5 class="text-center">Monday, 18 September 2023 16:55:16</h5>
    <div class="row">
     <div class="col-lg-3 col-md-6">
      <div class="card text-white card-success">
-      <div class="card-body bg-success">
+      <div class="card-body bg-danger">
        <div class="rotate">
         <i class="fa fa-retweet fa-5x"></i>
        </div>
@@ -509,12 +509,12 @@ body.theme-light code {
     </div>
     <div class="col-lg-3 col-md-6">
      <div class="card text-white card-info">
-      <div class="card-body bg-success">
+      <div class="card-body bg-danger">
        <div class="rotate">
         <i class="fa fa-plus-circle fa-5x"></i>
        </div>
        <h6 class="text-uppercase">Total Failed Tests</h6>
-       <h1 class="display-1">0</h1>
+       <h1 class="display-1">7</h1>
       </div>
      </div>
     </div>
@@ -550,9 +550,9 @@ body.theme-light code {
             <div class="card border-info">
                 <div class="card-body">
                 <h5 class="card-title text-uppercase text-white text-center bg-info">Timings and Data</h5>
-                <span><i class="fas fa-stopwatch"></i></span><strong> Total run duration:</strong> 28.6s<br>
-                <span><i class="fas fa-database"></i></span><strong> Total data received:</strong> 1.25KB<br>
-                <span><i class="fas fa-stopwatch"></i></span><strong> Average response time:</strong> 4.7s<br>
+                <span><i class="fas fa-stopwatch"></i></span><strong> Total run duration:</strong> 225ms<br>
+                <span><i class="fas fa-database"></i></span><strong> Total data received:</strong> 1.51KB<br>
+                <span><i class="fas fa-stopwatch"></i></span><strong> Average response time:</strong> 10ms<br>
                 </div>
             </div>
         </div>
@@ -584,10 +584,10 @@ body.theme-light code {
                         <td class="text-center">6</td>
                         <td class="text-center">0</td>
                     </tr>
-                    <tr class="">
+                    <tr class="table-danger">
                         <td>Assertions</td>
                         <td class="text-center">7</td>
-                        <td class="text-center">0</td>
+                        <td class="text-center">7</td>
                     </tr>
                     <tr class="">
                         <td>Skipped Tests</td>
@@ -608,9 +608,164 @@ body.theme-light code {
             <div class="tab-pane fade" id="pills-failed" role="tabcard" aria-labelledby="pills-failed-tab">
                 <button id="topOfFailuresScreen" class="btn btn-outline-success btn-sm backToTop" onclick="topFunction()">Go To Top</button>
 
-                <div class="alert alert-success text-uppercase text-center">
-                     <br><br><h1 class="text-center">There are no failed tests <span><i class="far fa-thumbs-up"></i></span></h1><br><br>
-                </div>
+                    <div class="btn-group float-right" role="group" aria-label="Button Group">
+                        <button id="openAllFailed" class="btn btn-outline-success btn-sm float-right" style="text-align: center; width: 185px;">Expand All Failed Tests</button>
+                    </div>
+                    <br>
+                    <br>
+
+                    <div class="alert alert-danger text-uppercase text-center">
+                        <h4>Showing 7 Failures</h4>
+                    </div>
+                    <div class="col-sm-12 mb-3">
+                    <div class="card-deck">
+                        <div class="card border-danger">
+                            <div class="card-header bg-danger">
+                                <a data-toggle="collapse" href="#" data-target="#fails-collapse-72b2259f-c24e-4dff-9a31-1665d9c1ca28" aria-expanded="false" aria-controls="collapse" id="fails-72b2259f-c24e-4dff-9a31-1665d9c1ca28" class="collapsed text-white z-block">
+                                    Iteration 1 - AssertionError - Visitor - pre_ImportBundleWithPage <i class="float-lg-right fa fa-chevron-down" style="padding-top:5px;"></i>
+                                </a>
+                            </div>
+                            <div id="fails-collapse-72b2259f-c24e-4dff-9a31-1665d9c1ca28" class="collapse" aria-labelledby="fails-72b2259f-c24e-4dff-9a31-1665d9c1ca28">
+                            <div class="card-body">
+                                <h5 ><strong>Failed Test:</strong> Bundle uploaded sucessfully</h5>
+                            <hr>
+                            <h5 class="card-title text-uppercase text-white text-center bg-danger">Assertion Error Message</h5>
+                            <div>
+                                <pre><code >expected response to have status code 200 but got 500</code></pre>
+                            </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-sm-12 mb-3">
+                    <div class="card-deck">
+                        <div class="card border-danger">
+                            <div class="card-header bg-danger">
+                                <a data-toggle="collapse" href="#" data-target="#fails-collapse-ca1da649-1977-40ac-88ca-6e80ea0c6d2d" aria-expanded="false" aria-controls="collapse" id="fails-ca1da649-1977-40ac-88ca-6e80ea0c6d2d" class="collapsed text-white z-block">
+                                    Iteration 1 - AssertionError - Visitor - Switch site to &#x27;default&#x27; <i class="float-lg-right fa fa-chevron-down" style="padding-top:5px;"></i>
+                                </a>
+                            </div>
+                            <div id="fails-collapse-ca1da649-1977-40ac-88ca-6e80ea0c6d2d" class="collapse" aria-labelledby="fails-ca1da649-1977-40ac-88ca-6e80ea0c6d2d">
+                            <div class="card-body">
+                                <h5 ><strong>Failed Test:</strong> Status code is 200 </h5>
+                            <hr>
+                            <h5 class="card-title text-uppercase text-white text-center bg-danger">Assertion Error Message</h5>
+                            <div>
+                                <pre><code >expected response to have status code 200 but got 500</code></pre>
+                            </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-sm-12 mb-3">
+                    <div class="card-deck">
+                        <div class="card border-danger">
+                            <div class="card-header bg-danger">
+                                <a data-toggle="collapse" href="#" data-target="#fails-collapse-5f714bf1-843b-467e-95af-bb1011c44394" aria-expanded="false" aria-controls="collapse" id="fails-5f714bf1-843b-467e-95af-bb1011c44394" class="collapsed text-white z-block">
+                                    Iteration 1 - JSONError - Visitor - Switch site to &#x27;default&#x27; <i class="float-lg-right fa fa-chevron-down" style="padding-top:5px;"></i>
+                                </a>
+                            </div>
+                            <div id="fails-collapse-5f714bf1-843b-467e-95af-bb1011c44394" class="collapse" aria-labelledby="fails-5f714bf1-843b-467e-95af-bb1011c44394">
+                            <div class="card-body">
+                                <h5 ><strong>Failed Test:</strong> Valid response</h5>
+                            <hr>
+                            <h5 class="card-title text-uppercase text-white text-center bg-danger">Assertion Error Message</h5>
+                            <div>
+                                <pre><code >No data, empty input at 1:1
+
+^</code></pre>
+                            </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-sm-12 mb-3">
+                    <div class="card-deck">
+                        <div class="card border-danger">
+                            <div class="card-header bg-danger">
+                                <a data-toggle="collapse" href="#" data-target="#fails-collapse-ee6c8dfb-1ebd-44b0-9f0a-3ae2753b2663" aria-expanded="false" aria-controls="collapse" id="fails-ee6c8dfb-1ebd-44b0-9f0a-3ae2753b2663" class="collapsed text-white z-block">
+                                    Iteration 1 - AssertionError - Visitor - invalidateSession <i class="float-lg-right fa fa-chevron-down" style="padding-top:5px;"></i>
+                                </a>
+                            </div>
+                            <div id="fails-collapse-ee6c8dfb-1ebd-44b0-9f0a-3ae2753b2663" class="collapse" aria-labelledby="fails-ee6c8dfb-1ebd-44b0-9f0a-3ae2753b2663">
+                            <div class="card-body">
+                                <h5 ><strong>Failed Test:</strong> Status code is 200</h5>
+                            <hr>
+                            <h5 class="card-title text-uppercase text-white text-center bg-danger">Assertion Error Message</h5>
+                            <div>
+                                <pre><code >expected response to have status code 200 but got 500</code></pre>
+                            </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-sm-12 mb-3">
+                    <div class="card-deck">
+                        <div class="card border-danger">
+                            <div class="card-header bg-danger">
+                                <a data-toggle="collapse" href="#" data-target="#fails-collapse-ae0b23a2-e5dc-4327-8b40-ba20809378c4" aria-expanded="false" aria-controls="collapse" id="fails-ae0b23a2-e5dc-4327-8b40-ba20809378c4" class="collapsed text-white z-block">
+                                    Iteration 1 - AssertionError - Visitor - Update aliases of Demo Host to remove localhost <i class="float-lg-right fa fa-chevron-down" style="padding-top:5px;"></i>
+                                </a>
+                            </div>
+                            <div id="fails-collapse-ae0b23a2-e5dc-4327-8b40-ba20809378c4" class="collapse" aria-labelledby="fails-ae0b23a2-e5dc-4327-8b40-ba20809378c4">
+                            <div class="card-body">
+                                <h5 ><strong>Failed Test:</strong> Status code should be 200</h5>
+                            <hr>
+                            <h5 class="card-title text-uppercase text-white text-center bg-danger">Assertion Error Message</h5>
+                            <div>
+                                <pre><code >expected response to have status code 200 but got 500</code></pre>
+                            </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-sm-12 mb-3">
+                    <div class="card-deck">
+                        <div class="card border-danger">
+                            <div class="card-header bg-danger">
+                                <a data-toggle="collapse" href="#" data-target="#fails-collapse-5db4abd2-5326-4b66-b2ae-a1a49155a02a" aria-expanded="false" aria-controls="collapse" id="fails-5db4abd2-5326-4b66-b2ae-a1a49155a02a" class="collapsed text-white z-block">
+                                    Iteration 1 - AssertionError - Visitor - GivenX-Forwarded-ForSetToAnIp_VisitorIpShouldBeTheSame <i class="float-lg-right fa fa-chevron-down" style="padding-top:5px;"></i>
+                                </a>
+                            </div>
+                            <div id="fails-collapse-5db4abd2-5326-4b66-b2ae-a1a49155a02a" class="collapse" aria-labelledby="fails-5db4abd2-5326-4b66-b2ae-a1a49155a02a">
+                            <div class="card-body">
+                                <h5 ><strong>Failed Test:</strong> Verify Visitor&#x27;s IP</h5>
+                            <hr>
+                            <h5 class="card-title text-uppercase text-white text-center bg-danger">Assertion Error Message</h5>
+                            <div>
+                                <pre><code >expected response to have status code 200 but got 500</code></pre>
+                            </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-sm-12 mb-3">
+                    <div class="card-deck">
+                        <div class="card border-danger">
+                            <div class="card-header bg-danger">
+                                <a data-toggle="collapse" href="#" data-target="#fails-collapse-9d883cf0-f88c-4bf0-b50b-20289e9ba10e" aria-expanded="false" aria-controls="collapse" id="fails-9d883cf0-f88c-4bf0-b50b-20289e9ba10e" class="collapsed text-white z-block">
+                                    Iteration 1 - AssertionError - Visitor - GivenX-Forwarded-ForSetToAnInvalidIp_VisitorIpShouldBeLocalhost <i class="float-lg-right fa fa-chevron-down" style="padding-top:5px;"></i>
+                                </a>
+                            </div>
+                            <div id="fails-collapse-9d883cf0-f88c-4bf0-b50b-20289e9ba10e" class="collapse" aria-labelledby="fails-9d883cf0-f88c-4bf0-b50b-20289e9ba10e">
+                            <div class="card-body">
+                                <h5 ><strong>Failed Test:</strong> Verify Visitor&#x27;s IP</h5>
+                            <hr>
+                            <h5 class="card-title text-uppercase text-white text-center bg-danger">Assertion Error Message</h5>
+                            <div>
+                                <pre><code >expected response to have status code 200 but got 500</code></pre>
+                            </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
             </div>
 
             <div class="tab-pane fade" id="pills-skipped" role="tabcard" aria-labelledby="pills-skipped-tab">
@@ -625,6 +780,7 @@ body.theme-light code {
             <button id="topOfRequestsScreen" class="btn btn-outline-success btn-sm backToTop" onclick="topFunction()">Go To Top</button>
 
             <div class="btn-group float-right" role="group" aria-label="Button Group">
+                <button id="showOnlyFailures" class="btn btn-outline-success btn-sm float-right" style="text-align: center; width:160px;">Show Failed Iterations</button>
                 <button id="openAll" class="btn btn-outline-success btn-sm float-right" style="text-align: center; width: 140px;">Expand Folders</button>
                 <button id="openAllRequests" class="btn btn-outline-success btn-sm float-right" style="text-align: center; width: 140px;">Expand Requests</button>
             </div>
@@ -639,16 +795,16 @@ body.theme-light code {
     </div>
     <h6 class="text-uppercase text-muted" id="iterationSelected" style="padding-top: 10px;"></h6>
 	<div class="tab-content" id="execution-data">
-            <div id="folder-2e944e98-6f9f-443e-bc05-a69587e0c8b6" class="card-deck iteration-0">
+            <div id="folder-169238ee-446b-40c0-ae86-85f8a2452d90" class="card-deck iteration-0">
             <div class="row iteration-0">
                 <div class="col-sm-12 mb-3 iteration-0">
                 <div class="card iteration-0">
-                    <div class="card-header  bg-success iteration-0">
-                        <a data-toggle="collapse" href="#" data-target="#collapse-2e944e98-6f9f-443e-bc05-a69587e0c8b6" aria-expanded="false" aria-controls="collapse" id="requests-2e944e98-6f9f-443e-bc05-a69587e0c8b6" class="collapsed text-white z-block">
+                    <div class="card-header  bg-danger iteration-0">
+                        <a data-toggle="collapse" href="#" data-target="#collapse-169238ee-446b-40c0-ae86-85f8a2452d90" aria-expanded="false" aria-controls="collapse" id="requests-169238ee-446b-40c0-ae86-85f8a2452d90" class="collapsed text-white z-block">
                     Iteration: 1 - pre_ImportBundleWithPage <i class="float-lg-right fa fa-chevron-down" style="padding-top: 5px;"></i>
                 </a>
                     </div>
-                    <div id="collapse-2e944e98-6f9f-443e-bc05-a69587e0c8b6" class="collapse" aria-labelledby="requests-2e944e98-6f9f-443e-bc05-a69587e0c8b6">
+                    <div id="collapse-169238ee-446b-40c0-ae86-85f8a2452d90" class="collapse" aria-labelledby="requests-169238ee-446b-40c0-ae86-85f8a2452d90">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-12 mb-3">
@@ -679,15 +835,15 @@ body.theme-light code {
                                 <div class="card border-info" style="width: 50rem;">
                                     <div class="card-body">
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Response Information</h5>
-                                    <span><i class="fas fa-info-circle"></i></span><strong> Response Code:</strong> <span class="float-right badge-outline badge badge-success"> 200 - OK</span><br>
-                                    <span><i class="fas fa-stopwatch"></i></span><strong> Mean time per request:</strong> <span class="float-right badge-outline badge badge-success"> 16.8s</span><br>
-                                    <span><i class="fas fa-database"></i></span><strong> Mean size per request:</strong> <span class="float-right badge-outline badge badge-success"> 64B</span><br>
+                                    <span><i class="fas fa-info-circle"></i></span><strong> Response Code:</strong> <span class="float-right badge-outline badge badge-success"> 500 - Internal Server Error</span><br>
+                                    <span><i class="fas fa-stopwatch"></i></span><strong> Mean time per request:</strong> <span class="float-right badge-outline badge badge-success"> 30ms</span><br>
+                                    <span><i class="fas fa-database"></i></span><strong> Mean size per request:</strong> <span class="float-right badge-outline badge badge-success"> 0B</span><br>
                                     <hr>
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Test Pass Percentage</h5>
                                     <div>
                                         <div class="progress" style="height: 40px;">
-                                            <div class="progress-bar  bg-success" style="width: 100%" role="progressbar">
-                                            <h5 style="padding-top:5px;"><strong>100 %</strong></h5>
+                                            <div class="progress-bar  bg-danger" style="width: 100%" role="progressbar">
+                                            <h5 style="padding-top:5px;"><strong>0 %</strong></h5>
                                             </div>
                                         </div>
                                     </div>
@@ -732,7 +888,7 @@ body.theme-light code {
                                                     </tr>
                                                     <tr>
                                                         <td class="text-nowrap">Postman-Token</td>
-                                                        <td class="text-wrap">f6880863-8207-4e2a-ab31-0f851a2dd1ed</td>
+                                                        <td class="text-wrap">abf81fe6-7cdd-4e62-80f4-d41d2205ea98</td>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-nowrap">Host</td>
@@ -799,67 +955,27 @@ body.theme-light code {
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">x-dot-server</td>
-                                                    <td class="text-wrap">990ec346b493|83343f7e17</td>
+                                                    <td class="text-wrap">74afef91a634|19bec39941</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Set-Cookie</td>
-                                                    <td class="text-wrap">JSESSIONID&#x3D;64FA8C3606239280B10B3A5AD6657B37; Path&#x3D;/; Secure; HttpOnly; SameSite&#x3D;Lax</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">Set-Cookie</td>
-                                                    <td class="text-wrap">access_token&#x3D;eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJhNDM4MDkyYy1jZjI2LTRhMjctYTljNi0xN2MyYzIzMDQxODUiLCJ4bW9kIjoxNjk0ODE0ODU4NDAzLCJzdWIiOiJkb3RjbXMub3JnLjEiLCJpYXQiOjE2OTQ4MTQ4NjEsImlzcyI6IjQ5YzE4N2M0NTkiLCJleHAiOjE2OTQ5MDEyNjF9.QgyseQJ8w-w_DF6HmRC9SEYIhUNGmRkDgEdvOfD4eq0; Path&#x3D;/; HttpOnly; SameSite&#x3D;Lax</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">Access-Control-Allow-Origin</td>
-                                                    <td class="text-wrap">*</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">Access-Control-Allow-Methods</td>
-                                                    <td class="text-wrap">GET,PUT,POST,DELETE,HEAD,OPTIONS,PATCH</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">Access-Control-Allow-Credentials</td>
-                                                    <td class="text-wrap">true</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">Access-Control-Allow-Headers</td>
-                                                    <td class="text-wrap">*</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">Access-Control-Expose-Headers</td>
-                                                    <td class="text-wrap">*</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">Cache-Control</td>
-                                                    <td class="text-wrap">no-cache, no-store, must-revalidate</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">Pragma</td>
-                                                    <td class="text-wrap">no-cache</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">Expires</td>
-                                                    <td class="text-wrap">Mon, 26 Jul 1997 05:00:00 GMT</td>
+                                                    <td class="text-wrap">JSESSIONID&#x3D;ECEABE703C0CFC2E13CE72C2E4E5B75B; Path&#x3D;/; HttpOnly; SameSite&#x3D;Lax</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Content-Type</td>
-                                                    <td class="text-wrap">application/json;charset&#x3D;utf-8</td>
+                                                    <td class="text-wrap">text/html</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Content-Length</td>
-                                                    <td class="text-wrap">64</td>
+                                                    <td class="text-wrap">0</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Date</td>
-                                                    <td class="text-wrap">Fri, 15 Sep 2023 21:54:34 GMT</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">Keep-Alive</td>
-                                                    <td class="text-wrap">timeout&#x3D;3</td>
+                                                    <td class="text-wrap">Mon, 18 Sep 2023 16:55:16 GMT</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Connection</td>
-                                                    <td class="text-wrap">keep-alive</td>
+                                                    <td class="text-wrap">close</td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -875,12 +991,7 @@ body.theme-light code {
                             <div class="card border-info" style="width: 50rem;">
                                 <div class="card-body">
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Response Body</h5>
-                                        <div class="dyn-height">
-                                                <pre><code id="copyText-0049c863-c959-4ec0-b46f-b0d4dc9cfa07" class="prettyPrint">{&quot;bundleName&quot;:&quot;pageDisplayingVisitor.tar.gz&quot;,&quot;status&quot;:&quot;SUCCESS&quot;}</code></pre>
-                                        </div>
-                                        <div class="card-footer">
-                                            <button class="btn btn-outline-secondary btn-sm copyButton" type="button" data-clipboard-action="copy" data-clipboard-target="#copyText-0049c863-c959-4ec0-b46f-b0d4dc9cfa07">Copy to Clipboard</button>
-                                        </div>
+                                    <h5 class="alert alert-success text-uppercase text-center">No Response Body for this request</h5>
                                 </div>
                             </div>
                             </div>
@@ -896,22 +1007,22 @@ body.theme-light code {
                                             <tbody>
                                                 <tr >
                                                     <td >Bundle uploaded sucessfully</td>
-                                                    <td class="text-center bg-success">1</td>
                                                     <td class="text-center ">0</td>
+                                                    <td class="text-center bg-danger">1</td>
                                                     <td class="text-center ">0</td>
                                                 </tr>
                                             </tbody>
                                             <tfoot>
                                                 <tr class="bg-light">
                                                     <td><strong>Total</strong></td>
-                                                    <td class="text-center">1</td>
                                                     <td class="text-center">0</td>
+                                                    <td class="text-center">1</td>
                                                     <td class="text-center">0</td>
                                                 </tr>
                                             </tfoot>
                                         </table>
                                     </div>
-                                    <div class="row d-none">
+                                    <div class="row ">
                                     <div class="col-sm-12 mb-3">
                                         <div class="card-deck">
                                         <div class="card border-danger" style="width: 50rem;">
@@ -921,6 +1032,10 @@ body.theme-light code {
                                                     <table class="table table-hover">
                                                     <thead><tr class="text-nowrap"><th>Test Name</th><th>Assertion Error</th></tr></thead>
                                                         <tbody>
+                                                            <tr>
+                                                                <td class="w-45 text-nowrap ">Bundle uploaded sucessfully</td>
+                                                                <td class="w-55"><pre><code >expected response to have status code 200 but got 500</code></pre></td>
+                                                            </tr>
                                                         </tbody>
                                                     </table>
                                                 </div>
@@ -938,16 +1053,16 @@ body.theme-light code {
                 </div>
             </div>
             </div>
-            <div id="folder-e07c5ee9-22a3-44c8-9848-41f57ade849a" class="card-deck iteration-0">
+            <div id="folder-78dd2020-51c6-4bca-a651-cc791c28f0ca" class="card-deck iteration-0">
             <div class="row iteration-0">
                 <div class="col-sm-12 mb-3 iteration-0">
                 <div class="card iteration-0">
-                    <div class="card-header  bg-success iteration-0">
-                        <a data-toggle="collapse" href="#" data-target="#collapse-e07c5ee9-22a3-44c8-9848-41f57ade849a" aria-expanded="false" aria-controls="collapse" id="requests-e07c5ee9-22a3-44c8-9848-41f57ade849a" class="collapsed text-white z-block">
+                    <div class="card-header  bg-danger iteration-0">
+                        <a data-toggle="collapse" href="#" data-target="#collapse-78dd2020-51c6-4bca-a651-cc791c28f0ca" aria-expanded="false" aria-controls="collapse" id="requests-78dd2020-51c6-4bca-a651-cc791c28f0ca" class="collapsed text-white z-block">
                     Iteration: 1 - Switch site to &#x27;default&#x27; <i class="float-lg-right fa fa-chevron-down" style="padding-top: 5px;"></i>
                 </a>
                     </div>
-                    <div id="collapse-e07c5ee9-22a3-44c8-9848-41f57ade849a" class="collapse" aria-labelledby="requests-e07c5ee9-22a3-44c8-9848-41f57ade849a">
+                    <div id="collapse-78dd2020-51c6-4bca-a651-cc791c28f0ca" class="collapse" aria-labelledby="requests-78dd2020-51c6-4bca-a651-cc791c28f0ca">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-12 mb-3">
@@ -962,15 +1077,15 @@ body.theme-light code {
                                 <div class="card border-info" style="width: 50rem;">
                                     <div class="card-body">
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Response Information</h5>
-                                    <span><i class="fas fa-info-circle"></i></span><strong> Response Code:</strong> <span class="float-right badge-outline badge badge-success"> 200 - OK</span><br>
-                                    <span><i class="fas fa-stopwatch"></i></span><strong> Mean time per request:</strong> <span class="float-right badge-outline badge badge-success"> 15ms</span><br>
-                                    <span><i class="fas fa-database"></i></span><strong> Mean size per request:</strong> <span class="float-right badge-outline badge badge-success"> 114B</span><br>
+                                    <span><i class="fas fa-info-circle"></i></span><strong> Response Code:</strong> <span class="float-right badge-outline badge badge-success"> 500 - Internal Server Error</span><br>
+                                    <span><i class="fas fa-stopwatch"></i></span><strong> Mean time per request:</strong> <span class="float-right badge-outline badge badge-success"> 7ms</span><br>
+                                    <span><i class="fas fa-database"></i></span><strong> Mean size per request:</strong> <span class="float-right badge-outline badge badge-success"> 0B</span><br>
                                     <hr>
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Test Pass Percentage</h5>
                                     <div>
                                         <div class="progress" style="height: 40px;">
-                                            <div class="progress-bar  bg-success" style="width: 100%" role="progressbar">
-                                            <h5 style="padding-top:5px;"><strong>100 %</strong></h5>
+                                            <div class="progress-bar  bg-danger" style="width: 100%" role="progressbar">
+                                            <h5 style="padding-top:5px;"><strong>0 %</strong></h5>
                                             </div>
                                         </div>
                                     </div>
@@ -1011,7 +1126,7 @@ body.theme-light code {
                                                     </tr>
                                                     <tr>
                                                         <td class="text-nowrap">Postman-Token</td>
-                                                        <td class="text-wrap">106ead86-6ad8-4020-a538-b542b94284d3</td>
+                                                        <td class="text-wrap">bff9d7fc-0cb1-4297-a43f-55336e4609c1</td>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-nowrap">Host</td>
@@ -1027,7 +1142,7 @@ body.theme-light code {
                                                     </tr>
                                                     <tr>
                                                         <td class="text-nowrap">Cookie</td>
-                                                        <td class="text-wrap">JSESSIONID&#x3D;64FA8C3606239280B10B3A5AD6657B37; access_token&#x3D;eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJhNDM4MDkyYy1jZjI2LTRhMjctYTljNi0xN2MyYzIzMDQxODUiLCJ4bW9kIjoxNjk0ODE0ODU4NDAzLCJzdWIiOiJkb3RjbXMub3JnLjEiLCJpYXQiOjE2OTQ4MTQ4NjEsImlzcyI6IjQ5YzE4N2M0NTkiLCJleHAiOjE2OTQ5MDEyNjF9.QgyseQJ8w-w_DF6HmRC9SEYIhUNGmRkDgEdvOfD4eq0</td>
+                                                        <td class="text-wrap">JSESSIONID&#x3D;ECEABE703C0CFC2E13CE72C2E4E5B75B</td>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-nowrap">Content-Length</td>
@@ -1065,59 +1180,23 @@ body.theme-light code {
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">x-dot-server</td>
-                                                    <td class="text-wrap">990ec346b493|83343f7e17</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">Access-Control-Allow-Origin</td>
-                                                    <td class="text-wrap">*</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">Access-Control-Allow-Methods</td>
-                                                    <td class="text-wrap">GET,PUT,POST,DELETE,HEAD,OPTIONS,PATCH</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">Access-Control-Allow-Credentials</td>
-                                                    <td class="text-wrap">true</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">Access-Control-Allow-Headers</td>
-                                                    <td class="text-wrap">*</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">Access-Control-Expose-Headers</td>
-                                                    <td class="text-wrap">*</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">Cache-Control</td>
-                                                    <td class="text-wrap">no-cache, no-store, must-revalidate</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">Pragma</td>
-                                                    <td class="text-wrap">no-cache</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">Expires</td>
-                                                    <td class="text-wrap">Mon, 26 Jul 1997 05:00:00 GMT</td>
+                                                    <td class="text-wrap">74afef91a634|19bec39941</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Content-Type</td>
-                                                    <td class="text-wrap">application/json</td>
+                                                    <td class="text-wrap">text/html</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Content-Length</td>
-                                                    <td class="text-wrap">114</td>
+                                                    <td class="text-wrap">0</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Date</td>
-                                                    <td class="text-wrap">Fri, 15 Sep 2023 21:54:34 GMT</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">Keep-Alive</td>
-                                                    <td class="text-wrap">timeout&#x3D;3</td>
+                                                    <td class="text-wrap">Mon, 18 Sep 2023 16:55:16 GMT</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Connection</td>
-                                                    <td class="text-wrap">keep-alive</td>
+                                                    <td class="text-wrap">close</td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -1133,12 +1212,7 @@ body.theme-light code {
                             <div class="card border-info" style="width: 50rem;">
                                 <div class="card-body">
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Response Body</h5>
-                                        <div class="dyn-height">
-                                                <pre><code id="copyText-cd154c0f-b435-4e03-bc5b-a7312dec8d21" class="prettyPrint">{&quot;entity&quot;:{&quot;hostSwitched&quot;:true},&quot;errors&quot;:[],&quot;i18nMessagesMap&quot;:{},&quot;messages&quot;:[],&quot;pagination&quot;:null,&quot;permissions&quot;:[]}</code></pre>
-                                        </div>
-                                        <div class="card-footer">
-                                            <button class="btn btn-outline-secondary btn-sm copyButton" type="button" data-clipboard-action="copy" data-clipboard-target="#copyText-cd154c0f-b435-4e03-bc5b-a7312dec8d21">Copy to Clipboard</button>
-                                        </div>
+                                    <h5 class="alert alert-success text-uppercase text-center">No Response Body for this request</h5>
                                 </div>
                             </div>
                             </div>
@@ -1154,37 +1228,47 @@ body.theme-light code {
                                             <tbody>
                                                 <tr >
                                                     <td >Status code is 200 </td>
-                                                    <td class="text-center bg-success">1</td>
                                                     <td class="text-center ">0</td>
+                                                    <td class="text-center bg-danger">1</td>
                                                     <td class="text-center ">0</td>
                                                 </tr>
                                                 <tr >
                                                     <td >Valid response</td>
-                                                    <td class="text-center bg-success">1</td>
                                                     <td class="text-center ">0</td>
+                                                    <td class="text-center bg-danger">1</td>
                                                     <td class="text-center ">0</td>
                                                 </tr>
                                             </tbody>
                                             <tfoot>
                                                 <tr class="bg-light">
                                                     <td><strong>Total</strong></td>
-                                                    <td class="text-center">2</td>
                                                     <td class="text-center">0</td>
+                                                    <td class="text-center">2</td>
                                                     <td class="text-center">0</td>
                                                 </tr>
                                             </tfoot>
                                         </table>
                                     </div>
-                                    <div class="row d-none">
+                                    <div class="row ">
                                     <div class="col-sm-12 mb-3">
                                         <div class="card-deck">
                                         <div class="card border-danger" style="width: 50rem;">
                                             <div class="card-body">
-                                                <h5 class="card-title text-uppercase text-white text-center bg-danger">Test Failure</h5>
+                                                <h5 class="card-title text-uppercase text-white text-center bg-danger">Test Failures</h5>
                                                 <div class="table-responsive">
                                                     <table class="table table-hover">
                                                     <thead><tr class="text-nowrap"><th>Test Name</th><th>Assertion Error</th></tr></thead>
                                                         <tbody>
+                                                            <tr>
+                                                                <td class="w-45 text-nowrap ">Status code is 200 </td>
+                                                                <td class="w-55"><pre><code >expected response to have status code 200 but got 500</code></pre></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="w-45 text-nowrap ">Valid response</td>
+                                                                <td class="w-55"><pre><code >No data, empty input at 1:1
+        
+        ^</code></pre></td>
+                                                            </tr>
                                                         </tbody>
                                                     </table>
                                                 </div>
@@ -1202,16 +1286,16 @@ body.theme-light code {
                 </div>
             </div>
             </div>
-            <div id="folder-aaf34504-7f90-446a-9c9e-9663b15054ab" class="card-deck iteration-0">
+            <div id="folder-dbbf4f63-c696-4362-9f95-d11e82b5789b" class="card-deck iteration-0">
             <div class="row iteration-0">
                 <div class="col-sm-12 mb-3 iteration-0">
                 <div class="card iteration-0">
-                    <div class="card-header  bg-success iteration-0">
-                        <a data-toggle="collapse" href="#" data-target="#collapse-aaf34504-7f90-446a-9c9e-9663b15054ab" aria-expanded="false" aria-controls="collapse" id="requests-aaf34504-7f90-446a-9c9e-9663b15054ab" class="collapsed text-white z-block">
+                    <div class="card-header  bg-danger iteration-0">
+                        <a data-toggle="collapse" href="#" data-target="#collapse-dbbf4f63-c696-4362-9f95-d11e82b5789b" aria-expanded="false" aria-controls="collapse" id="requests-dbbf4f63-c696-4362-9f95-d11e82b5789b" class="collapsed text-white z-block">
                     Iteration: 1 - invalidateSession <i class="float-lg-right fa fa-chevron-down" style="padding-top: 5px;"></i>
                 </a>
                     </div>
-                    <div id="collapse-aaf34504-7f90-446a-9c9e-9663b15054ab" class="collapse" aria-labelledby="requests-aaf34504-7f90-446a-9c9e-9663b15054ab">
+                    <div id="collapse-dbbf4f63-c696-4362-9f95-d11e82b5789b" class="collapse" aria-labelledby="requests-dbbf4f63-c696-4362-9f95-d11e82b5789b">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-12 mb-3">
@@ -1226,15 +1310,15 @@ body.theme-light code {
                                 <div class="card border-info" style="width: 50rem;">
                                     <div class="card-body">
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Response Information</h5>
-                                    <span><i class="fas fa-info-circle"></i></span><strong> Response Code:</strong> <span class="float-right badge-outline badge badge-success"> 200 - OK</span><br>
-                                    <span><i class="fas fa-stopwatch"></i></span><strong> Mean time per request:</strong> <span class="float-right badge-outline badge badge-success"> 743ms</span><br>
-                                    <span><i class="fas fa-database"></i></span><strong> Mean size per request:</strong> <span class="float-right badge-outline badge badge-success"> 114B</span><br>
+                                    <span><i class="fas fa-info-circle"></i></span><strong> Response Code:</strong> <span class="float-right badge-outline badge badge-success"> 500 - Internal Server Error</span><br>
+                                    <span><i class="fas fa-stopwatch"></i></span><strong> Mean time per request:</strong> <span class="float-right badge-outline badge badge-success"> 5ms</span><br>
+                                    <span><i class="fas fa-database"></i></span><strong> Mean size per request:</strong> <span class="float-right badge-outline badge badge-success"> 0B</span><br>
                                     <hr>
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Test Pass Percentage</h5>
                                     <div>
                                         <div class="progress" style="height: 40px;">
-                                            <div class="progress-bar  bg-success" style="width: 100%" role="progressbar">
-                                            <h5 style="padding-top:5px;"><strong>100 %</strong></h5>
+                                            <div class="progress-bar  bg-danger" style="width: 100%" role="progressbar">
+                                            <h5 style="padding-top:5px;"><strong>0 %</strong></h5>
                                             </div>
                                         </div>
                                     </div>
@@ -1267,7 +1351,7 @@ body.theme-light code {
                                                     </tr>
                                                     <tr>
                                                         <td class="text-nowrap">Postman-Token</td>
-                                                        <td class="text-wrap">1f4d91f6-4d84-4c00-846f-571f6d95b249</td>
+                                                        <td class="text-wrap">bce57179-87be-4515-9fbe-6034e3d49d78</td>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-nowrap">Host</td>
@@ -1283,7 +1367,7 @@ body.theme-light code {
                                                     </tr>
                                                     <tr>
                                                         <td class="text-nowrap">Cookie</td>
-                                                        <td class="text-wrap">JSESSIONID&#x3D;64FA8C3606239280B10B3A5AD6657B37; access_token&#x3D;eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJhNDM4MDkyYy1jZjI2LTRhMjctYTljNi0xN2MyYzIzMDQxODUiLCJ4bW9kIjoxNjk0ODE0ODU4NDAzLCJzdWIiOiJkb3RjbXMub3JnLjEiLCJpYXQiOjE2OTQ4MTQ4NjEsImlzcyI6IjQ5YzE4N2M0NTkiLCJleHAiOjE2OTQ5MDEyNjF9.QgyseQJ8w-w_DF6HmRC9SEYIhUNGmRkDgEdvOfD4eq0</td>
+                                                        <td class="text-wrap">JSESSIONID&#x3D;ECEABE703C0CFC2E13CE72C2E4E5B75B</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -1317,67 +1401,23 @@ body.theme-light code {
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">x-dot-server</td>
-                                                    <td class="text-wrap">990ec346b493|83343f7e17</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">Set-Cookie</td>
-                                                    <td class="text-wrap">JSESSIONID&#x3D;; Max-Age&#x3D;0; Expires&#x3D;Thu, 01-Jan-1970 00:00:10 GMT; Path&#x3D;/; HttpOnly; SameSite&#x3D;Lax</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">Set-Cookie</td>
-                                                    <td class="text-wrap">access_token&#x3D;; Max-Age&#x3D;0; Expires&#x3D;Thu, 01-Jan-1970 00:00:10 GMT; Path&#x3D;/; HttpOnly; SameSite&#x3D;Lax</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">Access-Control-Allow-Origin</td>
-                                                    <td class="text-wrap">*</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">Access-Control-Allow-Methods</td>
-                                                    <td class="text-wrap">GET,PUT,POST,DELETE,HEAD,OPTIONS,PATCH</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">Access-Control-Allow-Credentials</td>
-                                                    <td class="text-wrap">true</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">Access-Control-Allow-Headers</td>
-                                                    <td class="text-wrap">*</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">Access-Control-Expose-Headers</td>
-                                                    <td class="text-wrap">*</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">Cache-Control</td>
-                                                    <td class="text-wrap">no-cache, no-store, must-revalidate</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">Pragma</td>
-                                                    <td class="text-wrap">no-cache</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">Expires</td>
-                                                    <td class="text-wrap">Mon, 26 Jul 1997 05:00:00 GMT</td>
+                                                    <td class="text-wrap">74afef91a634|19bec39941</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Content-Type</td>
-                                                    <td class="text-wrap">application/json</td>
+                                                    <td class="text-wrap">text/html</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Content-Length</td>
-                                                    <td class="text-wrap">114</td>
+                                                    <td class="text-wrap">0</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Date</td>
-                                                    <td class="text-wrap">Fri, 15 Sep 2023 21:54:34 GMT</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">Keep-Alive</td>
-                                                    <td class="text-wrap">timeout&#x3D;3</td>
+                                                    <td class="text-wrap">Mon, 18 Sep 2023 16:55:16 GMT</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Connection</td>
-                                                    <td class="text-wrap">keep-alive</td>
+                                                    <td class="text-wrap">close</td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -1393,12 +1433,7 @@ body.theme-light code {
                             <div class="card border-info" style="width: 50rem;">
                                 <div class="card-body">
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Response Body</h5>
-                                        <div class="dyn-height">
-                                                <pre><code id="copyText-58caf897-995a-4b9e-bc7a-d671ef5be14a" class="prettyPrint">{&quot;entity&quot;:&quot;Logout successfully&quot;,&quot;errors&quot;:[],&quot;i18nMessagesMap&quot;:{},&quot;messages&quot;:[],&quot;pagination&quot;:null,&quot;permissions&quot;:[]}</code></pre>
-                                        </div>
-                                        <div class="card-footer">
-                                            <button class="btn btn-outline-secondary btn-sm copyButton" type="button" data-clipboard-action="copy" data-clipboard-target="#copyText-58caf897-995a-4b9e-bc7a-d671ef5be14a">Copy to Clipboard</button>
-                                        </div>
+                                    <h5 class="alert alert-success text-uppercase text-center">No Response Body for this request</h5>
                                 </div>
                             </div>
                             </div>
@@ -1414,22 +1449,22 @@ body.theme-light code {
                                             <tbody>
                                                 <tr >
                                                     <td >Status code is 200</td>
-                                                    <td class="text-center bg-success">1</td>
                                                     <td class="text-center ">0</td>
+                                                    <td class="text-center bg-danger">1</td>
                                                     <td class="text-center ">0</td>
                                                 </tr>
                                             </tbody>
                                             <tfoot>
                                                 <tr class="bg-light">
                                                     <td><strong>Total</strong></td>
-                                                    <td class="text-center">1</td>
                                                     <td class="text-center">0</td>
+                                                    <td class="text-center">1</td>
                                                     <td class="text-center">0</td>
                                                 </tr>
                                             </tfoot>
                                         </table>
                                     </div>
-                                    <div class="row d-none">
+                                    <div class="row ">
                                     <div class="col-sm-12 mb-3">
                                         <div class="card-deck">
                                         <div class="card border-danger" style="width: 50rem;">
@@ -1439,6 +1474,10 @@ body.theme-light code {
                                                     <table class="table table-hover">
                                                     <thead><tr class="text-nowrap"><th>Test Name</th><th>Assertion Error</th></tr></thead>
                                                         <tbody>
+                                                            <tr>
+                                                                <td class="w-45 text-nowrap ">Status code is 200</td>
+                                                                <td class="w-55"><pre><code >expected response to have status code 200 but got 500</code></pre></td>
+                                                            </tr>
                                                         </tbody>
                                                     </table>
                                                 </div>
@@ -1456,16 +1495,16 @@ body.theme-light code {
                 </div>
             </div>
             </div>
-            <div id="folder-49e9ef39-f4a5-4cb1-855c-02ffff974a75" class="card-deck iteration-0">
+            <div id="folder-24e1d599-3be1-4de2-b60e-daa8a799a960" class="card-deck iteration-0">
             <div class="row iteration-0">
                 <div class="col-sm-12 mb-3 iteration-0">
                 <div class="card iteration-0">
-                    <div class="card-header  bg-success iteration-0">
-                        <a data-toggle="collapse" href="#" data-target="#collapse-49e9ef39-f4a5-4cb1-855c-02ffff974a75" aria-expanded="false" aria-controls="collapse" id="requests-49e9ef39-f4a5-4cb1-855c-02ffff974a75" class="collapsed text-white z-block">
+                    <div class="card-header  bg-danger iteration-0">
+                        <a data-toggle="collapse" href="#" data-target="#collapse-24e1d599-3be1-4de2-b60e-daa8a799a960" aria-expanded="false" aria-controls="collapse" id="requests-24e1d599-3be1-4de2-b60e-daa8a799a960" class="collapsed text-white z-block">
                     Iteration: 1 - Update aliases of Demo Host to remove localhost <i class="float-lg-right fa fa-chevron-down" style="padding-top: 5px;"></i>
                 </a>
                     </div>
-                    <div id="collapse-49e9ef39-f4a5-4cb1-855c-02ffff974a75" class="collapse" aria-labelledby="requests-49e9ef39-f4a5-4cb1-855c-02ffff974a75">
+                    <div id="collapse-24e1d599-3be1-4de2-b60e-daa8a799a960" class="collapse" aria-labelledby="requests-24e1d599-3be1-4de2-b60e-daa8a799a960">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-12 mb-3">
@@ -1494,15 +1533,15 @@ body.theme-light code {
                                 <div class="card border-info" style="width: 50rem;">
                                     <div class="card-body">
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Response Information</h5>
-                                    <span><i class="fas fa-info-circle"></i></span><strong> Response Code:</strong> <span class="float-right badge-outline badge badge-success"> 200 - OK</span><br>
-                                    <span><i class="fas fa-stopwatch"></i></span><strong> Mean time per request:</strong> <span class="float-right badge-outline badge badge-success"> 10.7s</span><br>
-                                    <span><i class="fas fa-database"></i></span><strong> Mean size per request:</strong> <span class="float-right badge-outline badge badge-success"> 970B</span><br>
+                                    <span><i class="fas fa-info-circle"></i></span><strong> Response Code:</strong> <span class="float-right badge-outline badge badge-success"> 500 - Internal Server Error</span><br>
+                                    <span><i class="fas fa-stopwatch"></i></span><strong> Mean time per request:</strong> <span class="float-right badge-outline badge badge-success"> 5ms</span><br>
+                                    <span><i class="fas fa-database"></i></span><strong> Mean size per request:</strong> <span class="float-right badge-outline badge badge-success"> 0B</span><br>
                                     <hr>
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Test Pass Percentage</h5>
                                     <div>
                                         <div class="progress" style="height: 40px;">
-                                            <div class="progress-bar  bg-success" style="width: 100%" role="progressbar">
-                                            <h5 style="padding-top:5px;"><strong>100 %</strong></h5>
+                                            <div class="progress-bar  bg-danger" style="width: 100%" role="progressbar">
+                                            <h5 style="padding-top:5px;"><strong>0 %</strong></h5>
                                             </div>
                                         </div>
                                     </div>
@@ -1543,7 +1582,7 @@ body.theme-light code {
                                                     </tr>
                                                     <tr>
                                                         <td class="text-nowrap">Postman-Token</td>
-                                                        <td class="text-wrap">6a9d9d75-331f-4a3a-9246-1a24cd5db28c</td>
+                                                        <td class="text-wrap">f341664e-d0f0-4a63-ae4b-e4cf72bac0a2</td>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-nowrap">Host</td>
@@ -1560,6 +1599,10 @@ body.theme-light code {
                                                     <tr>
                                                         <td class="text-nowrap">Content-Length</td>
                                                         <td class="text-wrap">134</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-nowrap">Cookie</td>
+                                                        <td class="text-wrap">JSESSIONID&#x3D;ECEABE703C0CFC2E13CE72C2E4E5B75B</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -1614,75 +1657,23 @@ body.theme-light code {
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">x-dot-server</td>
-                                                    <td class="text-wrap">990ec346b493|83343f7e17</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">Set-Cookie</td>
-                                                    <td class="text-wrap">JSESSIONID&#x3D;D2627ED5DD13FC70BFD0F09F25D02B08; Path&#x3D;/; Secure; HttpOnly; SameSite&#x3D;Lax</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">Set-Cookie</td>
-                                                    <td class="text-wrap">access_token&#x3D;eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJhNDM4MDkyYy1jZjI2LTRhMjctYTljNi0xN2MyYzIzMDQxODUiLCJ4bW9kIjoxNjk0ODE0ODc2NDI5LCJzdWIiOiJkb3RjbXMub3JnLjEiLCJpYXQiOjE2OTQ4MTQ4NzksImlzcyI6IjQ5YzE4N2M0NTkiLCJleHAiOjE2OTQ5MDEyNzl9.b3qUcjJQBBBqWTQUMxGcG6R1DCNYQDGeJYH_DHBkojo; Path&#x3D;/; HttpOnly; SameSite&#x3D;Lax</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">Access-Control-Allow-Origin</td>
-                                                    <td class="text-wrap">*</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">Access-Control-Allow-Methods</td>
-                                                    <td class="text-wrap">GET,PUT,POST,DELETE,HEAD,OPTIONS,PATCH</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">Access-Control-Allow-Credentials</td>
-                                                    <td class="text-wrap">true</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">Access-Control-Allow-Headers</td>
-                                                    <td class="text-wrap">*</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">Access-Control-Expose-Headers</td>
-                                                    <td class="text-wrap">*</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">Cache-Control</td>
-                                                    <td class="text-wrap">no-cache, no-store, must-revalidate</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">Pragma</td>
-                                                    <td class="text-wrap">no-cache</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">Expires</td>
-                                                    <td class="text-wrap">Mon, 26 Jul 1997 05:00:00 GMT</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">vary</td>
-                                                    <td class="text-wrap">accept-encoding</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">Content-Encoding</td>
-                                                    <td class="text-wrap">gzip</td>
+                                                    <td class="text-wrap">74afef91a634|19bec39941</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Content-Type</td>
-                                                    <td class="text-wrap">application/json</td>
+                                                    <td class="text-wrap">text/html</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="text-nowrap">Transfer-Encoding</td>
-                                                    <td class="text-wrap">chunked</td>
+                                                    <td class="text-nowrap">Content-Length</td>
+                                                    <td class="text-wrap">0</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Date</td>
-                                                    <td class="text-wrap">Fri, 15 Sep 2023 21:54:45 GMT</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">Keep-Alive</td>
-                                                    <td class="text-wrap">timeout&#x3D;3</td>
+                                                    <td class="text-wrap">Mon, 18 Sep 2023 16:55:16 GMT</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Connection</td>
-                                                    <td class="text-wrap">keep-alive</td>
+                                                    <td class="text-wrap">close</td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -1698,12 +1689,7 @@ body.theme-light code {
                             <div class="card border-info" style="width: 50rem;">
                                 <div class="card-body">
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Response Body</h5>
-                                        <div class="dyn-height">
-                                                <pre><code id="copyText-85a289b8-adbb-4fd1-a072-d7e2f600280b" class="prettyPrint">{&quot;entity&quot;:{&quot;addThis&quot;:&quot;ra-4e02119211875e7b&quot;,&quot;aliases&quot;:&quot;test.dotcms.com test2.dotcms.com test3.dotcms.com&quot;,&quot;archived&quot;:false,&quot;default&quot;:false,&quot;description&quot;:&quot;demoHost&quot;,&quot;embeddedDashboard&quot;:null,&quot;googleAnalytics&quot;:&quot;UA-9877660-3&quot;,&quot;googleMap&quot;:&quot;AIzaSyDXvD7JA5Q8S5VgfviI8nDinAq9x5Utmu0&quot;,&quot;identifier&quot;:&quot;48190c8c-42c4-46af-8d1a-0cd5db894797&quot;,&quot;inode&quot;:&quot;57569a33-22d3-425a-a610-68f4770b2883&quot;,&quot;keywords&quot;:&quot;CMS, Web Content Management, Open Source, Java, J2EE, DXP, NoCode, OSGI, Apache Velocity, Elasticsearch, RESTful Services, REST API, Workflows, Personalization, Multilingual, I18N, L10N, Internationalization, Localization, Docker CMS, Containerized CMS&quot;,&quot;languageId&quot;:1,&quot;live&quot;:true,&quot;locked&quot;:true,&quot;modDate&quot;:1694814879520,&quot;modUser&quot;:&quot;dotcms.org.1&quot;,&quot;proxyUrlForEditMode&quot;:null,&quot;runDashboard&quot;:false,&quot;siteName&quot;:&quot;demo.dotcms.com&quot;,&quot;siteThumbnail&quot;:&quot;&quot;,&quot;systemHost&quot;:false,&quot;tagStorage&quot;:&quot;SYSTEM_HOST&quot;,&quot;working&quot;:true},&quot;errors&quot;:[],&quot;i18nMessagesMap&quot;:{},&quot;messages&quot;:[],&quot;pagination&quot;:null,&quot;permissions&quot;:[]}</code></pre>
-                                        </div>
-                                        <div class="card-footer">
-                                            <button class="btn btn-outline-secondary btn-sm copyButton" type="button" data-clipboard-action="copy" data-clipboard-target="#copyText-85a289b8-adbb-4fd1-a072-d7e2f600280b">Copy to Clipboard</button>
-                                        </div>
+                                    <h5 class="alert alert-success text-uppercase text-center">No Response Body for this request</h5>
                                 </div>
                             </div>
                             </div>
@@ -1719,22 +1705,22 @@ body.theme-light code {
                                             <tbody>
                                                 <tr >
                                                     <td >Status code should be 200</td>
-                                                    <td class="text-center bg-success">1</td>
                                                     <td class="text-center ">0</td>
+                                                    <td class="text-center bg-danger">1</td>
                                                     <td class="text-center ">0</td>
                                                 </tr>
                                             </tbody>
                                             <tfoot>
                                                 <tr class="bg-light">
                                                     <td><strong>Total</strong></td>
-                                                    <td class="text-center">1</td>
                                                     <td class="text-center">0</td>
+                                                    <td class="text-center">1</td>
                                                     <td class="text-center">0</td>
                                                 </tr>
                                             </tfoot>
                                         </table>
                                     </div>
-                                    <div class="row d-none">
+                                    <div class="row ">
                                     <div class="col-sm-12 mb-3">
                                         <div class="card-deck">
                                         <div class="card border-danger" style="width: 50rem;">
@@ -1744,6 +1730,10 @@ body.theme-light code {
                                                     <table class="table table-hover">
                                                     <thead><tr class="text-nowrap"><th>Test Name</th><th>Assertion Error</th></tr></thead>
                                                         <tbody>
+                                                            <tr>
+                                                                <td class="w-45 text-nowrap ">Status code should be 200</td>
+                                                                <td class="w-55"><pre><code >expected response to have status code 200 but got 500</code></pre></td>
+                                                            </tr>
                                                         </tbody>
                                                     </table>
                                                 </div>
@@ -1761,16 +1751,16 @@ body.theme-light code {
                 </div>
             </div>
             </div>
-            <div id="folder-a7b1d80f-eac1-4e87-860a-691dd498aa38" class="card-deck iteration-0">
+            <div id="folder-4b99b043-8079-4274-9af8-e915ff61d8d7" class="card-deck iteration-0">
             <div class="row iteration-0">
                 <div class="col-sm-12 mb-3 iteration-0">
                 <div class="card iteration-0">
-                    <div class="card-header  bg-success iteration-0">
-                        <a data-toggle="collapse" href="#" data-target="#collapse-a7b1d80f-eac1-4e87-860a-691dd498aa38" aria-expanded="false" aria-controls="collapse" id="requests-a7b1d80f-eac1-4e87-860a-691dd498aa38" class="collapsed text-white z-block">
+                    <div class="card-header  bg-danger iteration-0">
+                        <a data-toggle="collapse" href="#" data-target="#collapse-4b99b043-8079-4274-9af8-e915ff61d8d7" aria-expanded="false" aria-controls="collapse" id="requests-4b99b043-8079-4274-9af8-e915ff61d8d7" class="collapsed text-white z-block">
                     Iteration: 1 - GivenX-Forwarded-ForSetToAnIp_VisitorIpShouldBeTheSame <i class="float-lg-right fa fa-chevron-down" style="padding-top: 5px;"></i>
                 </a>
                     </div>
-                    <div id="collapse-a7b1d80f-eac1-4e87-860a-691dd498aa38" class="collapse" aria-labelledby="requests-a7b1d80f-eac1-4e87-860a-691dd498aa38">
+                    <div id="collapse-4b99b043-8079-4274-9af8-e915ff61d8d7" class="collapse" aria-labelledby="requests-4b99b043-8079-4274-9af8-e915ff61d8d7">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-12 mb-3">
@@ -1785,15 +1775,15 @@ body.theme-light code {
                                 <div class="card border-info" style="width: 50rem;">
                                     <div class="card-body">
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Response Information</h5>
-                                    <span><i class="fas fa-info-circle"></i></span><strong> Response Code:</strong> <span class="float-right badge-outline badge badge-success"> 200 - OK</span><br>
-                                    <span><i class="fas fa-stopwatch"></i></span><strong> Mean time per request:</strong> <span class="float-right badge-outline badge badge-success"> 137ms</span><br>
-                                    <span><i class="fas fa-database"></i></span><strong> Mean size per request:</strong> <span class="float-right badge-outline badge badge-success"> 13B</span><br>
+                                    <span><i class="fas fa-info-circle"></i></span><strong> Response Code:</strong> <span class="float-right badge-outline badge badge-success"> 500 - Internal Server Error</span><br>
+                                    <span><i class="fas fa-stopwatch"></i></span><strong> Mean time per request:</strong> <span class="float-right badge-outline badge badge-success"> 9ms</span><br>
+                                    <span><i class="fas fa-database"></i></span><strong> Mean size per request:</strong> <span class="float-right badge-outline badge badge-success"> 771B</span><br>
                                     <hr>
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Test Pass Percentage</h5>
                                     <div>
                                         <div class="progress" style="height: 40px;">
-                                            <div class="progress-bar  bg-success" style="width: 100%" role="progressbar">
-                                            <h5 style="padding-top:5px;"><strong>100 %</strong></h5>
+                                            <div class="progress-bar  bg-danger" style="width: 100%" role="progressbar">
+                                            <h5 style="padding-top:5px;"><strong>0 %</strong></h5>
                                             </div>
                                         </div>
                                     </div>
@@ -1834,7 +1824,7 @@ body.theme-light code {
                                                     </tr>
                                                     <tr>
                                                         <td class="text-nowrap">Postman-Token</td>
-                                                        <td class="text-wrap">6cb6c28d-1bdf-41e2-add6-4c312b207422</td>
+                                                        <td class="text-wrap">d9343074-912f-4a32-8218-781fcfa079d7</td>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-nowrap">Host</td>
@@ -1880,47 +1870,35 @@ body.theme-light code {
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">x-dot-server</td>
-                                                    <td class="text-wrap">990ec346b493|83343f7e17</td>
+                                                    <td class="text-wrap">74afef91a634|19bec39941</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Set-Cookie</td>
-                                                    <td class="text-wrap">JSESSIONID&#x3D;97D0DECCEE8E629D2528AB1C55FD4FCF; Path&#x3D;/; Secure; HttpOnly; SameSite&#x3D;Lax</td>
+                                                    <td class="text-wrap">JSESSIONID&#x3D;45BA81A9FFB2724ADAE1B91D9678A315; Path&#x3D;/; HttpOnly; SameSite&#x3D;Lax</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="text-nowrap">Set-Cookie</td>
-                                                    <td class="text-wrap">opvc&#x3D;d2d31244-1f55-4b08-b302-0b3118570a95; Path&#x3D;/; HttpOnly; SameSite&#x3D;Lax</td>
+                                                    <td class="text-nowrap">vary</td>
+                                                    <td class="text-wrap">accept-encoding</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="text-nowrap">Set-Cookie</td>
-                                                    <td class="text-wrap">sitevisitscookie&#x3D;1; Max-Age&#x3D;153792000; Expires&#x3D;Sun, 30-Jul-2028 21:54:45 GMT; Path&#x3D;/; HttpOnly; SameSite&#x3D;Lax</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">Set-Cookie</td>
-                                                    <td class="text-wrap">dmid&#x3D;c5fda57b-d6da-43e1-a3ae-2b639e4ef1c3; Max-Age&#x3D;153792000; Expires&#x3D;Sun, 30-Jul-2028 21:54:45 GMT; Path&#x3D;/; HttpOnly; SameSite&#x3D;Lax</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">Cache-Control</td>
-                                                    <td class="text-wrap">max-age&#x3D;15</td>
+                                                    <td class="text-nowrap">Content-Encoding</td>
+                                                    <td class="text-wrap">gzip</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Content-Type</td>
-                                                    <td class="text-wrap">text/html;charset&#x3D;UTF-8</td>
+                                                    <td class="text-wrap">text/html;charset&#x3D;ISO-8859-1</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="text-nowrap">Content-Length</td>
-                                                    <td class="text-wrap">13</td>
+                                                    <td class="text-nowrap">Transfer-Encoding</td>
+                                                    <td class="text-wrap">chunked</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Date</td>
-                                                    <td class="text-wrap">Fri, 15 Sep 2023 21:54:45 GMT</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">Keep-Alive</td>
-                                                    <td class="text-wrap">timeout&#x3D;3</td>
+                                                    <td class="text-wrap">Mon, 18 Sep 2023 16:55:16 GMT</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Connection</td>
-                                                    <td class="text-wrap">keep-alive</td>
+                                                    <td class="text-wrap">close</td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -1937,10 +1915,60 @@ body.theme-light code {
                                 <div class="card-body">
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Response Body</h5>
                                         <div class="dyn-height">
-                                                <pre><code id="copyText-4782f230-e165-4be2-829a-97d774144d0f" class="prettyPrint">/3.22.136.122</code></pre>
+                                                <pre><code id="copyText-f13f35c6-08b4-413f-a46c-8139eea1aa85" class="prettyPrint">
+        &lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot;
+          &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;
+        
+        &lt;html&gt;
+        &lt;head&gt;
+        &lt;title&gt;dotCMS: 500 error&lt;/title&gt;
+        
+        &lt;style type&#x3D;&quot;text/css&quot;&gt;
+        body {
+          font-family: helvetica, san-serif;
+          padding: 20px;
+          margin-top: 0px;
+        }
+        
+        #main {
+          width: 400px;
+        }
+        
+        #footer {
+          text-align: center;
+        }
+        
+        h1 {
+          font-size: 20px;
+        }
+        
+        #logo {
+          float: left;
+        }
+        
+        #text {
+          float: left;
+        }
+        &lt;/style&gt;
+        
+        
+        
+        &lt;/head&gt;
+        &lt;body&gt;
+          &lt;div id&#x3D;&quot;main&quot;&gt;
+            &lt;div id&#x3D;&quot;text&quot;&gt;
+        
+              &lt;h1&gt;dotCMS: 500 error&lt;/h1&gt;
+        
+              &lt;p&gt;The Page or file you were looking for caused an &lt;a href&#x3D;&quot;javascript:showError()&quot;&gt;error&lt;/a&gt;. &lt;br/&gt;Please make sure that you have typed the correct URL.&lt;/p&gt;
+        
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;</code></pre>
                                         </div>
                                         <div class="card-footer">
-                                            <button class="btn btn-outline-secondary btn-sm copyButton" type="button" data-clipboard-action="copy" data-clipboard-target="#copyText-4782f230-e165-4be2-829a-97d774144d0f">Copy to Clipboard</button>
+                                            <button class="btn btn-outline-secondary btn-sm copyButton" type="button" data-clipboard-action="copy" data-clipboard-target="#copyText-f13f35c6-08b4-413f-a46c-8139eea1aa85">Copy to Clipboard</button>
                                         </div>
                                 </div>
                             </div>
@@ -1957,22 +1985,22 @@ body.theme-light code {
                                             <tbody>
                                                 <tr >
                                                     <td >Verify Visitor&#x27;s IP</td>
-                                                    <td class="text-center bg-success">1</td>
                                                     <td class="text-center ">0</td>
+                                                    <td class="text-center bg-danger">1</td>
                                                     <td class="text-center ">0</td>
                                                 </tr>
                                             </tbody>
                                             <tfoot>
                                                 <tr class="bg-light">
                                                     <td><strong>Total</strong></td>
-                                                    <td class="text-center">1</td>
                                                     <td class="text-center">0</td>
+                                                    <td class="text-center">1</td>
                                                     <td class="text-center">0</td>
                                                 </tr>
                                             </tfoot>
                                         </table>
                                     </div>
-                                    <div class="row d-none">
+                                    <div class="row ">
                                     <div class="col-sm-12 mb-3">
                                         <div class="card-deck">
                                         <div class="card border-danger" style="width: 50rem;">
@@ -1982,6 +2010,10 @@ body.theme-light code {
                                                     <table class="table table-hover">
                                                     <thead><tr class="text-nowrap"><th>Test Name</th><th>Assertion Error</th></tr></thead>
                                                         <tbody>
+                                                            <tr>
+                                                                <td class="w-45 text-nowrap ">Verify Visitor&#x27;s IP</td>
+                                                                <td class="w-55"><pre><code >expected response to have status code 200 but got 500</code></pre></td>
+                                                            </tr>
                                                         </tbody>
                                                     </table>
                                                 </div>
@@ -1999,16 +2031,16 @@ body.theme-light code {
                 </div>
             </div>
             </div>
-            <div id="folder-1c54c6f5-3d9c-48f8-b361-1d7589db8638" class="card-deck iteration-0">
+            <div id="folder-b307b319-473b-4519-8ccd-d1e23426011c" class="card-deck iteration-0">
             <div class="row iteration-0">
                 <div class="col-sm-12 mb-3 iteration-0">
                 <div class="card iteration-0">
-                    <div class="card-header  bg-success iteration-0">
-                        <a data-toggle="collapse" href="#" data-target="#collapse-1c54c6f5-3d9c-48f8-b361-1d7589db8638" aria-expanded="false" aria-controls="collapse" id="requests-1c54c6f5-3d9c-48f8-b361-1d7589db8638" class="collapsed text-white z-block">
+                    <div class="card-header  bg-danger iteration-0">
+                        <a data-toggle="collapse" href="#" data-target="#collapse-b307b319-473b-4519-8ccd-d1e23426011c" aria-expanded="false" aria-controls="collapse" id="requests-b307b319-473b-4519-8ccd-d1e23426011c" class="collapsed text-white z-block">
                     Iteration: 1 - GivenX-Forwarded-ForSetToAnInvalidIp_VisitorIpShouldBeLocalhost <i class="float-lg-right fa fa-chevron-down" style="padding-top: 5px;"></i>
                 </a>
                     </div>
-                    <div id="collapse-1c54c6f5-3d9c-48f8-b361-1d7589db8638" class="collapse" aria-labelledby="requests-1c54c6f5-3d9c-48f8-b361-1d7589db8638">
+                    <div id="collapse-b307b319-473b-4519-8ccd-d1e23426011c" class="collapse" aria-labelledby="requests-b307b319-473b-4519-8ccd-d1e23426011c">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-12 mb-3">
@@ -2023,15 +2055,15 @@ body.theme-light code {
                                 <div class="card border-info" style="width: 50rem;">
                                     <div class="card-body">
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Response Information</h5>
-                                    <span><i class="fas fa-info-circle"></i></span><strong> Response Code:</strong> <span class="float-right badge-outline badge badge-success"> 200 - OK</span><br>
-                                    <span><i class="fas fa-stopwatch"></i></span><strong> Mean time per request:</strong> <span class="float-right badge-outline badge badge-success"> 11ms</span><br>
-                                    <span><i class="fas fa-database"></i></span><strong> Mean size per request:</strong> <span class="float-right badge-outline badge badge-success"> 10B</span><br>
+                                    <span><i class="fas fa-info-circle"></i></span><strong> Response Code:</strong> <span class="float-right badge-outline badge badge-success"> 500 - Internal Server Error</span><br>
+                                    <span><i class="fas fa-stopwatch"></i></span><strong> Mean time per request:</strong> <span class="float-right badge-outline badge badge-success"> 5ms</span><br>
+                                    <span><i class="fas fa-database"></i></span><strong> Mean size per request:</strong> <span class="float-right badge-outline badge badge-success"> 771B</span><br>
                                     <hr>
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Test Pass Percentage</h5>
                                     <div>
                                         <div class="progress" style="height: 40px;">
-                                            <div class="progress-bar  bg-success" style="width: 100%" role="progressbar">
-                                            <h5 style="padding-top:5px;"><strong>100 %</strong></h5>
+                                            <div class="progress-bar  bg-danger" style="width: 100%" role="progressbar">
+                                            <h5 style="padding-top:5px;"><strong>0 %</strong></h5>
                                             </div>
                                         </div>
                                     </div>
@@ -2072,7 +2104,7 @@ body.theme-light code {
                                                     </tr>
                                                     <tr>
                                                         <td class="text-nowrap">Postman-Token</td>
-                                                        <td class="text-wrap">db8ae84b-099b-4724-b872-8e41d5a0d13b</td>
+                                                        <td class="text-wrap">6da353a2-611d-4d1c-94b7-84219fe7942e</td>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-nowrap">Host</td>
@@ -2118,47 +2150,35 @@ body.theme-light code {
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">x-dot-server</td>
-                                                    <td class="text-wrap">990ec346b493|83343f7e17</td>
+                                                    <td class="text-wrap">74afef91a634|19bec39941</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Set-Cookie</td>
-                                                    <td class="text-wrap">JSESSIONID&#x3D;61B2921C1BDB84DE7B3E64F1FB06664A; Path&#x3D;/; Secure; HttpOnly; SameSite&#x3D;Lax</td>
+                                                    <td class="text-wrap">JSESSIONID&#x3D;AA9A09C3AAF103B467FDC8D05A85EB51; Path&#x3D;/; HttpOnly; SameSite&#x3D;Lax</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="text-nowrap">Set-Cookie</td>
-                                                    <td class="text-wrap">opvc&#x3D;d7307376-aa11-406a-96a9-f98b0d4c8211; Path&#x3D;/; HttpOnly; SameSite&#x3D;Lax</td>
+                                                    <td class="text-nowrap">vary</td>
+                                                    <td class="text-wrap">accept-encoding</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="text-nowrap">Set-Cookie</td>
-                                                    <td class="text-wrap">sitevisitscookie&#x3D;1; Max-Age&#x3D;153792000; Expires&#x3D;Sun, 30-Jul-2028 21:54:46 GMT; Path&#x3D;/; HttpOnly; SameSite&#x3D;Lax</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">Set-Cookie</td>
-                                                    <td class="text-wrap">dmid&#x3D;9ceaa84a-7049-4218-a8aa-2318db1e66a2; Max-Age&#x3D;153792000; Expires&#x3D;Sun, 30-Jul-2028 21:54:46 GMT; Path&#x3D;/; HttpOnly; SameSite&#x3D;Lax</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">Cache-Control</td>
-                                                    <td class="text-wrap">max-age&#x3D;15</td>
+                                                    <td class="text-nowrap">Content-Encoding</td>
+                                                    <td class="text-wrap">gzip</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Content-Type</td>
-                                                    <td class="text-wrap">text/html;charset&#x3D;UTF-8</td>
+                                                    <td class="text-wrap">text/html;charset&#x3D;ISO-8859-1</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="text-nowrap">Content-Length</td>
-                                                    <td class="text-wrap">10</td>
+                                                    <td class="text-nowrap">Transfer-Encoding</td>
+                                                    <td class="text-wrap">chunked</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Date</td>
-                                                    <td class="text-wrap">Fri, 15 Sep 2023 21:54:45 GMT</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">Keep-Alive</td>
-                                                    <td class="text-wrap">timeout&#x3D;3</td>
+                                                    <td class="text-wrap">Mon, 18 Sep 2023 16:55:16 GMT</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Connection</td>
-                                                    <td class="text-wrap">keep-alive</td>
+                                                    <td class="text-wrap">close</td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -2175,10 +2195,60 @@ body.theme-light code {
                                 <div class="card-body">
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Response Body</h5>
                                         <div class="dyn-height">
-                                                <pre><code id="copyText-59f30c38-0782-4dbe-a8ee-929bd6e9bda3" class="prettyPrint">/127.0.0.1</code></pre>
+                                                <pre><code id="copyText-a0043a2c-ee5c-4c18-bca2-a04e656b4092" class="prettyPrint">
+        &lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot;
+          &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;
+        
+        &lt;html&gt;
+        &lt;head&gt;
+        &lt;title&gt;dotCMS: 500 error&lt;/title&gt;
+        
+        &lt;style type&#x3D;&quot;text/css&quot;&gt;
+        body {
+          font-family: helvetica, san-serif;
+          padding: 20px;
+          margin-top: 0px;
+        }
+        
+        #main {
+          width: 400px;
+        }
+        
+        #footer {
+          text-align: center;
+        }
+        
+        h1 {
+          font-size: 20px;
+        }
+        
+        #logo {
+          float: left;
+        }
+        
+        #text {
+          float: left;
+        }
+        &lt;/style&gt;
+        
+        
+        
+        &lt;/head&gt;
+        &lt;body&gt;
+          &lt;div id&#x3D;&quot;main&quot;&gt;
+            &lt;div id&#x3D;&quot;text&quot;&gt;
+        
+              &lt;h1&gt;dotCMS: 500 error&lt;/h1&gt;
+        
+              &lt;p&gt;The Page or file you were looking for caused an &lt;a href&#x3D;&quot;javascript:showError()&quot;&gt;error&lt;/a&gt;. &lt;br/&gt;Please make sure that you have typed the correct URL.&lt;/p&gt;
+        
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;</code></pre>
                                         </div>
                                         <div class="card-footer">
-                                            <button class="btn btn-outline-secondary btn-sm copyButton" type="button" data-clipboard-action="copy" data-clipboard-target="#copyText-59f30c38-0782-4dbe-a8ee-929bd6e9bda3">Copy to Clipboard</button>
+                                            <button class="btn btn-outline-secondary btn-sm copyButton" type="button" data-clipboard-action="copy" data-clipboard-target="#copyText-a0043a2c-ee5c-4c18-bca2-a04e656b4092">Copy to Clipboard</button>
                                         </div>
                                 </div>
                             </div>
@@ -2195,22 +2265,22 @@ body.theme-light code {
                                             <tbody>
                                                 <tr >
                                                     <td >Verify Visitor&#x27;s IP</td>
-                                                    <td class="text-center bg-success">1</td>
                                                     <td class="text-center ">0</td>
+                                                    <td class="text-center bg-danger">1</td>
                                                     <td class="text-center ">0</td>
                                                 </tr>
                                             </tbody>
                                             <tfoot>
                                                 <tr class="bg-light">
                                                     <td><strong>Total</strong></td>
-                                                    <td class="text-center">1</td>
                                                     <td class="text-center">0</td>
+                                                    <td class="text-center">1</td>
                                                     <td class="text-center">0</td>
                                                 </tr>
                                             </tfoot>
                                         </table>
                                     </div>
-                                    <div class="row d-none">
+                                    <div class="row ">
                                     <div class="col-sm-12 mb-3">
                                         <div class="card-deck">
                                         <div class="card border-danger" style="width: 50rem;">
@@ -2220,6 +2290,10 @@ body.theme-light code {
                                                     <table class="table table-hover">
                                                     <thead><tr class="text-nowrap"><th>Test Name</th><th>Assertion Error</th></tr></thead>
                                                         <tbody>
+                                                            <tr>
+                                                                <td class="w-45 text-nowrap ">Verify Visitor&#x27;s IP</td>
+                                                                <td class="w-55"><pre><code >expected response to have status code 200 but got 500</code></pre></td>
+                                                            </tr>
                                                         </tbody>
                                                     </table>
                                                 </div>
@@ -2325,57 +2399,57 @@ $('#openAllRequests').on('click', function(e) {
 let clickCount = $(this).data("clickCount") || 1
 switch (clickCount){
     case 1:
-            $('#requests-2e944e98-6f9f-443e-bc05-a69587e0c8b6').removeClass('collapsed')
-            $('#collapse-2e944e98-6f9f-443e-bc05-a69587e0c8b6').removeClass('collapsed')
-            $('#requests-2e944e98-6f9f-443e-bc05-a69587e0c8b6').addClass('show')
-            $('#collapse-2e944e98-6f9f-443e-bc05-a69587e0c8b6').addClass('show')
-            $('#requests-e07c5ee9-22a3-44c8-9848-41f57ade849a').removeClass('collapsed')
-            $('#collapse-e07c5ee9-22a3-44c8-9848-41f57ade849a').removeClass('collapsed')
-            $('#requests-e07c5ee9-22a3-44c8-9848-41f57ade849a').addClass('show')
-            $('#collapse-e07c5ee9-22a3-44c8-9848-41f57ade849a').addClass('show')
-            $('#requests-aaf34504-7f90-446a-9c9e-9663b15054ab').removeClass('collapsed')
-            $('#collapse-aaf34504-7f90-446a-9c9e-9663b15054ab').removeClass('collapsed')
-            $('#requests-aaf34504-7f90-446a-9c9e-9663b15054ab').addClass('show')
-            $('#collapse-aaf34504-7f90-446a-9c9e-9663b15054ab').addClass('show')
-            $('#requests-49e9ef39-f4a5-4cb1-855c-02ffff974a75').removeClass('collapsed')
-            $('#collapse-49e9ef39-f4a5-4cb1-855c-02ffff974a75').removeClass('collapsed')
-            $('#requests-49e9ef39-f4a5-4cb1-855c-02ffff974a75').addClass('show')
-            $('#collapse-49e9ef39-f4a5-4cb1-855c-02ffff974a75').addClass('show')
-            $('#requests-a7b1d80f-eac1-4e87-860a-691dd498aa38').removeClass('collapsed')
-            $('#collapse-a7b1d80f-eac1-4e87-860a-691dd498aa38').removeClass('collapsed')
-            $('#requests-a7b1d80f-eac1-4e87-860a-691dd498aa38').addClass('show')
-            $('#collapse-a7b1d80f-eac1-4e87-860a-691dd498aa38').addClass('show')
-            $('#requests-1c54c6f5-3d9c-48f8-b361-1d7589db8638').removeClass('collapsed')
-            $('#collapse-1c54c6f5-3d9c-48f8-b361-1d7589db8638').removeClass('collapsed')
-            $('#requests-1c54c6f5-3d9c-48f8-b361-1d7589db8638').addClass('show')
-            $('#collapse-1c54c6f5-3d9c-48f8-b361-1d7589db8638').addClass('show')
+            $('#requests-169238ee-446b-40c0-ae86-85f8a2452d90').removeClass('collapsed')
+            $('#collapse-169238ee-446b-40c0-ae86-85f8a2452d90').removeClass('collapsed')
+            $('#requests-169238ee-446b-40c0-ae86-85f8a2452d90').addClass('show')
+            $('#collapse-169238ee-446b-40c0-ae86-85f8a2452d90').addClass('show')
+            $('#requests-78dd2020-51c6-4bca-a651-cc791c28f0ca').removeClass('collapsed')
+            $('#collapse-78dd2020-51c6-4bca-a651-cc791c28f0ca').removeClass('collapsed')
+            $('#requests-78dd2020-51c6-4bca-a651-cc791c28f0ca').addClass('show')
+            $('#collapse-78dd2020-51c6-4bca-a651-cc791c28f0ca').addClass('show')
+            $('#requests-dbbf4f63-c696-4362-9f95-d11e82b5789b').removeClass('collapsed')
+            $('#collapse-dbbf4f63-c696-4362-9f95-d11e82b5789b').removeClass('collapsed')
+            $('#requests-dbbf4f63-c696-4362-9f95-d11e82b5789b').addClass('show')
+            $('#collapse-dbbf4f63-c696-4362-9f95-d11e82b5789b').addClass('show')
+            $('#requests-24e1d599-3be1-4de2-b60e-daa8a799a960').removeClass('collapsed')
+            $('#collapse-24e1d599-3be1-4de2-b60e-daa8a799a960').removeClass('collapsed')
+            $('#requests-24e1d599-3be1-4de2-b60e-daa8a799a960').addClass('show')
+            $('#collapse-24e1d599-3be1-4de2-b60e-daa8a799a960').addClass('show')
+            $('#requests-4b99b043-8079-4274-9af8-e915ff61d8d7').removeClass('collapsed')
+            $('#collapse-4b99b043-8079-4274-9af8-e915ff61d8d7').removeClass('collapsed')
+            $('#requests-4b99b043-8079-4274-9af8-e915ff61d8d7').addClass('show')
+            $('#collapse-4b99b043-8079-4274-9af8-e915ff61d8d7').addClass('show')
+            $('#requests-b307b319-473b-4519-8ccd-d1e23426011c').removeClass('collapsed')
+            $('#collapse-b307b319-473b-4519-8ccd-d1e23426011c').removeClass('collapsed')
+            $('#requests-b307b319-473b-4519-8ccd-d1e23426011c').addClass('show')
+            $('#collapse-b307b319-473b-4519-8ccd-d1e23426011c').addClass('show')
         $('#openAllRequests').html("Collapse Requests");
         break;
     case 2:
-            $('#requests-2e944e98-6f9f-443e-bc05-a69587e0c8b6').addClass('collapsed')
-            $('#collapse-2e944e98-6f9f-443e-bc05-a69587e0c8b6').addClass('collapsed')
-            $('#requests-2e944e98-6f9f-443e-bc05-a69587e0c8b6').removeClass('show')
-            $('#collapse-2e944e98-6f9f-443e-bc05-a69587e0c8b6').removeClass('show')
-            $('#requests-e07c5ee9-22a3-44c8-9848-41f57ade849a').addClass('collapsed')
-            $('#collapse-e07c5ee9-22a3-44c8-9848-41f57ade849a').addClass('collapsed')
-            $('#requests-e07c5ee9-22a3-44c8-9848-41f57ade849a').removeClass('show')
-            $('#collapse-e07c5ee9-22a3-44c8-9848-41f57ade849a').removeClass('show')
-            $('#requests-aaf34504-7f90-446a-9c9e-9663b15054ab').addClass('collapsed')
-            $('#collapse-aaf34504-7f90-446a-9c9e-9663b15054ab').addClass('collapsed')
-            $('#requests-aaf34504-7f90-446a-9c9e-9663b15054ab').removeClass('show')
-            $('#collapse-aaf34504-7f90-446a-9c9e-9663b15054ab').removeClass('show')
-            $('#requests-49e9ef39-f4a5-4cb1-855c-02ffff974a75').addClass('collapsed')
-            $('#collapse-49e9ef39-f4a5-4cb1-855c-02ffff974a75').addClass('collapsed')
-            $('#requests-49e9ef39-f4a5-4cb1-855c-02ffff974a75').removeClass('show')
-            $('#collapse-49e9ef39-f4a5-4cb1-855c-02ffff974a75').removeClass('show')
-            $('#requests-a7b1d80f-eac1-4e87-860a-691dd498aa38').addClass('collapsed')
-            $('#collapse-a7b1d80f-eac1-4e87-860a-691dd498aa38').addClass('collapsed')
-            $('#requests-a7b1d80f-eac1-4e87-860a-691dd498aa38').removeClass('show')
-            $('#collapse-a7b1d80f-eac1-4e87-860a-691dd498aa38').removeClass('show')
-            $('#requests-1c54c6f5-3d9c-48f8-b361-1d7589db8638').addClass('collapsed')
-            $('#collapse-1c54c6f5-3d9c-48f8-b361-1d7589db8638').addClass('collapsed')
-            $('#requests-1c54c6f5-3d9c-48f8-b361-1d7589db8638').removeClass('show')
-            $('#collapse-1c54c6f5-3d9c-48f8-b361-1d7589db8638').removeClass('show')
+            $('#requests-169238ee-446b-40c0-ae86-85f8a2452d90').addClass('collapsed')
+            $('#collapse-169238ee-446b-40c0-ae86-85f8a2452d90').addClass('collapsed')
+            $('#requests-169238ee-446b-40c0-ae86-85f8a2452d90').removeClass('show')
+            $('#collapse-169238ee-446b-40c0-ae86-85f8a2452d90').removeClass('show')
+            $('#requests-78dd2020-51c6-4bca-a651-cc791c28f0ca').addClass('collapsed')
+            $('#collapse-78dd2020-51c6-4bca-a651-cc791c28f0ca').addClass('collapsed')
+            $('#requests-78dd2020-51c6-4bca-a651-cc791c28f0ca').removeClass('show')
+            $('#collapse-78dd2020-51c6-4bca-a651-cc791c28f0ca').removeClass('show')
+            $('#requests-dbbf4f63-c696-4362-9f95-d11e82b5789b').addClass('collapsed')
+            $('#collapse-dbbf4f63-c696-4362-9f95-d11e82b5789b').addClass('collapsed')
+            $('#requests-dbbf4f63-c696-4362-9f95-d11e82b5789b').removeClass('show')
+            $('#collapse-dbbf4f63-c696-4362-9f95-d11e82b5789b').removeClass('show')
+            $('#requests-24e1d599-3be1-4de2-b60e-daa8a799a960').addClass('collapsed')
+            $('#collapse-24e1d599-3be1-4de2-b60e-daa8a799a960').addClass('collapsed')
+            $('#requests-24e1d599-3be1-4de2-b60e-daa8a799a960').removeClass('show')
+            $('#collapse-24e1d599-3be1-4de2-b60e-daa8a799a960').removeClass('show')
+            $('#requests-4b99b043-8079-4274-9af8-e915ff61d8d7').addClass('collapsed')
+            $('#collapse-4b99b043-8079-4274-9af8-e915ff61d8d7').addClass('collapsed')
+            $('#requests-4b99b043-8079-4274-9af8-e915ff61d8d7').removeClass('show')
+            $('#collapse-4b99b043-8079-4274-9af8-e915ff61d8d7').removeClass('show')
+            $('#requests-b307b319-473b-4519-8ccd-d1e23426011c').addClass('collapsed')
+            $('#collapse-b307b319-473b-4519-8ccd-d1e23426011c').addClass('collapsed')
+            $('#requests-b307b319-473b-4519-8ccd-d1e23426011c').removeClass('show')
+            $('#collapse-b307b319-473b-4519-8ccd-d1e23426011c').removeClass('show')
         $('#openAllRequests').html("Expand Requests");
         break;
 }
@@ -2391,57 +2465,57 @@ $('#openAllSkipped').on('click', function(e) {
 let clickCount = $(this).data("clickCount") || 1
 switch (clickCount){
     case 1:
-            $('#skipped-2e944e98-6f9f-443e-bc05-a69587e0c8b6').removeClass('collapsed')
-            $('#skipped-collapse-2e944e98-6f9f-443e-bc05-a69587e0c8b6').removeClass('collapsed')
-            $('#skipped-2e944e98-6f9f-443e-bc05-a69587e0c8b6').addClass('show')
-            $('#skipped-collapse-2e944e98-6f9f-443e-bc05-a69587e0c8b6').addClass('show')
-            $('#skipped-e07c5ee9-22a3-44c8-9848-41f57ade849a').removeClass('collapsed')
-            $('#skipped-collapse-e07c5ee9-22a3-44c8-9848-41f57ade849a').removeClass('collapsed')
-            $('#skipped-e07c5ee9-22a3-44c8-9848-41f57ade849a').addClass('show')
-            $('#skipped-collapse-e07c5ee9-22a3-44c8-9848-41f57ade849a').addClass('show')
-            $('#skipped-aaf34504-7f90-446a-9c9e-9663b15054ab').removeClass('collapsed')
-            $('#skipped-collapse-aaf34504-7f90-446a-9c9e-9663b15054ab').removeClass('collapsed')
-            $('#skipped-aaf34504-7f90-446a-9c9e-9663b15054ab').addClass('show')
-            $('#skipped-collapse-aaf34504-7f90-446a-9c9e-9663b15054ab').addClass('show')
-            $('#skipped-49e9ef39-f4a5-4cb1-855c-02ffff974a75').removeClass('collapsed')
-            $('#skipped-collapse-49e9ef39-f4a5-4cb1-855c-02ffff974a75').removeClass('collapsed')
-            $('#skipped-49e9ef39-f4a5-4cb1-855c-02ffff974a75').addClass('show')
-            $('#skipped-collapse-49e9ef39-f4a5-4cb1-855c-02ffff974a75').addClass('show')
-            $('#skipped-a7b1d80f-eac1-4e87-860a-691dd498aa38').removeClass('collapsed')
-            $('#skipped-collapse-a7b1d80f-eac1-4e87-860a-691dd498aa38').removeClass('collapsed')
-            $('#skipped-a7b1d80f-eac1-4e87-860a-691dd498aa38').addClass('show')
-            $('#skipped-collapse-a7b1d80f-eac1-4e87-860a-691dd498aa38').addClass('show')
-            $('#skipped-1c54c6f5-3d9c-48f8-b361-1d7589db8638').removeClass('collapsed')
-            $('#skipped-collapse-1c54c6f5-3d9c-48f8-b361-1d7589db8638').removeClass('collapsed')
-            $('#skipped-1c54c6f5-3d9c-48f8-b361-1d7589db8638').addClass('show')
-            $('#skipped-collapse-1c54c6f5-3d9c-48f8-b361-1d7589db8638').addClass('show')
+            $('#skipped-169238ee-446b-40c0-ae86-85f8a2452d90').removeClass('collapsed')
+            $('#skipped-collapse-169238ee-446b-40c0-ae86-85f8a2452d90').removeClass('collapsed')
+            $('#skipped-169238ee-446b-40c0-ae86-85f8a2452d90').addClass('show')
+            $('#skipped-collapse-169238ee-446b-40c0-ae86-85f8a2452d90').addClass('show')
+            $('#skipped-78dd2020-51c6-4bca-a651-cc791c28f0ca').removeClass('collapsed')
+            $('#skipped-collapse-78dd2020-51c6-4bca-a651-cc791c28f0ca').removeClass('collapsed')
+            $('#skipped-78dd2020-51c6-4bca-a651-cc791c28f0ca').addClass('show')
+            $('#skipped-collapse-78dd2020-51c6-4bca-a651-cc791c28f0ca').addClass('show')
+            $('#skipped-dbbf4f63-c696-4362-9f95-d11e82b5789b').removeClass('collapsed')
+            $('#skipped-collapse-dbbf4f63-c696-4362-9f95-d11e82b5789b').removeClass('collapsed')
+            $('#skipped-dbbf4f63-c696-4362-9f95-d11e82b5789b').addClass('show')
+            $('#skipped-collapse-dbbf4f63-c696-4362-9f95-d11e82b5789b').addClass('show')
+            $('#skipped-24e1d599-3be1-4de2-b60e-daa8a799a960').removeClass('collapsed')
+            $('#skipped-collapse-24e1d599-3be1-4de2-b60e-daa8a799a960').removeClass('collapsed')
+            $('#skipped-24e1d599-3be1-4de2-b60e-daa8a799a960').addClass('show')
+            $('#skipped-collapse-24e1d599-3be1-4de2-b60e-daa8a799a960').addClass('show')
+            $('#skipped-4b99b043-8079-4274-9af8-e915ff61d8d7').removeClass('collapsed')
+            $('#skipped-collapse-4b99b043-8079-4274-9af8-e915ff61d8d7').removeClass('collapsed')
+            $('#skipped-4b99b043-8079-4274-9af8-e915ff61d8d7').addClass('show')
+            $('#skipped-collapse-4b99b043-8079-4274-9af8-e915ff61d8d7').addClass('show')
+            $('#skipped-b307b319-473b-4519-8ccd-d1e23426011c').removeClass('collapsed')
+            $('#skipped-collapse-b307b319-473b-4519-8ccd-d1e23426011c').removeClass('collapsed')
+            $('#skipped-b307b319-473b-4519-8ccd-d1e23426011c').addClass('show')
+            $('#skipped-collapse-b307b319-473b-4519-8ccd-d1e23426011c').addClass('show')
         $('#openAllSkipped').html("Collapse All Skipped Tests");
         break;
     case 2:
-            $('#skipped-2e944e98-6f9f-443e-bc05-a69587e0c8b6').addClass('collapsed')
-            $('#skipped-collapse-2e944e98-6f9f-443e-bc05-a69587e0c8b6').addClass('collapsed')
-            $('#skipped-2e944e98-6f9f-443e-bc05-a69587e0c8b6').removeClass('show')
-            $('#skipped-collapse-2e944e98-6f9f-443e-bc05-a69587e0c8b6').removeClass('show')
-            $('#skipped-e07c5ee9-22a3-44c8-9848-41f57ade849a').addClass('collapsed')
-            $('#skipped-collapse-e07c5ee9-22a3-44c8-9848-41f57ade849a').addClass('collapsed')
-            $('#skipped-e07c5ee9-22a3-44c8-9848-41f57ade849a').removeClass('show')
-            $('#skipped-collapse-e07c5ee9-22a3-44c8-9848-41f57ade849a').removeClass('show')
-            $('#skipped-aaf34504-7f90-446a-9c9e-9663b15054ab').addClass('collapsed')
-            $('#skipped-collapse-aaf34504-7f90-446a-9c9e-9663b15054ab').addClass('collapsed')
-            $('#skipped-aaf34504-7f90-446a-9c9e-9663b15054ab').removeClass('show')
-            $('#skipped-collapse-aaf34504-7f90-446a-9c9e-9663b15054ab').removeClass('show')
-            $('#skipped-49e9ef39-f4a5-4cb1-855c-02ffff974a75').addClass('collapsed')
-            $('#skipped-collapse-49e9ef39-f4a5-4cb1-855c-02ffff974a75').addClass('collapsed')
-            $('#skipped-49e9ef39-f4a5-4cb1-855c-02ffff974a75').removeClass('show')
-            $('#skipped-collapse-49e9ef39-f4a5-4cb1-855c-02ffff974a75').removeClass('show')
-            $('#skipped-a7b1d80f-eac1-4e87-860a-691dd498aa38').addClass('collapsed')
-            $('#skipped-collapse-a7b1d80f-eac1-4e87-860a-691dd498aa38').addClass('collapsed')
-            $('#skipped-a7b1d80f-eac1-4e87-860a-691dd498aa38').removeClass('show')
-            $('#skipped-collapse-a7b1d80f-eac1-4e87-860a-691dd498aa38').removeClass('show')
-            $('#skipped-1c54c6f5-3d9c-48f8-b361-1d7589db8638').addClass('collapsed')
-            $('#skipped-collapse-1c54c6f5-3d9c-48f8-b361-1d7589db8638').addClass('collapsed')
-            $('#skipped-1c54c6f5-3d9c-48f8-b361-1d7589db8638').removeClass('show')
-            $('#skipped-collapse-1c54c6f5-3d9c-48f8-b361-1d7589db8638').removeClass('show')
+            $('#skipped-169238ee-446b-40c0-ae86-85f8a2452d90').addClass('collapsed')
+            $('#skipped-collapse-169238ee-446b-40c0-ae86-85f8a2452d90').addClass('collapsed')
+            $('#skipped-169238ee-446b-40c0-ae86-85f8a2452d90').removeClass('show')
+            $('#skipped-collapse-169238ee-446b-40c0-ae86-85f8a2452d90').removeClass('show')
+            $('#skipped-78dd2020-51c6-4bca-a651-cc791c28f0ca').addClass('collapsed')
+            $('#skipped-collapse-78dd2020-51c6-4bca-a651-cc791c28f0ca').addClass('collapsed')
+            $('#skipped-78dd2020-51c6-4bca-a651-cc791c28f0ca').removeClass('show')
+            $('#skipped-collapse-78dd2020-51c6-4bca-a651-cc791c28f0ca').removeClass('show')
+            $('#skipped-dbbf4f63-c696-4362-9f95-d11e82b5789b').addClass('collapsed')
+            $('#skipped-collapse-dbbf4f63-c696-4362-9f95-d11e82b5789b').addClass('collapsed')
+            $('#skipped-dbbf4f63-c696-4362-9f95-d11e82b5789b').removeClass('show')
+            $('#skipped-collapse-dbbf4f63-c696-4362-9f95-d11e82b5789b').removeClass('show')
+            $('#skipped-24e1d599-3be1-4de2-b60e-daa8a799a960').addClass('collapsed')
+            $('#skipped-collapse-24e1d599-3be1-4de2-b60e-daa8a799a960').addClass('collapsed')
+            $('#skipped-24e1d599-3be1-4de2-b60e-daa8a799a960').removeClass('show')
+            $('#skipped-collapse-24e1d599-3be1-4de2-b60e-daa8a799a960').removeClass('show')
+            $('#skipped-4b99b043-8079-4274-9af8-e915ff61d8d7').addClass('collapsed')
+            $('#skipped-collapse-4b99b043-8079-4274-9af8-e915ff61d8d7').addClass('collapsed')
+            $('#skipped-4b99b043-8079-4274-9af8-e915ff61d8d7').removeClass('show')
+            $('#skipped-collapse-4b99b043-8079-4274-9af8-e915ff61d8d7').removeClass('show')
+            $('#skipped-b307b319-473b-4519-8ccd-d1e23426011c').addClass('collapsed')
+            $('#skipped-collapse-b307b319-473b-4519-8ccd-d1e23426011c').addClass('collapsed')
+            $('#skipped-b307b319-473b-4519-8ccd-d1e23426011c').removeClass('show')
+            $('#skipped-collapse-b307b319-473b-4519-8ccd-d1e23426011c').removeClass('show')
         $('#openAllSkipped').html("Expand All Skipped Tests");
         break;
 }
@@ -2459,9 +2533,93 @@ let failedItemContent
 let failedItemHeading
 switch (clickCount){
     case 1:
+            failedItemHeading = $('#fails-72b2259f-c24e-4dff-9a31-1665d9c1ca28');
+            failedItemContent = $("#fails-collapse-72b2259f-c24e-4dff-9a31-1665d9c1ca28");
+            failedItemHeading.removeClass('collapsed')
+            failedItemContent.removeClass('collapsed')
+            failedItemHeading.addClass('show')
+            failedItemContent.addClass('show')
+            failedItemHeading = $('#fails-ca1da649-1977-40ac-88ca-6e80ea0c6d2d');
+            failedItemContent = $("#fails-collapse-ca1da649-1977-40ac-88ca-6e80ea0c6d2d");
+            failedItemHeading.removeClass('collapsed')
+            failedItemContent.removeClass('collapsed')
+            failedItemHeading.addClass('show')
+            failedItemContent.addClass('show')
+            failedItemHeading = $('#fails-5f714bf1-843b-467e-95af-bb1011c44394');
+            failedItemContent = $("#fails-collapse-5f714bf1-843b-467e-95af-bb1011c44394");
+            failedItemHeading.removeClass('collapsed')
+            failedItemContent.removeClass('collapsed')
+            failedItemHeading.addClass('show')
+            failedItemContent.addClass('show')
+            failedItemHeading = $('#fails-ee6c8dfb-1ebd-44b0-9f0a-3ae2753b2663');
+            failedItemContent = $("#fails-collapse-ee6c8dfb-1ebd-44b0-9f0a-3ae2753b2663");
+            failedItemHeading.removeClass('collapsed')
+            failedItemContent.removeClass('collapsed')
+            failedItemHeading.addClass('show')
+            failedItemContent.addClass('show')
+            failedItemHeading = $('#fails-ae0b23a2-e5dc-4327-8b40-ba20809378c4');
+            failedItemContent = $("#fails-collapse-ae0b23a2-e5dc-4327-8b40-ba20809378c4");
+            failedItemHeading.removeClass('collapsed')
+            failedItemContent.removeClass('collapsed')
+            failedItemHeading.addClass('show')
+            failedItemContent.addClass('show')
+            failedItemHeading = $('#fails-5db4abd2-5326-4b66-b2ae-a1a49155a02a');
+            failedItemContent = $("#fails-collapse-5db4abd2-5326-4b66-b2ae-a1a49155a02a");
+            failedItemHeading.removeClass('collapsed')
+            failedItemContent.removeClass('collapsed')
+            failedItemHeading.addClass('show')
+            failedItemContent.addClass('show')
+            failedItemHeading = $('#fails-9d883cf0-f88c-4bf0-b50b-20289e9ba10e');
+            failedItemContent = $("#fails-collapse-9d883cf0-f88c-4bf0-b50b-20289e9ba10e");
+            failedItemHeading.removeClass('collapsed')
+            failedItemContent.removeClass('collapsed')
+            failedItemHeading.addClass('show')
+            failedItemContent.addClass('show')
         $('#openAllFailed').html("Collapse All Failed Tests");
         break;
     case 2:
+            failedItemHeading = $('#fails-72b2259f-c24e-4dff-9a31-1665d9c1ca28');
+            failedItemContent = $("#fails-collapse-72b2259f-c24e-4dff-9a31-1665d9c1ca28");
+            failedItemHeading.removeClass('show')
+            failedItemContent.removeClass('show')
+            failedItemHeading.addClass('collapsed')
+            failedItemContent.addClass('collapsed')
+            failedItemHeading = $('#fails-ca1da649-1977-40ac-88ca-6e80ea0c6d2d');
+            failedItemContent = $("#fails-collapse-ca1da649-1977-40ac-88ca-6e80ea0c6d2d");
+            failedItemHeading.removeClass('show')
+            failedItemContent.removeClass('show')
+            failedItemHeading.addClass('collapsed')
+            failedItemContent.addClass('collapsed')
+            failedItemHeading = $('#fails-5f714bf1-843b-467e-95af-bb1011c44394');
+            failedItemContent = $("#fails-collapse-5f714bf1-843b-467e-95af-bb1011c44394");
+            failedItemHeading.removeClass('show')
+            failedItemContent.removeClass('show')
+            failedItemHeading.addClass('collapsed')
+            failedItemContent.addClass('collapsed')
+            failedItemHeading = $('#fails-ee6c8dfb-1ebd-44b0-9f0a-3ae2753b2663');
+            failedItemContent = $("#fails-collapse-ee6c8dfb-1ebd-44b0-9f0a-3ae2753b2663");
+            failedItemHeading.removeClass('show')
+            failedItemContent.removeClass('show')
+            failedItemHeading.addClass('collapsed')
+            failedItemContent.addClass('collapsed')
+            failedItemHeading = $('#fails-ae0b23a2-e5dc-4327-8b40-ba20809378c4');
+            failedItemContent = $("#fails-collapse-ae0b23a2-e5dc-4327-8b40-ba20809378c4");
+            failedItemHeading.removeClass('show')
+            failedItemContent.removeClass('show')
+            failedItemHeading.addClass('collapsed')
+            failedItemContent.addClass('collapsed')
+            failedItemHeading = $('#fails-5db4abd2-5326-4b66-b2ae-a1a49155a02a');
+            failedItemContent = $("#fails-collapse-5db4abd2-5326-4b66-b2ae-a1a49155a02a");
+            failedItemHeading.removeClass('show')
+            failedItemContent.removeClass('show')
+            failedItemHeading.addClass('collapsed')
+            failedItemContent.addClass('collapsed')
+            failedItemHeading = $('#fails-9d883cf0-f88c-4bf0-b50b-20289e9ba10e');
+            failedItemContent = $("#fails-collapse-9d883cf0-f88c-4bf0-b50b-20289e9ba10e");
+            failedItemHeading.removeClass('show')
+            failedItemContent.removeClass('show')
+            failedItemHeading.addClass('collapsed')
+            failedItemContent.addClass('collapsed')
         $('#openAllFailed').html("Expand All Failed Tests");
         break;
 }
@@ -2586,6 +2744,8 @@ function scrollFunction() {
     document.getElementById("openAllRequests").style.display = "none";
 
 
+    document.getElementById("showOnlyFailures").style.display = "none";
+    document.getElementById("openAllFailed").style.display = "none";
   } else {
     document.getElementById("topOfRequestsScreen").style.display = "none";
     document.getElementById("topOfFailuresScreen").style.display = "none";
@@ -2593,6 +2753,8 @@ function scrollFunction() {
     document.getElementById("openAll").style.display = "block";
     document.getElementById("openAllRequests").style.display = "block";
 
+    document.getElementById("showOnlyFailures").style.display = "block";
+    document.getElementById("openAllFailed").style.display = "block";
   }
 }
 
@@ -2655,6 +2817,12 @@ window.onload = function () {
   document.getElementById('iteration-0').click();
   document.getElementById('iterationSelected').innerHTML = `Iteration ${document.getElementById('iteration-0').innerHTML} selected`
 
+    $("#iteration-0").removeClass('itPassed').addClass('itFailed')
+    $("#iteration-0").removeClass('itPassed').addClass('itFailed')
+    $("#iteration-0").removeClass('itPassed').addClass('itFailed')
+    $("#iteration-0").removeClass('itPassed').addClass('itFailed')
+    $("#iteration-0").removeClass('itPassed').addClass('itFailed')
+    $("#iteration-0").removeClass('itPassed').addClass('itFailed')
 }
 </script>
 
