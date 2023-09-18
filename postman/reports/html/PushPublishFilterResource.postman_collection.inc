@@ -1,2 +1,2 @@
-<tr><td><a href="./PushPublishFilterResource.postman_collection.html">PushPublishFilterResource.postman_collection.json</a></td><td style="color: #ffffff; background-color: #28a745; font-weight: bold;">PASSED</td>
-      <td>6.655</td></tr>
+<tr><td><a href="./PushPublishFilterResource.postman_collection.html">PushPublishFilterResource.postman_collection.json</a></td><td style="color: #ffffff; background-color: #dc3545; font-weight: bold;">FAILED</td>
+      <td>1.534</td></tr>
