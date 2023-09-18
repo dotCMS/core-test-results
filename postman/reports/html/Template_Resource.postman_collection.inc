@@ -1,2 +1,2 @@
-<tr><td><a href="./Template_Resource.postman_collection.html">Template Resource.postman_collection.json</a></td><td style="color: #ffffff; background-color: #28a745; font-weight: bold;">PASSED</td>
-      <td>365.561</td></tr>
+<tr><td><a href="./Template_Resource.postman_collection.html">Template Resource.postman_collection.json</a></td><td style="color: #ffffff; background-color: #dc3545; font-weight: bold;">FAILED</td>
+      <td>14.351</td></tr>
