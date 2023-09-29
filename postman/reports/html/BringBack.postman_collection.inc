@@ -1,2 +1,2 @@
 <tr><td><a href="./BringBack.postman_collection.html">BringBack.postman_collection.json</a></td><td style="color: #ffffff; background-color: #28a745; font-weight: bold;">PASSED</td>
-      <td>61.676</td></tr>
+      <td>61.064</td></tr>
