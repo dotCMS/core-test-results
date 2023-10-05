@@ -1,2 +1,2 @@
 <tr><td><a href="./Page_Version_with_diferrent_Templates.postman_collection.html">Page Version with diferrent Templates.postman_collection.json</a></td><td style="color: #ffffff; background-color: #dc3545; font-weight: bold;">FAILED</td>
-      <td>57.114</td></tr>
+      <td>56.248</td></tr>
